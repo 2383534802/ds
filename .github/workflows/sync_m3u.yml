@@ -1,7 +1,7 @@
 # 工作流名称：同步内容到 index.php
 name: 同步内容到 index.php
 
-# 触发条件：手动触发 + 定时（每15分钟执行一次）
+# 触发条件：手动触发 + 每15分钟执行
 on:
   workflow_dispatch:
   schedule:
@@ -10,21 +10,19 @@ on:
 jobs:
   sync-file:
     runs-on: ubuntu-latest
-    # 全局写入权限
     permissions:
       contents: write
 
     steps:
-      - name: 检出代码
+      - name: 检出仓库代码
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          # 强制注入token用于推送
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 执行同步脚本
+      - name: 核心同步脚本
         run: |
-          # 配置区
+          # 自定义配置区
           BACKUP_URL="https://ghproxy.com/https://pastecode.dev/raw/2i9vtj9l/paste1.txt"
           MAIN_URL="https://ghproxy.com/https://github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"
           FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"
@@ -44,7 +42,7 @@ jobs:
           export TZ=Asia/Shanghai
           NOW_DATETIME=$(date "+%Y-%m-%d %H:%M:%S")
 
-          # 到期逻辑
+          # 到期判断逻辑
           if [[ "$NOW_DATETIME" > "$EXPIRE_DATETIME" ]]; then
             TARGET_URL="$BACKUP_URL"
             [ ! -f "$TASK_FLAG" ] && touch "$TASK_FLAG"
@@ -64,7 +62,7 @@ jobs:
             rm -f temp_fix1
           fi
 
-          # 主源（第二位）
+          # 主源（排在第二位）
           curl $CURL_OPT -o temp_source "$TARGET_URL"
           if [[ "$GROUP_SWITCH" == "on" ]]; then
             sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" temp_source >> index.php
@@ -91,20 +89,16 @@ jobs:
           fi
           rm -f temp_*
 
-      # 【重写推送代码，解决403静默失败】
-      - name: 提交并强制推送
+      - name: 提交推送（无语法错误）
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git add index.php
-          # 强制提交，即使内容无变化也生成提交（杜绝不推送）
           git commit --allow-empty -m "自动更新直播源"
-          git pull --rebase origin main
           git push origin main
 
-      # 企业微信通知
-      - name: 企业微信同步通知
+      - name: 企业微信通知
         if: always()
         run: |
           set +e
