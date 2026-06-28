@@ -1,24 +1,34 @@
 # 工作流名称：同步内容到 index.php
 name: 同步内容到 index.php
 
+# 触发条件：手动触发 + 定时（每30分钟）
 on:
-  workflow_dispatch:          # 手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'   # 每30分钟执行一次
+    - cron: '*/15 * * * *'
 
+# 定义作业
 jobs:
   sync-file:
-    runs-on: ubuntu-latest    # ① 改用 GitHub 官方 runner
+    # 使用 GitHub 官方提供的 Ubuntu 运行器
+    runs-on: ubuntu-latest
+
+    # 设置权限，允许 GITHUB_TOKEN 推送代码
+    permissions:
+      contents: write
 
     steps:
+      # 检出仓库（使用 v4 版本）
       - name: 检出仓库代码
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          # 如果用 GITHUB_TOKEN，无需额外配置；若用自定义 PAT，可添加 token: ${{ secrets.PAT }}
 
+      # 核心同步脚本
       - name: 核心同步脚本
         run: |
-          # 变量定义（与您原脚本完全相同，未做更改）
+          # 变量定义（与原文完全一致）
           BACKUP_URL="https://pastecode.dev/raw/2i9vtj9l/paste1.txt"
           MAIN_URL="https://gh-proxy.org/github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"
           FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"
@@ -49,18 +59,18 @@ jobs:
             LOAD_FIXED_SOURCE="on"
           fi
 
-          # 备份并清空目标文件
+          # 备份并清空 index.php
           cp -f index.php index.php.bak 2>/dev/null || true
           > index.php
 
-          # 附加源1（未到期且开启）
+          # 附加源1（启用时）
           if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED1_SWITCH" == "on" ]]; then
             curl $CURL_OPT -o temp_fix1 "$FIXED_SOURCE_URL1"
             cat temp_fix1 >> index.php
             rm -f temp_fix1
           fi
 
-          # 下载主/备用源
+          # 下载主源
           curl $CURL_OPT -o temp_source "$TARGET_URL"
 
           # 分组替换
@@ -71,7 +81,7 @@ jobs:
           fi
           cat temp_format >> index.php
 
-          # 附加源2、3、4
+          # 附加源2/3/4
           if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED2_SWITCH" == "on" ]]; then
             curl $CURL_OPT -o temp_fix2 "$FIXED_SOURCE_URL2"
             cat temp_fix2 >> index.php
@@ -88,21 +98,22 @@ jobs:
             rm -f temp_fix4
           fi
 
-          # 清理
+          # 清理临时文件
           rm -f temp_source temp_format temp_fix1 temp_fix2 temp_fix3 temp_fix4 index.php.bak
 
+      # 提交并推送变更（使用 GitHub 内置的 GITHUB_TOKEN）
       - name: 提交推送变更
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # ② 使用 GITHUB_TOKEN 进行身份验证（GitHub 自动提供）
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git add index.php
           git commit -m "自动同步：更新 index.php" || echo "无变更"
           git push
+        # 注意：默认 GITHUB_TOKEN 已自动注入，并具有 contents:write 权限（我们已在开头声明）
 
+      # 企业微信通知（无论成败均执行）
       - name: 企业微信同步通知
-        if: always()           # ③ 与 Forgejo 写法相同，但 GitHub 也支持
+        if: always()
         run: |
           set +e
           WEBHOOK="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
@@ -110,7 +121,7 @@ jobs:
           RUN_TIME=$(date "+%Y-%m-%d %H:%M:%S")
           EXPIRE_TIME="2026-07-01 00:00:00"
           ADVANCE_REMIND_DAYS=30
-          FILE_LINK="https://github.com/${GITHUB_REPOSITORY}/raw/main/index.php"  # ④ 改为您的 GitHub 链接
+          FILE_LINK="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/index.php"   # 改为 GitHub 原始链接
 
           if git diff --quiet HEAD -- index.php; then
             CHANGE="本次无内容变更"
