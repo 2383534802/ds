@@ -1,50 +1,53 @@
-name: 同步内容到 index.php
+# 工作流名称：同步内容到 indx.php
+name: 同步内容到 indx.php
 
+# 触发条件：手动触发 + 每30分钟定时
 on:
-  workflow_dispatch:                # 手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *'          # 每15分钟自动运行
+    - cron: '*/30 * * * *'
 
+# 定义作业
 jobs:
-  sync:
+  sync-file:
+    # GitHub 标准运行环境
     runs-on: ubuntu-latest
-    permissions:
-      contents: write               # 允许推送代码
-
-    env:
-      GROUP_NAME: "央视直播"        # 定义环境变量，所有步骤共享
+    # 最大执行超时（GitHub 支持，Forgejo不支持，此处恢复）
+    timeout-minutes: 10
 
     steps:
-      - name: 检出仓库
+      # 步骤1：检出仓库代码
+      - name: 检出仓库代码
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
+      # 步骤2：核心同步脚本（完整保留原有逻辑，适配Ubuntu bash）
       - name: 核心同步脚本
-        id: sync_script              # 为后续步骤引用状态
         run: |
-          set -e                    # 遇错即停，避免继续执行
-          # 配置区（请按需修改）
+          # 自定义配置变量区
           BACKUP_URL="https://pastecode.dev/raw/2i9vtj9l/paste1.txt"
-          MAIN_URL="https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"   # 直接使用，无需代理
+          MAIN_URL="https://gh-proxy.org/github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"
           FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"
           FIXED1_SWITCH="off"
-          FIXED_SOURCE_URL2="https://pastecode.dev/raw/xxxx/xxxx"
-          FIXED2_SWITCH="off"
+          FIXED_SOURCE_URL2="https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt"
+          FIXED2_SWITCH="on"
           FIXED_SOURCE_URL3="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED3_SWITCH="off"
           FIXED_SOURCE_URL4="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED4_SWITCH="off"
-          EXPIRE_DATETIME="2026-07-01 00:00:00"
+          EXPIRE_DATETIME="2027-01-01 00:00:00"
           TASK_FLAG="expire_task_done.flag"
-          GROUP_SWITCH="on"
-          CURL_OPT="--connect-timeout 8 --max-time 20 --retry 3 --retry-delay 3 -L -s"
+          GROUP_NAME="央视直播"
+          GROUP_SWITCH="off"
+          CURL_OPT="--connect-timeout 5 --max-time 15 --retry 2 --retry-delay 2 -L -s"
 
+          # 设置上海时区
           export TZ=Asia/Shanghai
-          NOW_DATETIME=$(date "+%Y-%m-%d %H:%M:%S")
+          NOW_DATETIME=$(date +"%Y-%m-%d %H:%M:%S")
 
-          # 到期判断
+          # 判断主源是否到期
           if [[ "$NOW_DATETIME" > "$EXPIRE_DATETIME" ]]; then
             TARGET_URL="$BACKUP_URL"
             [ ! -f "$TASK_FLAG" ] && touch "$TASK_FLAG"
@@ -55,110 +58,115 @@ jobs:
             LOAD_FIXED_SOURCE="on"
           fi
 
-          # 清空目标文件
-          > index.php
+          # 备份并清空目标文件
+          cp -f indx.php indx.php.bak 2>/dev/null || true
+          > indx.php
 
-          # 附加源1（若启用）
+          # 附加源1
           if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED1_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix1 "$FIXED_SOURCE_URL1" || { echo "下载fix1失败"; exit 1; }
-            sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" temp_fix1 >> index.php
+            curl $CURL_OPT -o temp_fix1 "$FIXED_SOURCE_URL1"
+            cat temp_fix1 >> indx.php
             rm -f temp_fix1
           fi
 
-          # 主源
-          curl $CURL_OPT -o temp_source "$TARGET_URL" || { echo "下载主源失败"; exit 1; }
+          # 下载主/备用源并处理分组替换
+          curl $CURL_OPT -o temp_source "$TARGET_URL"
           if [[ "$GROUP_SWITCH" == "on" ]]; then
-            sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" temp_source >> index.php
+            sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" temp_source > temp_format
           else
-            cat temp_source >> index.php
+            cp temp_source temp_format
           fi
-          rm -f temp_source
+          cat temp_format >> indx.php
 
-          # 附加源2~4
-          for i in 2 3 4; do
-            switch_var="FIXED${i}_SWITCH"
-            url_var="FIXED_SOURCE_URL${i}"
-            if [[ "$LOAD_FIXED_SOURCE" == "on" && "${!switch_var}" == "on" ]]; then
-              curl $CURL_OPT -o "temp_fix${i}" "${!url_var}" || { echo "下载fix${i}失败"; exit 1; }
-              sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" "temp_fix${i}" >> index.php
-              rm -f "temp_fix${i}"
-            fi
-          done
+          # 附加源2
+          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED2_SWITCH" == "on" ]]; then
+            curl $CURL_OPT -o temp_fix2 "$FIXED_SOURCE_URL2"
+            cat temp_fix2 >> indx.php
+            rm -f temp_fix2
+          fi
+          # 附加源3
+          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED3_SWITCH" == "on" ]]; then
+            curl $CURL_OPT -o temp_fix3 "$FIXED_SOURCE_URL3"
+            cat temp_fix3 >> indx.php
+            rm -f temp_fix3
+          fi
+          # 附加源4
+          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED4_SWITCH" == "on" ]]; then
+            curl $CURL_OPT -o temp_fix4 "$FIXED_SOURCE_URL4"
+            cat temp_fix4 >> indx.php
+            rm -f temp_fix4
+          fi
 
           # 清理临时文件
-          rm -f temp_* 2>/dev/null || true
+          rm -f temp_source temp_format temp_fix1 temp_fix2 temp_fix3 temp_fix4 indx.php.bak
 
-          # 输出文件信息，供调试和通知使用
-          echo "FILE_SIZE=$(stat -c%s index.php)" >> $GITHUB_ENV
-          echo "FILE_CHANGED=false" >> $GITHUB_ENV
-
-      - name: 提交并推送（仅当内容变更）
+      # 步骤3：提交推送更新（GitHub 内置 token 自动鉴权）
+      - name: 提交推送变更
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.php
-          # 检查是否有变更
-          if git diff --cached --quiet; then
-            echo "无内容变更，跳过提交"
-            echo "FILE_CHANGED=false" >> $GITHUB_ENV
-          else
-            git commit -m "自动同步直播源 $(date '+%Y-%m-%d %H:%M')"
-            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)   # 推送到当前分支
-            echo "FILE_CHANGED=true" >> $GITHUB_ENV
-          fi
+          git add indx.php
+          git commit -m "自动同步：更新 indx.php" || echo "无内容变更，跳过提交"
+          git push
 
-      - name: 企业微信通知
-        if: always()                # 无论成败都执行
+      # 步骤4：企业微信通知（无论成功失败都执行）
+      - name: 企业微信同步通知
+        if: always()
         run: |
           set +e
-          # 使用 Secrets 存储 Webhook（请在仓库设置中添加）
-          WEBHOOK="${{ secrets.WECHAT_WEBHOOK }}"
-          # 若未配置 secret，则使用硬编码（不推荐，但保留兼容）
-          if [ -z "$WEBHOOK" ]; then
-            WEBHOOK="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
-          fi
-
+          WEBHOOK="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=430c0cbc-1b04-4519-a3a4-46e418dff464"
           export TZ=Asia/Shanghai
-          RUN_TIME=$(date "+%Y-%m-%d %H:%M:%S")
-          EXPIRE_TIME="2026-07-01 00:00:00"
+          RUN_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+          EXPIRE_TIME="2027-01-01 00:00:00"
           ADVANCE_REMIND_DAYS=30
-          FILE_LINK="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/index.php"
+          # GitHub 文件原始链接格式：raw.githubusercontent.com/用户名/仓库名/分支名/indx.php
+          FILE_LINK="https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/indx.php"
 
-          # 使用上一步设置的变量
-          if [[ "$FILE_CHANGED" == "true" ]]; then
-            CHANGE="已成功更新直播源文件"
+          # 判断是否有文件变更
+          if git diff --quiet HEAD -- indx.php; then
+            CHANGE="本次无内容变更"
           else
-            CHANGE="本次无内容变更，属于正常状态"
+            CHANGE="已更新 indx.php 内容"
           fi
 
-          # 计算剩余天数
+          # 计算到期剩余天数
           EXPIRE_TIMESTAMP=$(date -d "$EXPIRE_TIME" +%s)
           NOW_TIMESTAMP=$(date -d "$RUN_TIME" +%s)
           DIFF_DAYS=$(( (EXPIRE_TIMESTAMP - NOW_TIMESTAMP) / 86400 ))
 
           if [[ $DIFF_DAYS -le 0 ]]; then
-            EXPIRE_TIP="⚠️ 源已到期，请及时续费！"
+            EXPIRE_TIP="到期提示：源已到期，请及时续费"
           elif [[ $DIFF_DAYS -le $ADVANCE_REMIND_DAYS ]]; then
-            EXPIRE_TIP="⏰ 距离到期还有 ${DIFF_DAYS} 天"
+            EXPIRE_TIP="到期提示：距离源到期还有 ${DIFF_DAYS} 天"
           else
             EXPIRE_TIP=""
           fi
 
-          MSG="直播源同步任务报告
-================================
+          # 拼接消息，转义换行符适配JSON
+          RAW_MSG="直播源同步任务报告
+====================================
 执行时间：$RUN_TIME
 运行状态：${{ job.status }}
-文件变更：$CHANGE
-统一分组：${{ env.GROUP_NAME }}
+变更状态：$CHANGE
 到期时间：$EXPIRE_TIME
-周期：每15分钟
-文件地址：$FILE_LINK
-================================
+分组名称：央视直播
+------------------------------------
+同步周期：每30分钟
+文件链接：$FILE_LINK
+====================================
 $EXPIRE_TIP"
 
+          # 失败追加@全员
           if [[ "${{ job.status }}" == "failure" ]]; then
-            MSG="$MSG
+            RAW_MSG="$RAW_MSG
 @all"
           fi
 
-          curl --connect-timeout 10 --max-time 20 -H "Content-Type: application/json;charset=utf-8" -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"$MSG\"}}" "$WEBHOOK" || echo "通知发送失败，但不影响主流程"
+          # 将换行替换为 \n 适配json
+          ESC_MSG=$(echo "$RAW_MSG" | sed ':a;N;$!ba;s/\n/\\n/g')
+
+          # 发送企业微信webhook
+          curl --connect-timeout 10 --max-time 20 \
+            -H "Content-Type: application/json;charset=utf-8" \
+            -d "{\"msgtype\":\"text\",\"text\":{\"content\":\"$ESC_MSG\"}}" \
+            "$WEBHOOK"
