@@ -29,7 +29,7 @@ jobs:
           FIXED3_SWITCH="off"
           FIXED_SOURCE_URL4="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED4_SWITCH="off"
-          EXPIRE_DATETIME="2026-07-01 00:00:00"
+          EXPIRE_DATETIME="2026-09-01 00:00:00"
           TASK_FLAG="expire_task_done.flag"
           GROUP_NAME="央视直播"
           GROUP_SWITCH="on"
@@ -121,7 +121,7 @@ jobs:
           WEBHOOK="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
           export TZ=Asia/Shanghai
           RUN_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-          EXPIRE_TIME="2026-07-01 00:00:00"
+          EXPIRE_TIME="2026-09-01 00:00:00"
           ADVANCE_REMIND_DAYS=30
           FILE_LINK="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/index.php"
           TXT_LINK="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/channels.txt"
