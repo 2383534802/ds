@@ -37,7 +37,7 @@ jobs:
           FIXED3_SWITCH="off"
           FIXED_SOURCE_URL4="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED4_SWITCH="off"
-          EXPIRE_DATETIME="2026-07-01 00:00:00"  # 主源到期时间
+          EXPIRE_DATETIME="2026-09-01 00:00:00"  # 主源到期时间
           TASK_FLAG="expire_task_done.flag"      # 标记文件，用于记录到期状态
           GROUP_NAME="央视直播"                   # 分组名称（将替换所有频道组名）
           GROUP_SWITCH="on"                      # 是否启用分组替换
@@ -116,7 +116,7 @@ jobs:
           WEBHOOK="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"  # 企业微信机器人 Webhook 地址
           export TZ=Asia/Shanghai
           RUN_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-          EXPIRE_TIME="2026-07-01 00:00:00"
+          EXPIRE_TIME="2026-09-01 00:00:00"
           ADVANCE_REMIND_DAYS=30
           FILE_LINK="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/index.php"  # 根据你的仓库自动生成
 
