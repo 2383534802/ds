@@ -30,7 +30,7 @@ jobs:
           BACKUP_URL="https://pastecode.dev/raw/2i9vtj9l/paste1.txt"          # 备用源地址（到期后使用）
           MAIN_URL="https://gh-proxy.org/github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"  # 主源地址
           FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"  # 固定附加源1
-          FIXED1_SWITCH="on"              # 是否启用附加源1（on/off）
+          FIXED1_SWITCH="off"              # 是否启用附加源1（on/off）
           FIXED_SOURCE_URL2="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED2_SWITCH="off"
           FIXED_SOURCE_URL3="https://pastecode.dev/raw/xxxx/xxxx"
