@@ -1,4 +1,3 @@
-# 工作流名称：同步内容到 index.php
 name: 同步内容到 index.php
 
 on:
@@ -18,9 +17,13 @@ jobs:
 
       - name: 核心同步脚本
         run: |
-          # 定义变量
+          # ----- 变量定义 -----
+          # 主源（直接使用 GitHub Raw，若需代理可自行替换）
+          MAIN_URL="https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
+          # 备用源（你原有的备用地址）
           BACKUP_URL="https://pastecode.dev/raw/2i9vtj9l/paste1.txt"
-          MAIN_URL="https://gh-proxy.org/github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"
+          
+          # 附加源（保持不变）
           FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"
           FIXED1_SWITCH="on"
           FIXED_SOURCE_URL2="https://pastecode.dev/raw/xxxx/xxxx"
@@ -29,6 +32,7 @@ jobs:
           FIXED3_SWITCH="off"
           FIXED_SOURCE_URL4="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED4_SWITCH="off"
+          
           EXPIRE_DATETIME="2026-09-01 00:00:00"
           TASK_FLAG="expire_task_done.flag"
           GROUP_NAME="央视直播"
@@ -38,6 +42,7 @@ jobs:
           export TZ=Asia/Shanghai
           NOW_DATETIME=$(date "+%Y-%m-%d %H:%M:%S")
 
+          # 判断是否到期
           if [[ "$NOW_DATETIME" > "$EXPIRE_DATETIME" ]]; then
             TARGET_URL="$BACKUP_URL"
             [ ! -f "$TASK_FLAG" ] && touch "$TASK_FLAG"
@@ -48,17 +53,52 @@ jobs:
             LOAD_FIXED_SOURCE="on"
           fi
 
+          # 备份并清空目标文件
           cp -f index.php index.php.bak 2>/dev/null || true
           > index.php
 
+          # ----- 下载并验证内容是否有效 -----
+          fetch_and_validate() {
+            local url="$1"
+            local output="$2"
+            curl $CURL_OPT -o "$output" "$url"
+            # 检查是否包含 Cloudflare 验证或其他无用页面
+            if grep -q -E "Enable JavaScript|Just a moment|Cloudflare" "$output"; then
+              echo "警告：下载的内容疑似验证页面，源无效" >&2
+              return 1
+            fi
+            # 检查是否包含 M3U 标识（可选）
+            if ! grep -q "#EXTM3U" "$output"; then
+              echo "警告：下载内容不包含 #EXTM3U，可能不是有效直播源" >&2
+              return 1
+            fi
+            return 0
+          }
+
+          # 尝试下载主源（若失败则用备用源）
+          if fetch_and_validate "$TARGET_URL" "temp_source"; then
+            echo "主源下载成功"
+          else
+            echo "主源无效，尝试使用备用源..."
+            if fetch_and_validate "$BACKUP_URL" "temp_source"; then
+              echo "备用源下载成功"
+            else
+              echo "错误：所有源均无效，放弃更新" >&2
+              # 保留原 index.php 不覆盖，并退出
+              rm -f temp_source
+              exit 1
+            fi
+          fi
+
+          # ----- 处理附加源（仅当未到期且开关开启）-----
           if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED1_SWITCH" == "on" ]]; then
             curl $CURL_OPT -o temp_fix1 "$FIXED_SOURCE_URL1"
+            # 也可对附加源进行校验，但简单处理：直接追加
             cat temp_fix1 >> index.php
             rm -f temp_fix1
           fi
 
-          curl $CURL_OPT -o temp_source "$TARGET_URL"
-
+          # 替换分组名称并追加主源内容
           if [[ "$GROUP_SWITCH" == "on" ]]; then
             sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" temp_source > temp_format
           else
@@ -66,23 +106,19 @@ jobs:
           fi
           cat temp_format >> index.php
 
-          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED2_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix2 "$FIXED_SOURCE_URL2"
-            cat temp_fix2 >> index.php
-            rm -f temp_fix2
-          fi
-          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED3_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix3 "$FIXED_SOURCE_URL3"
-            cat temp_fix3 >> index.php
-            rm -f temp_fix3
-          fi
-          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED4_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix4 "$FIXED_SOURCE_URL4"
-            cat temp_fix4 >> index.php
-            rm -f temp_fix4
-          fi
+          # 处理其余附加源
+          for i in 2 3 4; do
+            switch_var="FIXED${i}_SWITCH"
+            url_var="FIXED_SOURCE_URL${i}"
+            if [[ "$LOAD_FIXED_SOURCE" == "on" && "${!switch_var}" == "on" ]]; then
+              curl $CURL_OPT -o "temp_fix${i}" "${!url_var}"
+              cat "temp_fix${i}" >> index.php
+              rm -f "temp_fix${i}"
+            fi
+          done
 
-          rm -f temp_source temp_format temp_fix1 temp_fix2 temp_fix3 temp_fix4 index.php.bak
+          # 清理临时文件
+          rm -f temp_source temp_format index.php.bak
 
       - name: 提交推送变更
         run: |
