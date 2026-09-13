@@ -1,4 +1,4 @@
-name: Auto Sync IPTV
+name: IPTV 自动同步
 
 on:
   schedule:
@@ -13,206 +13,325 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      MAIN_SOURCE_ENABLED: "on"
-      CCTV_SOURCE_ENABLED: "on"
-      JINJIANG_ENABLED: "on"
-      WECHAT_ENABLED: "on"
-
       MAIN_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
       CCTV_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
-      JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/main/jinjinag"
+      JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjinag"
 
       OUTPUT_FILE: "iptv-fe.m3u"
+
+      MAIN_SOURCE_ENABLED: "on"
+      CCTV_SOURCE_ENABLED: "on"
+      JINJIANG_SOURCE_ENABLED: "on"
+
       GROUP_NAME: "央视直播"
       EXPIRE_TIME: "2027-12-01 00:00:00"
 
+      WECHAT_ENABLED: "on"
+
+      # 企业微信 Webhook
+      # 将下面占位符替换成你的完整 Webhook
+      WECHAT_WEBHOOK: "YOUR_WECHAT_WEBHOOK_HERE"
+
     steps:
 
+      # ==========================================
+      # 1. 获取仓库
+      # ==========================================
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 1
 
-      - name: Check old file
-        id: old
+      # ==========================================
+      # 2. 检查旧文件
+      # ==========================================
+      - name: Check current file hash
+        id: hash_check
         shell: bash
         run: |
           if [ -f "$OUTPUT_FILE" ]; then
             OLD_HASH=$(sha256sum "$OUTPUT_FILE" | awk '{print $1}')
-            echo "old_hash=$OLD_HASH" >> "$GITHUB_OUTPUT"
           else
-            echo "old_hash=none" >> "$GITHUB_OUTPUT"
+            OLD_HASH="none"
           fi
 
+          echo "old_hash=$OLD_HASH" >> "$GITHUB_OUTPUT"
+
+          echo "======================================"
+          echo "旧文件 SHA256:"
+          echo "$OLD_HASH"
+          echo "======================================"
+
+      # ==========================================
+      # 3. 下载直播源
+      # ==========================================
       - name: Download sources
         id: download
         shell: bash
         run: |
-          set -u
+          set -e
 
-          : > main.m3u
-          : > cctv.m3u
-          : > jinjiang.m3u
+          rm -f jinjiang.m3u
+          rm -f main.m3u
+          rm -f cctv.m3u
+          rm -f new-iptv.m3u
 
+          echo "开始下载 IPTV 源..."
+
+          # 锦江
+          if [ "$JINJIANG_SOURCE_ENABLED" = "on" ]; then
+            echo "下载锦江源..."
+
+            curl -fL \
+              --retry 3 \
+              --connect-timeout 20 \
+              -o jinjiang.m3u \
+              "$JINJIANG_URL"
+
+            test -s jinjiang.m3u
+
+            echo "锦江源下载成功"
+          fi
+
+          # 主源
           if [ "$MAIN_SOURCE_ENABLED" = "on" ]; then
-            curl -fL --retry 3 --connect-timeout 20 --max-time 120 \
-              "$MAIN_URL" -o main.m3u
+            echo "下载主源..."
+
+            curl -fL \
+              --retry 3 \
+              --connect-timeout 20 \
+              -o main.m3u \
+              "$MAIN_URL"
+
+            test -s main.m3u
+
+            echo "主源下载成功"
           fi
 
+          # CCTV
           if [ "$CCTV_SOURCE_ENABLED" = "on" ]; then
-            curl -fL --retry 3 --connect-timeout 20 --max-time 120 \
-              "$CCTV_URL" -o cctv.m3u
+            echo "下载 CCTV 源..."
+
+            curl -fL \
+              --retry 3 \
+              --connect-timeout 20 \
+              -o cctv.m3u \
+              "$CCTV_URL"
+
+            test -s cctv.m3u
+
+            echo "CCTV 源下载成功"
           fi
 
-          if [ "$JINJIANG_ENABLED" = "on" ]; then
-            curl -fL --retry 3 --connect-timeout 20 --max-time 120 \
-              "$JINJIANG_URL" -o jinjiang.m3u
-          fi
-
-          MAIN_COUNT=$(grep -c '^#EXTINF' main.m3u || true)
-          CCTV_COUNT=$(grep -c '^#EXTINF' cctv.m3u || true)
-          JINJIANG_COUNT=$(grep -c '^#EXTINF' jinjiang.m3u || true)
-
-          echo "main_count=$MAIN_COUNT" >> "$GITHUB_OUTPUT"
-          echo "cctv_count=$CCTV_COUNT" >> "$GITHUB_OUTPUT"
-          echo "jinjiang_count=$JINJIANG_COUNT" >> "$GITHUB_OUTPUT"
-
-          echo "主源：$MAIN_COUNT"
-          echo "CCTV：$CCTV_COUNT"
-          echo "锦江：$JINJIANG_COUNT"
-
-      - name: Fix and merge
+      # ==========================================
+      # 4. 合并直播源
+      #
+      # 顺序：
+      # 锦江
+      # 主源
+      # CCTV
+      # ==========================================
+      - name: Merge and unify groups
         id: merge
         shell: bash
         run: |
+          set -e
+
           echo "#EXTM3U" > new-iptv.m3u
 
+          # --------------------------------------
+          # 锦江：第一位
+          # --------------------------------------
+          if [ "$JINJIANG_SOURCE_ENABLED" = "on" ] && [ -s jinjiang.m3u ]; then
+
+            echo "处理锦江源..."
+
+            tail -n +2 jinjiang.m3u 2>/dev/null \
+              | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
+              | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
+              >> new-iptv.m3u
+
+          fi
+
+          # --------------------------------------
+          # 主源：第二位
+          # --------------------------------------
           if [ "$MAIN_SOURCE_ENABLED" = "on" ] && [ -s main.m3u ]; then
-            grep -v '^#EXTM3U' main.m3u >> new-iptv.m3u || true
+
+            echo "处理主源..."
+
+            tail -n +2 main.m3u 2>/dev/null \
+              | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
+              | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
+              >> new-iptv.m3u
+
           fi
 
+          # --------------------------------------
+          # CCTV：第三位
+          # --------------------------------------
           if [ "$CCTV_SOURCE_ENABLED" = "on" ] && [ -s cctv.m3u ]; then
-            sed -E 's/(tvg-logo="[^"]*")/\1,group-title="央视专版"/' cctv.m3u \
-              | grep -v '^#EXTM3U' >> new-iptv.m3u || true
+
+            echo "处理 CCTV..."
+
+            tail -n +2 cctv.m3u 2>/dev/null \
+              | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
+              | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
+              >> new-iptv.m3u
+
           fi
 
-          if [ "$JINJIANG_ENABLED" = "on" ] && [ -s jinjiang.m3u ]; then
-            grep -v '^#EXTM3U' jinjiang.m3u >> new-iptv.m3u || true
+          # --------------------------------------
+          # 基础检查
+          # --------------------------------------
+          if [ ! -s new-iptv.m3u ]; then
+            echo "合并文件为空"
+            exit 1
           fi
 
           CHANNEL_COUNT=$(grep -c '^#EXTINF' new-iptv.m3u || true)
 
           if [ "$CHANNEL_COUNT" -le 0 ]; then
-            echo "错误：合并后没有有效频道"
+            echo "没有找到频道"
             exit 1
           fi
 
-          echo "channel_count=$CHANNEL_COUNT" >> "$GITHUB_OUTPUT"
-          echo "合并后频道数：$CHANNEL_COUNT"
+          NEW_HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
+          FILE_SIZE=$(wc -c < new-iptv.m3u)
+          LINE_COUNT=$(wc -l < new-iptv.m3u)
 
-      - name: Compare
+          echo "new_hash=$NEW_HASH" >> "$GITHUB_OUTPUT"
+          echo "channel_count=$CHANNEL_COUNT" >> "$GITHUB_OUTPUT"
+          echo "file_size=$FILE_SIZE" >> "$GITHUB_OUTPUT"
+          echo "line_count=$LINE_COUNT" >> "$GITHUB_OUTPUT"
+
+          echo "======================================"
+          echo "合并完成"
+          echo "锦江：置顶"
+          echo "统一分组：央视直播"
+          echo "频道数量：$CHANNEL_COUNT"
+          echo "文件大小：$FILE_SIZE 字节"
+          echo "======================================"
+
+      # ==========================================
+      # 5. 比较文件
+      # ==========================================
+      - name: Compare files
         id: compare
         shell: bash
         run: |
-          NEW_HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
-          OLD_HASH="${{ steps.old.outputs.old_hash }}"
-
-          echo "new_hash=$NEW_HASH" >> "$GITHUB_OUTPUT"
+          OLD_HASH="${{ steps.hash_check.outputs.old_hash }}"
+          NEW_HASH="${{ steps.merge.outputs.new_hash }}"
 
           if [ "$OLD_HASH" = "$NEW_HASH" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "文件没有变化"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "文件有变化"
+            echo "发现 IPTV 内容变化"
           fi
 
+      # ==========================================
+      # 6. 更新并提交
+      # ==========================================
       - name: Update and push
         if: steps.compare.outputs.changed == 'true'
         shell: bash
         run: |
+          set -e
+
           mv new-iptv.m3u "$OUTPUT_FILE"
 
-          git config user.name "GitHub Actions Bot"
+          git config user.name "IPTV Sync Bot"
           git config user.email "actions@github.com"
 
           git add "$OUTPUT_FILE"
-          git commit -m "自动同步 IPTV 直播源"
-          git push origin main
 
-      - name: Enterprise WeChat notification
+          git commit \
+            -m "🔄 自动同步 IPTV - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+
+          git push origin HEAD:main
+
+          echo "IPTV 更新完成"
+
+      # ==========================================
+      # 7. 无变化
+      # ==========================================
+      - name: No changes
+        if: steps.compare.outputs.changed == 'false'
+        shell: bash
+        run: |
+          echo "文件没有变化，跳过提交"
+
+      # ==========================================
+      # 8. 企业微信通知
+      # ==========================================
+      - name: 企业微信通知
         if: always() && env.WECHAT_ENABLED == 'on'
         continue-on-error: true
         shell: bash
-        env:
-          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK }}
         run: |
-          if [ -z "$WECHAT_WEBHOOK" ]; then
-            echo "未配置 WECHAT_WEBHOOK"
+
+          if [ -z "$WECHAT_WEBHOOK" ] || [ "$WECHAT_WEBHOOK" = "YOUR_WECHAT_WEBHOOK_HERE" ]; then
+            echo "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
             exit 0
           fi
 
           RUN_TIME=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')
           JOB_STATUS="${{ job.status }}"
           CHANGED="${{ steps.compare.outputs.changed }}"
-          MAIN_COUNT="${{ steps.download.outputs.main_count }}"
-          CCTV_COUNT="${{ steps.download.outputs.cctv_count }}"
-          JINJIANG_COUNT="${{ steps.download.outputs.jinjiang_count }}"
           CHANNEL_COUNT="${{ steps.merge.outputs.channel_count }}"
-          NEW_HASH="${{ steps.compare.outputs.new_hash }}"
+          NEW_HASH="${{ steps.merge.outputs.new_hash }}"
 
           if [ "$JOB_STATUS" = "success" ]; then
-            STATUS="成功"
+            STATUS_TEXT="✅ 运行成功"
           else
-            STATUS="失败"
+            STATUS_TEXT="❌ 运行失败"
           fi
 
           if [ "$CHANGED" = "true" ]; then
-            CHANGE="有变化，已更新 iptv-fe.m3u"
-          elif [ "$CHANGED" = "false" ]; then
-            CHANGE="无变化，未提交"
+            CHANGE_TEXT="🔄 检测到更新，已提交"
           else
-            CHANGE="任务未完成"
+            CHANGE_TEXT="⏭️ 内容无变化，未提交"
           fi
 
-          export RUN_TIME STATUS CHANGE MAIN_COUNT CCTV_COUNT JINJIANG_COUNT CHANNEL_COUNT NEW_HASH
+          MESSAGE="📡 IPTV 自动同步
 
-          python3 <<'PY'
+$STATUS_TEXT
+
+执行时间：$RUN_TIME
+
+同步周期：每15分钟
+
+锦江：置顶
+主直播源：已同步
+CCTV：已同步
+
+统一分组：央视直播
+
+频道数量：$CHANNEL_COUNT
+
+结果：$CHANGE_TEXT
+
+SHA256：
+$NEW_HASH
+
+到期时间：2027-12-01 00:00:00"
+
+          python3 - "$WECHAT_WEBHOOK" "$MESSAGE" <<'PY'
+          import sys
           import json
-          import os
           import urllib.request
 
-          webhook = os.environ["WECHAT_WEBHOOK"]
-
-          content = f"""📡 IPTV 自动同步任务
-
-          执行时间：{os.environ.get("RUN_TIME", "")}
-          运行状态：{os.environ.get("STATUS", "")}
-          变更状态：{os.environ.get("CHANGE", "")}
-
-          主源频道：{os.environ.get("MAIN_COUNT", "0")}
-          CCTV频道：{os.environ.get("CCTV_COUNT", "0")}
-          锦江频道：{os.environ.get("JINJIANG_COUNT", "0")}
-          合计频道：{os.environ.get("CHANNEL_COUNT", "0")}
-
-          同步周期：每15分钟
-          到期时间：2027-12-01 00:00:00
-
-          文件：iptv-fe.m3u
-
-          SHA256：
-          {os.environ.get("NEW_HASH", "")}
-          """
+          webhook = sys.argv[1]
+          message = sys.argv[2]
 
           data = {
               "msgtype": "text",
               "text": {
-                  "content": content
+                  "content": message
               }
           }
-
-          if os.environ.get("STATUS") == "失败":
-              data["text"]["mentioned_list"] = ["@all"]
 
           request = urllib.request.Request(
               webhook,
@@ -226,20 +345,36 @@ jobs:
               method="POST"
           )
 
-          with urllib.request.urlopen(
-              request,
-              timeout=20
-          ) as response:
-              print(
-                  response.read().decode(
+          try:
+              with urllib.request.urlopen(
+                  request,
+                  timeout=20
+              ) as response:
+                  result = response.read().decode(
                       "utf-8",
                       errors="ignore"
                   )
-              )
+                  print("企业微信返回：")
+                  print(result)
+          except Exception as e:
+              print("企业微信通知失败：")
+              print(e)
           PY
 
-      - name: No changes log
-        if: steps.compare.outputs.changed == 'false'
+      # ==========================================
+      # 9. 最终状态
+      # ==========================================
+      - name: Summary
+        if: always()
         shell: bash
         run: |
-          echo "⏭️ $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S') 文件没有变化"
+          echo "======================================"
+          echo "IPTV 自动同步完成"
+          echo "======================================"
+          echo "状态：${{ job.status }}"
+          echo "文件：$OUTPUT_FILE"
+          echo "锦江：置顶"
+          echo "分组：央视直播"
+          echo "周期：每15分钟"
+          echo "到期：$EXPIRE_TIME"
+          echo "======================================"
