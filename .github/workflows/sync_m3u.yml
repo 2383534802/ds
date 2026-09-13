@@ -16,42 +16,39 @@ jobs:
       MAIN_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
       CCTV_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
       JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjinag"
-
       OUTPUT_FILE: "iptv-fe.m3u"
-      GROUP_NAME: "央视直播"
-
-      MAIN_SOURCE_ENABLED: "on"
-      CCTV_SOURCE_ENABLED: "on"
-      JINJIANG_SOURCE_ENABLED: "on"
-
       WECHAT_ENABLED: "on"
-
-      # 企业微信 Webhook
       WECHAT_WEBHOOK: "YOUR_WECHAT_WEBHOOK_HERE"
 
     steps:
 
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
 
       - name: Download sources
         shell: bash
         run: |
           set -e
 
-          echo "开始下载锦江源..."
-          curl -fL --retry 3 -o jinjiang.m3u "$JINJIANG_URL"
+          echo "下载锦江源..."
+          curl -fL --retry 3 --connect-timeout 20 \
+            -o jinjiang.m3u "$JINJIANG_URL"
+
+          echo "下载主源..."
+          curl -fL --retry 3 --connect-timeout 20 \
+            -o main.m3u "$MAIN_URL"
+
+          echo "下载CCTV..."
+          curl -fL --retry 3 --connect-timeout 20 \
+            -o cctv.m3u "$CCTV_URL"
+
           test -s jinjiang.m3u
-
-          echo "开始下载主源..."
-          curl -fL --retry 3 -o main.m3u "$MAIN_URL"
           test -s main.m3u
-
-          echo "开始下载CCTV..."
-          curl -fL --retry 3 -o cctv.m3u "$CCTV_URL"
           test -s cctv.m3u
 
-          echo "三个直播源下载成功"
+          echo "三个源下载成功"
 
       - name: Build playlist
         id: build
@@ -60,49 +57,61 @@ jobs:
           set -e
 
           rm -f new-iptv.m3u
-
           echo "#EXTM3U" > new-iptv.m3u
 
-          echo "处理锦江源..."
-          tail -n +2 jinjiang.m3u 2>/dev/null \
+          append_source() {
+            FILE="$1"
+
+            if head -n 1 "$FILE" | grep -q "^#EXTM3U"; then
+              tail -n +2 "$FILE"
+            else
+              cat "$FILE"
+            fi
+          }
+
+          echo "锦江置顶..."
+
+          append_source jinjiang.m3u \
             | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
             | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
             >> new-iptv.m3u
 
-          echo "处理主源..."
-          tail -n +2 main.m3u 2>/dev/null \
+          echo "添加主源..."
+
+          append_source main.m3u \
             | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
             | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
             >> new-iptv.m3u
 
-          echo "处理CCTV..."
-          tail -n +2 cctv.m3u 2>/dev/null \
+          echo "添加CCTV..."
+
+          append_source cctv.m3u \
             | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
             | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
             >> new-iptv.m3u
 
-          COUNT=$(grep -c '^#EXTINF' new-iptv.m3u || true)
+          CHANNEL_COUNT=$(grep -c "^#EXTINF" new-iptv.m3u || true)
 
-          if [ "$COUNT" -le 0 ]; then
+          if [ "$CHANNEL_COUNT" -eq 0 ]; then
             echo "错误：没有找到频道"
             exit 1
           fi
 
-          HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
+          NEW_HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
 
-          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
-          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "hash=$NEW_HASH" >> "$GITHUB_OUTPUT"
+          echo "count=$CHANNEL_COUNT" >> "$GITHUB_OUTPUT"
 
           echo "=============================="
-          echo "合并成功"
-          echo "锦江：第一位"
-          echo "主源：第二位"
-          echo "CCTV：第三位"
-          echo "统一分组：央视直播"
-          echo "频道数量：$COUNT"
+          echo "合并完成"
+          echo "锦江：置顶"
+          echo "主源：第二"
+          echo "CCTV：第三"
+          echo "分组：央视直播"
+          echo "频道：$CHANNEL_COUNT"
           echo "=============================="
 
-      - name: Compare files
+      - name: Compare
         id: compare
         shell: bash
         run: |
@@ -114,8 +123,8 @@ jobs:
 
           NEW_HASH="${{ steps.build.outputs.hash }}"
 
-          echo "旧文件：$OLD_HASH"
-          echo "新文件：$NEW_HASH"
+          echo "旧：$OLD_HASH"
+          echo "新：$NEW_HASH"
 
           if [ "$OLD_HASH" = "$NEW_HASH" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -125,8 +134,8 @@ jobs:
             echo "发现文件变化"
           fi
 
-      - name: Update repository
-        if: steps.compare.outputs.changed == 'true'
+      - name: Update and push
+        if: ${{ steps.compare.outputs.changed == 'true' }}
         shell: bash
         run: |
           set -e
@@ -137,22 +146,20 @@ jobs:
           git config user.email "actions@github.com"
 
           git add "$OUTPUT_FILE"
-
           git commit -m "自动同步 IPTV"
+          git push origin HEAD:main
 
-          git push
-
-          echo "文件已经成功推送"
+          echo "推送成功"
 
       - name: No changes
-        if: steps.compare.outputs.changed == 'false'
+        if: ${{ steps.compare.outputs.changed == 'false' }}
         shell: bash
         run: |
-          echo "IPTV 文件没有变化"
+          echo "文件没有变化"
           echo "跳过提交"
 
       - name: Enterprise WeChat
-        if: always() && env.WECHAT_ENABLED == 'on'
+        if: ${{ always() && env.WECHAT_ENABLED == 'on' }}
         continue-on-error: true
         shell: bash
         run: |
@@ -171,33 +178,41 @@ jobs:
           COUNT="${{ steps.build.outputs.count }}"
           TIME=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')
 
-          MESSAGE="IPTV 自动同步
-状态：$STATUS
-时间：$TIME
-同步周期：每15分钟
-锦江：置顶
-主源：已同步
-CCTV：已同步
-统一分组：央视直播
-频道数量：$COUNT
-文件变化：$CHANGED
-到期时间：2027-12-01 00:00:00"
+          if [ "$STATUS" = "success" ]; then
+            STATUS_TEXT="运行成功"
+          else
+            STATUS_TEXT="运行失败"
+          fi
 
-          curl -sS -X POST "$WECHAT_WEBHOOK" \
+          if [ "$CHANGED" = "true" ]; then
+            RESULT_TEXT="检测到更新，已提交"
+          else
+            RESULT_TEXT="内容无变化，未提交"
+          fi
+
+          MESSAGE=$'IPTV 自动同步\n状态：'"$STATUS_TEXT"$'\n时间：'"$TIME"$'\n同步周期：每15分钟\n锦江：置顶\n主源：已同步\nCCTV：已同步\n统一分组：央视直播\n频道数量：'"$COUNT"$'\n结果：'"$RESULT_TEXT"$'\n到期时间：2027-12-01 00:00:00'
+
+          PAYLOAD=$(jq -n \
+            --arg content "$MESSAGE" \
+            '{msgtype:"text",text:{content:$content}}')
+
+          RESPONSE=$(curl -sS \
+            -X POST \
+            "$WECHAT_WEBHOOK" \
             -H "Content-Type: application/json" \
-            --data-raw "{\"msgtype\":\"text\",\"text\":{\"content\":\"$MESSAGE\"}}"
+            --data "$PAYLOAD")
 
-          echo "企业微信通知已发送"
+          echo "企业微信返回：$RESPONSE"
 
       - name: Summary
-        if: always()
+        if: ${{ always() }}
         shell: bash
         run: |
           echo "=============================="
           echo "IPTV 自动同步结束"
           echo "状态：${{ job.status }}"
           echo "锦江：置顶"
-          echo "分组：央视直播"
-          echo "周期：每15分钟"
-          echo "到期：2027-12-01 00:00:00"
+          echo "统一分组：央视直播"
+          echo "同步周期：每15分钟"
+          echo "到期时间：2027-12-01 00:00:00"
           echo "=============================="
