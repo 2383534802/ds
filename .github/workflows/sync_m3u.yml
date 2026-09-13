@@ -1,13 +1,22 @@
+---
+# 工作流名称：同步内容到 index.php
 name: 同步内容到 index.php
 
+# 触发条件：支持手动触发和定时触发（每30分钟一次）
 on:
   workflow_dispatch:
   schedule:
     - cron: '*/30 * * * *'
 
+# GitHub Actions 允许向仓库写入内容
+permissions:
+  contents: write
+
 jobs:
   sync-file:
+    # GitHub Runner
     runs-on: ubuntu-latest
+
     steps:
       # 步骤1：检出仓库代码
       - name: 检出仓库代码
@@ -15,83 +24,343 @@ jobs:
         with:
           fetch-depth: 1
 
-      # 步骤2：核心同步脚本（主要业务逻辑）
+      # 步骤2：核心同步脚本
       - name: 核心同步脚本
         run: |
-          # 定义变量
+          # ==============================
+          # 地址配置
+          # ==============================
+
           BACKUP_URL="https://pastecode.dev/raw/2i9vtj9l/paste1.txt"
+
           MAIN_URL="https://gh-proxy.org/github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"
+
           FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"
           FIXED1_SWITCH="on"
+
           FIXED_SOURCE_URL2="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED2_SWITCH="off"
+
           FIXED_SOURCE_URL3="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED3_SWITCH="off"
+
           FIXED_SOURCE_URL4="https://pastecode.dev/raw/xxxx/xxxx"
           FIXED4_SWITCH="off"
+
+          # ==============================
+          # 到期配置
+          # ==============================
+
           EXPIRE_DATETIME="2027-07-01 00:00:00"
           TASK_FLAG="expire_task_done.flag"
+
+          # ==============================
+          # 分组配置
+          # ==============================
+
           GROUP_NAME="央视直播"
           GROUP_SWITCH="on"
+
+          # ==============================
+          # CURL 配置
+          # ==============================
+
           CURL_OPT="--connect-timeout 5 --max-time 15 --retry 2 --retry-delay 2 -L -s"
 
           export TZ=Asia/Shanghai
+
           NOW_DATETIME=$(date "+%Y-%m-%d %H:%M:%S")
 
+          echo "===================================="
+          echo "直播源同步任务开始"
+          echo "当前时间：$NOW_DATETIME"
+          echo "===================================="
+
+          # ==============================
+          # 判断主源是否到期
+          # ==============================
+
           if [[ "$NOW_DATETIME" > "$EXPIRE_DATETIME" ]]; then
+
+            echo "主源已到期，使用备用源"
+
             TARGET_URL="$BACKUP_URL"
-            [ ! -f "$TASK_FLAG" ] && touch "$TASK_FLAG"
+
+            if [ ! -f "$TASK_FLAG" ]; then
+              touch "$TASK_FLAG"
+            fi
+
             LOAD_FIXED_SOURCE="off"
+
           else
+
+            echo "主源仍在有效期内，使用主源"
+
             TARGET_URL="$MAIN_URL"
+
             rm -f "$TASK_FLAG"
+
             LOAD_FIXED_SOURCE="on"
+
           fi
+
+          echo "目标源：$TARGET_URL"
+          echo "固定源状态：$LOAD_FIXED_SOURCE"
+
+          # ==============================
+          # 备份旧 index.php
+          # ==============================
 
           cp -f index.php index.php.bak 2>/dev/null || true
+
+          # 清空 index.php
           > index.php
 
+          # ==============================
+          # 固定源1
+          #
+          # 防止 Pastecode 返回 HTML / Cloudflare 页面
+          # 从第一个 #EXTM3U 开始截取
+          # ==============================
+
           if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED1_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix1 "$FIXED_SOURCE_URL1"
-            cat temp_fix1 >> index.php
+
+            echo "正在获取固定源1..."
+
+            curl $CURL_OPT \
+              -o temp_fix1 \
+              "$FIXED_SOURCE_URL1"
+
+            if [ -s temp_fix1 ]; then
+
+              if grep -q "#EXTM3U" temp_fix1; then
+
+                echo "固定源1检测到 M3U 内容"
+
+                # 从第一个 #EXTM3U 开始
+                sed -n '/#EXTM3U/,$p' temp_fix1 >> index.php
+
+              else
+
+                echo "警告：固定源1没有检测到 #EXTM3U"
+                echo "固定源1可能返回了网页或错误页面"
+
+              fi
+
+            else
+
+              echo "警告：固定源1下载失败"
+
+            fi
+
             rm -f temp_fix1
+
           fi
 
-          curl $CURL_OPT -o temp_source "$TARGET_URL"
+          # ==============================
+          # 获取主源 / 备用源
+          # ==============================
+
+          echo "正在获取主直播源..."
+
+          curl $CURL_OPT \
+            -o temp_source \
+            "$TARGET_URL"
+
+          # ==============================
+          # 检查主源
+          # ==============================
+
+          if [ ! -s temp_source ]; then
+
+            echo "错误：主源下载失败"
+
+            # 如果旧文件存在，则恢复
+            if [ -f index.php.bak ]; then
+              cp -f index.php.bak index.php
+              echo "已恢复旧 index.php"
+            fi
+
+            rm -f temp_source
+            exit 1
+
+          fi
+
+          # ==============================
+          # 检查是否存在 M3U
+          # ==============================
+
+          if grep -q "#EXTM3U" temp_source; then
+
+            echo "主源检测到 M3U 内容"
+
+          else
+
+            echo "错误：主源没有检测到 #EXTM3U"
+
+            # 恢复旧文件
+            if [ -f index.php.bak ]; then
+              cp -f index.php.bak index.php
+              echo "已恢复旧 index.php"
+            fi
+
+            rm -f temp_source
+            exit 1
+
+          fi
+
+          # ==============================
+          # 主源格式处理
+          # ==============================
 
           if [[ "$GROUP_SWITCH" == "on" ]]; then
-            sed "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" temp_source > temp_format
+
+            echo "正在统一分组：$GROUP_NAME"
+
+            sed \
+              "s/group-title=\"[^\"]*\"/group-title=\"${GROUP_NAME}\"/g" \
+              temp_source > temp_format
+
           else
+
             cp temp_source temp_format
+
           fi
+
+          # ==============================
+          # 写入主源
+          # ==============================
+
           cat temp_format >> index.php
 
+          # ==============================
+          # 固定源2
+          # ==============================
+
           if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED2_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix2 "$FIXED_SOURCE_URL2"
-            cat temp_fix2 >> index.php
+
+            echo "正在获取固定源2..."
+
+            curl $CURL_OPT \
+              -o temp_fix2 \
+              "$FIXED_SOURCE_URL2"
+
+            if [ -s temp_fix2 ] && grep -q "#EXTM3U" temp_fix2; then
+
+              sed -n '/#EXTM3U/,$p' temp_fix2 >> index.php
+
+            else
+
+              echo "警告：固定源2没有有效 M3U 内容"
+
+            fi
+
             rm -f temp_fix2
-          fi
-          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED3_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix3 "$FIXED_SOURCE_URL3"
-            cat temp_fix3 >> index.php
-            rm -f temp_fix3
-          fi
-          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED4_SWITCH" == "on" ]]; then
-            curl $CURL_OPT -o temp_fix4 "$FIXED_SOURCE_URL4"
-            cat temp_fix4 >> index.php
-            rm -f temp_fix4
+
           fi
 
-          rm -f temp_source temp_format temp_fix1 temp_fix2 temp_fix3 temp_fix4 index.php.bak
+          # ==============================
+          # 固定源3
+          # ==============================
+
+          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED3_SWITCH" == "on" ]]; then
+
+            echo "正在获取固定源3..."
+
+            curl $CURL_OPT \
+              -o temp_fix3 \
+              "$FIXED_SOURCE_URL3"
+
+            if [ -s temp_fix3 ] && grep -q "#EXTM3U" temp_fix3; then
+
+              sed -n '/#EXTM3U/,$p' temp_fix3 >> index.php
+
+            else
+
+              echo "警告：固定源3没有有效 M3U 内容"
+
+            fi
+
+            rm -f temp_fix3
+
+          fi
+
+          # ==============================
+          # 固定源4
+          # ==============================
+
+          if [[ "$LOAD_FIXED_SOURCE" == "on" && "$FIXED4_SWITCH" == "on" ]]; then
+
+            echo "正在获取固定源4..."
+
+            curl $CURL_OPT \
+              -o temp_fix4 \
+              "$FIXED_SOURCE_URL4"
+
+            if [ -s temp_fix4 ] && grep -q "#EXTM3U" temp_fix4; then
+
+              sed -n '/#EXTM3U/,$p' temp_fix4 >> index.php
+
+            else
+
+              echo "警告：固定源4没有有效 M3U 内容"
+
+            fi
+
+            rm -f temp_fix4
+
+          fi
+
+          # ==============================
+          # 清理临时文件
+          # ==============================
+
+          rm -f \
+            temp_source \
+            temp_format \
+            temp_fix1 \
+            temp_fix2 \
+            temp_fix3 \
+            temp_fix4 \
+            index.php.bak
+
+          # ==============================
+          # 最终检查
+          # ==============================
+
+          if [ ! -s index.php ]; then
+
+            echo "错误：最终 index.php 是空文件"
+            exit 1
+
+          fi
+
+          if ! grep -q "#EXTM3U" index.php; then
+
+            echo "错误：最终 index.php 不包含 #EXTM3U"
+            exit 1
+
+          fi
+
+          echo "===================================="
+          echo "同步完成"
+          echo "index.php 文件大小："
+          wc -c index.php
+          echo "===================================="
+
 
       # 步骤3：提交并推送变更到仓库
       - name: 提交推送变更
         run: |
           git config --global user.name "actions@codeberg"
           git config --global user.email "actions@codeberg.org"
+
           git add index.php
+
           git commit -m "自动同步：更新 index.php" || echo "无变更"
+
           git push
+
 
       # 步骤4：企业微信通知（无论前面的步骤成功或失败，都会执行）
       - name: 企业微信同步通知
