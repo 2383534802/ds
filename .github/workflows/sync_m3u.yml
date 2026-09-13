@@ -38,7 +38,7 @@ jobs:
 
           MAIN_URL="https://gh-proxy.org/github.com/ioptu/migu_video/raw/refs/heads/main/migu.m3u"
 
-          FIXED_SOURCE_URL1="https://pastecode.dev/raw/eq5q34ns/%E5%9B%BA%E5%AE%9A"
+          FIXED_SOURCE_URL1="https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjinag"
           FIXED1_SWITCH="on"
 
           FIXED_SOURCE_URL2="https://pastecode.dev/raw/xxxx/xxxx"
