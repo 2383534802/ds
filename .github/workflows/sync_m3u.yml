@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  sync-and-notify:
+  sync:
     runs-on: ubuntu-latest
 
     env:
@@ -19,7 +19,6 @@ jobs:
 
       OUTPUT_FILE: "iptv-fe.m3u"
       GROUP_NAME: "央视直播"
-      EXPIRE_TIME: "2027-12-01 00:00:00"
 
       MAIN_SOURCE_ENABLED: "on"
       CCTV_SOURCE_ENABLED: "on"
@@ -27,24 +26,84 @@ jobs:
 
       WECHAT_ENABLED: "on"
 
-      # 在这里填写你的企业微信 Webhook
+      # 企业微信 Webhook
       WECHAT_WEBHOOK: "YOUR_WECHAT_WEBHOOK_HERE"
 
     steps:
 
-      # ==============================
-      # 获取仓库
-      # ==============================
       - name: Checkout
         uses: actions/checkout@v5
-        with:
-          fetch-depth: 1
 
-      # ==============================
-      # 检查旧文件
-      # ==============================
-      - name: Check old file
-        id: old
+      - name: Download sources
+        shell: bash
+        run: |
+          set -e
+
+          echo "开始下载锦江源..."
+          curl -fL --retry 3 -o jinjiang.m3u "$JINJIANG_URL"
+          test -s jinjiang.m3u
+
+          echo "开始下载主源..."
+          curl -fL --retry 3 -o main.m3u "$MAIN_URL"
+          test -s main.m3u
+
+          echo "开始下载CCTV..."
+          curl -fL --retry 3 -o cctv.m3u "$CCTV_URL"
+          test -s cctv.m3u
+
+          echo "三个直播源下载成功"
+
+      - name: Build playlist
+        id: build
+        shell: bash
+        run: |
+          set -e
+
+          rm -f new-iptv.m3u
+
+          echo "#EXTM3U" > new-iptv.m3u
+
+          echo "处理锦江源..."
+          tail -n +2 jinjiang.m3u 2>/dev/null \
+            | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
+            | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
+            >> new-iptv.m3u
+
+          echo "处理主源..."
+          tail -n +2 main.m3u 2>/dev/null \
+            | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
+            | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
+            >> new-iptv.m3u
+
+          echo "处理CCTV..."
+          tail -n +2 cctv.m3u 2>/dev/null \
+            | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
+            | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
+            >> new-iptv.m3u
+
+          COUNT=$(grep -c '^#EXTINF' new-iptv.m3u || true)
+
+          if [ "$COUNT" -le 0 ]; then
+            echo "错误：没有找到频道"
+            exit 1
+          fi
+
+          HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
+
+          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+          echo "=============================="
+          echo "合并成功"
+          echo "锦江：第一位"
+          echo "主源：第二位"
+          echo "CCTV：第三位"
+          echo "统一分组：央视直播"
+          echo "频道数量：$COUNT"
+          echo "=============================="
+
+      - name: Compare files
+        id: compare
         shell: bash
         run: |
           if [ -f "$OUTPUT_FILE" ]; then
@@ -53,150 +112,20 @@ jobs:
             OLD_HASH="none"
           fi
 
-          echo "old_hash=$OLD_HASH" >> "$GITHUB_OUTPUT"
+          NEW_HASH="${{ steps.build.outputs.hash }}"
 
-          echo "旧文件 SHA256: $OLD_HASH"
-
-      # ==============================
-      # 下载源
-      # ==============================
-      - name: Download sources
-        shell: bash
-        run: |
-          set -e
-
-          rm -f jinjiang.m3u
-          rm -f main.m3u
-          rm -f cctv.m3u
-          rm -f new-iptv.m3u
-
-          echo "开始下载 IPTV 源..."
-
-          if [ "$JINJIANG_SOURCE_ENABLED" = "on" ]; then
-            curl -fL --retry 3 --connect-timeout 20 \
-              -o jinjiang.m3u \
-              "$JINJIANG_URL"
-
-            test -s jinjiang.m3u
-            echo "锦江源下载成功"
-          fi
-
-          if [ "$MAIN_SOURCE_ENABLED" = "on" ]; then
-            curl -fL --retry 3 --connect-timeout 20 \
-              -o main.m3u \
-              "$MAIN_URL"
-
-            test -s main.m3u
-            echo "主源下载成功"
-          fi
-
-          if [ "$CCTV_SOURCE_ENABLED" = "on" ]; then
-            curl -fL --retry 3 --connect-timeout 20 \
-              -o cctv.m3u \
-              "$CCTV_URL"
-
-            test -s cctv.m3u
-            echo "CCTV 源下载成功"
-          fi
-
-      # ==============================
-      # 合并
-      #
-      # 锦江
-      # 主源
-      # CCTV
-      # ==============================
-      - name: Merge IPTV
-        id: merge
-        shell: bash
-        run: |
-          set -e
-
-          echo "#EXTM3U" > new-iptv.m3u
-
-          echo "处理锦江源..."
-
-          if [ "$JINJIANG_SOURCE_ENABLED" = "on" ] && [ -s jinjiang.m3u ]; then
-            tail -n +2 jinjiang.m3u 2>/dev/null \
-              | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
-              | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
-              >> new-iptv.m3u
-          fi
-
-          echo "处理主源..."
-
-          if [ "$MAIN_SOURCE_ENABLED" = "on" ] && [ -s main.m3u ]; then
-            tail -n +2 main.m3u 2>/dev/null \
-              | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
-              | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
-              >> new-iptv.m3u
-          fi
-
-          echo "处理 CCTV..."
-
-          if [ "$CCTV_SOURCE_ENABLED" = "on" ] && [ -s cctv.m3u ]; then
-            tail -n +2 cctv.m3u 2>/dev/null \
-              | sed -E 's/[[:space:]]*group-title="[^"]*"//g' \
-              | sed -E 's/^#EXTINF([^,]*),/#EXTINF\1 group-title="央视直播",/' \
-              >> new-iptv.m3u
-          fi
-
-          if [ ! -s new-iptv.m3u ]; then
-            echo "错误：合并文件为空"
-            exit 1
-          fi
-
-          CHANNEL_COUNT=$(grep -c "^#EXTINF" new-iptv.m3u || true)
-
-          if [ "$CHANNEL_COUNT" -le 0 ]; then
-            echo "错误：没有找到频道"
-            exit 1
-          fi
-
-          NEW_HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
-          FILE_SIZE=$(wc -c < new-iptv.m3u)
-          LINE_COUNT=$(wc -l < new-iptv.m3u)
-
-          echo "new_hash=$NEW_HASH" >> "$GITHUB_OUTPUT"
-          echo "channel_count=$CHANNEL_COUNT" >> "$GITHUB_OUTPUT"
-          echo "file_size=$FILE_SIZE" >> "$GITHUB_OUTPUT"
-          echo "line_count=$LINE_COUNT" >> "$GITHUB_OUTPUT"
-
-          echo "=============================="
-          echo "合并完成"
-          echo "锦江：第一位"
-          echo "主源：第二位"
-          echo "CCTV：第三位"
-          echo "统一分组：央视直播"
-          echo "频道数量：$CHANNEL_COUNT"
-          echo "文件大小：$FILE_SIZE 字节"
-          echo "=============================="
-
-      # ==============================
-      # 比较
-      # ==============================
-      - name: Compare
-        id: compare
-        shell: bash
-        run: |
-          OLD_HASH="${{ steps.old.outputs.old_hash }}"
-          NEW_HASH="${{ steps.merge.outputs.new_hash }}"
-
-          echo "旧 HASH: $OLD_HASH"
-          echo "新 HASH: $NEW_HASH"
+          echo "旧文件：$OLD_HASH"
+          echo "新文件：$NEW_HASH"
 
           if [ "$OLD_HASH" = "$NEW_HASH" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "没有变化"
+            echo "文件没有变化"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "检测到 IPTV 内容变化"
+            echo "发现文件变化"
           fi
 
-      # ==============================
-      # 更新并推送
-      # ==============================
-      - name: Update and push
+      - name: Update repository
         if: steps.compare.outputs.changed == 'true'
         shell: bash
         run: |
@@ -209,16 +138,12 @@ jobs:
 
           git add "$OUTPUT_FILE"
 
-          git commit \
-            -m "🔄 自动同步 IPTV $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "自动同步 IPTV"
 
-          git push origin HEAD:main
+          git push
 
-          echo "推送成功"
+          echo "文件已经成功推送"
 
-      # ==============================
-      # 没有变化
-      # ==============================
       - name: No changes
         if: steps.compare.outputs.changed == 'false'
         shell: bash
@@ -226,102 +151,44 @@ jobs:
           echo "IPTV 文件没有变化"
           echo "跳过提交"
 
-      # ==============================
-      # 企业微信
-      # ==============================
-      - name: 企业微信通知
+      - name: Enterprise WeChat
         if: always() && env.WECHAT_ENABLED == 'on'
         continue-on-error: true
         shell: bash
         run: |
-          if [ -z "$WECHAT_WEBHOOK" ] || [ "$WECHAT_WEBHOOK" = "YOUR_WECHAT_WEBHOOK_HERE" ]; then
-            echo "未填写企业微信 Webhook"
+          if [ -z "$WECHAT_WEBHOOK" ]; then
+            echo "没有填写企业微信 Webhook"
             exit 0
           fi
 
-          RUN_TIME=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')
-          JOB_STATUS="${{ job.status }}"
+          if [ "$WECHAT_WEBHOOK" = "YOUR_WECHAT_WEBHOOK_HERE" ]; then
+            echo "没有填写企业微信 Webhook"
+            exit 0
+          fi
+
+          STATUS="${{ job.status }}"
           CHANGED="${{ steps.compare.outputs.changed }}"
-          CHANNEL_COUNT="${{ steps.merge.outputs.channel_count }}"
+          COUNT="${{ steps.build.outputs.count }}"
+          TIME=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')
 
-          if [ "$JOB_STATUS" = "success" ]; then
-            STATUS="✅ 运行成功"
-          else
-            STATUS="❌ 运行失败"
-          fi
-
-          if [ "$CHANGED" = "true" ]; then
-            RESULT="🔄 IPTV 已更新并提交"
-          else
-            RESULT="⏭️ IPTV 没有变化"
-          fi
-
-          MESSAGE="📡 IPTV 自动同步
-
-$STATUS
-
-执行时间：$RUN_TIME
+          MESSAGE="IPTV 自动同步
+状态：$STATUS
+时间：$TIME
 同步周期：每15分钟
-
 锦江：置顶
 主源：已同步
 CCTV：已同步
-
 统一分组：央视直播
-频道数量：$CHANNEL_COUNT
-
-结果：$RESULT
-
+频道数量：$COUNT
+文件变化：$CHANGED
 到期时间：2027-12-01 00:00:00"
 
-          python3 - "$WECHAT_WEBHOOK" "$MESSAGE" <<'PY'
-          import sys
-          import json
-          import urllib.request
+          curl -sS -X POST "$WECHAT_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            --data-raw "{\"msgtype\":\"text\",\"text\":{\"content\":\"$MESSAGE\"}}"
 
-          webhook = sys.argv[1]
-          message = sys.argv[2]
+          echo "企业微信通知已发送"
 
-          data = {
-              "msgtype": "text",
-              "text": {
-                  "content": message
-              }
-          }
-
-          request = urllib.request.Request(
-              webhook,
-              data=json.dumps(
-                  data,
-                  ensure_ascii=False
-              ).encode("utf-8"),
-              headers={
-                  "Content-Type": "application/json"
-              },
-              method="POST"
-          )
-
-          try:
-              with urllib.request.urlopen(
-                  request,
-                  timeout=20
-              ) as response:
-                  result = response.read().decode(
-                      "utf-8",
-                      errors="ignore"
-                  )
-
-                  print("企业微信返回：")
-                  print(result)
-
-          except Exception as error:
-              print("企业微信通知失败：")
-              print(error)
-          PY
-
-      # ==============================
-      # 最终状态
-      # ==============================
       - name: Summary
         if: always()
         shell: bash
@@ -332,5 +199,5 @@ CCTV：已同步
           echo "锦江：置顶"
           echo "分组：央视直播"
           echo "周期：每15分钟"
-          echo "到期：$EXPIRE_TIME"
+          echo "到期：2027-12-01 00:00:00"
           echo "=============================="
