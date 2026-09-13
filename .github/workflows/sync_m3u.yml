@@ -273,7 +273,7 @@ jobs:
         run: |
 
           if [ -z "$WECHAT_WEBHOOK" ] || [ "$WECHAT_WEBHOOK" = "YOUR_WECHAT_WEBHOOK_HERE" ]; then
-            echo "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
+            echo "未填写企业微信 Webhook"
             exit 0
           fi
 
