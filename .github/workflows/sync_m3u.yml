@@ -18,7 +18,7 @@ jobs:
       JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjinag"
       OUTPUT_FILE: "iptv-fe.m3u"
       WECHAT_ENABLED: "on"
-      WECHAT_WEBHOOK: "YOUR_WECHAT_WEBHOOK_HERE"
+      WECHAT_WEBHOOK: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
 
     steps:
 
