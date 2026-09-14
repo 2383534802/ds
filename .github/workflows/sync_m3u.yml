@@ -1,8 +1,6 @@
 name: IPTV 自动同步
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,7 +13,7 @@ jobs:
     env:
       MAIN_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
       CCTV_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
-      JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjinag"
+      JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjiang"
       OUTPUT_FILE: "iptv-fe.m3u"
       WECHAT_ENABLED: "on"
       WECHAT_WEBHOOK: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
@@ -190,7 +188,7 @@ jobs:
             RESULT_TEXT="内容无变化，未提交"
           fi
 
-          MESSAGE=$'IPTV 自动同步\n状态：'"$STATUS_TEXT"$'\n时间：'"$TIME"$'\n同步周期：每15分钟\n锦江：置顶\n主源：已同步\nCCTV：已同步\n统一分组：央视直播\n频道数量：'"$COUNT"$'\n结果：'"$RESULT_TEXT"$'\n到期时间：2027-12-01 00:00:00'
+          MESSAGE=$'IPTV 自动同步\n状态：'"$STATUS_TEXT"$'\n时间：'"$TIME"$'\n同步周期：每30分钟\n锦江：置顶\n主源：已同步\nCCTV：已同步\n统一分组：央视直播\n频道数量：'"$COUNT"$'\n结果：'"$RESULT_TEXT"
 
           PAYLOAD=$(jq -n \
             --arg content "$MESSAGE" \
@@ -213,6 +211,5 @@ jobs:
           echo "状态：${{ job.status }}"
           echo "锦江：置顶"
           echo "统一分组：央视直播"
-          echo "同步周期：每15分钟"
-          echo "到期时间：2027-12-01 00:00:00"
+          echo "同步周期：每30分钟"
           echo "=============================="
