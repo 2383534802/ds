@@ -98,11 +98,6 @@ jobs:
           else
             RESULT_TEXT="源内容无变动，未推送"
           fi
-          MESSAGE="IPTV自动同步
-状态：${STATUS_TEXT}
-执行时间：${TIME}
-频道数量：${COUNT}
-结果：${RESULT_TEXT}
-播放列表直链：https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/iptv-fe.m3u"
+          MESSAGE="IPTV自动同步 状态：${STATUS_TEXT} 执行时间：${TIME} 频道数量：${COUNT} 结果：${RESULT_TEXT} 播放列表直链：https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/iptv-fe.m3u"
           PAYLOAD=$(jq -n --arg msg "$MESSAGE" '{msgtype:"text", text:{content:$msg}}')
           curl -s -X POST "$WECHAT_WEBHOOK" -H "Content-Type:application/json" -d "$PAYLOAD"
