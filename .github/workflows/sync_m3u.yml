@@ -76,10 +76,9 @@ jobs:
           mv new-iptv.m3u "$OUTPUT_FILE"
           git config user.name "IPTV Sync Bot"
           git config user.email "actions@github.com"
-          git pull origin main --rebase
           git add "$OUTPUT_FILE"
           git commit -m "自动更新 IPTV 播放列表"
-          git push origin HEAD:main
+          git push origin HEAD:main --force-with-lease
 
       - name: 企业微信通知
         if: ${{ always() && env.WECHAT_WEBHOOK != '' }}
@@ -88,7 +87,7 @@ jobs:
           STATUS="${{ job.status }}"
           CHANGED="${{ steps.compare.outputs.changed }}"
           COUNT="${{ steps.build.outputs.count }}"
-          TIME=$(date '+%Y-%m-%d %Y-%m-%d %H:%M:%S')
+          TIME=$(date '+%Y-%m-%d %H:%M:%S')
           if [ "$STATUS" = "success" ]; then
             STATUS_TEXT="✅运行成功"
           else
