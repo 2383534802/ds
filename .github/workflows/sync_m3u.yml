@@ -10,7 +10,7 @@ jobs:
     env:
       MAIN_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
       CCTV_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
-      JINJIANG_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjiang"
+      JINJIANG_URL: ""
       OUTPUT_FILE: "iptv-fe.m3u"
       # =========这里粘贴你新生成的企微webhook完整地址=========
       WECHAT_WEBHOOK: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
