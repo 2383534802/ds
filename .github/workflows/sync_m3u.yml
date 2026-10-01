@@ -1,104 +1,1259 @@
 name: IPTV 自动同步
+
 on:
   workflow_dispatch:
-permissions:
-  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     env:
-      MAIN_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
-      CCTV_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
-      JINJIANG_URL: ""
-      OUTPUT_FILE: "iptv-fe.m3u"
-      # =========这里粘贴你新生成的企微webhook完整地址=========
-      WECHAT_WEBHOOK: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b581707c-2415-4b9e-958e-9d0f8fdba1cb"
+      # =========================================================
+      # 输出文件
+      # =========================================================
+      OUTPUT_FILE: index.php
+
+      # =========================================================
+      # 源 1：咪咕主源
+      # =========================================================
+      SOURCE_1_ENABLED: "on"
+      SOURCE_1_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
+
+      # =========================================================
+      # 源 2：咪咕 CCTV 源
+      # =========================================================
+      SOURCE_2_ENABLED: "on"
+      SOURCE_2_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
+
+      # =========================================================
+      # 源 3：锦江酒店自有视频源
+      # =========================================================
+      SOURCE_3_ENABLED: "off"
+      SOURCE_3_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjiang"
+
+      # =========================================================
+      # 源 4
+      # =========================================================
+      SOURCE_4_ENABLED: "off"
+      SOURCE_4_URL: ""
+
+      # =========================================================
+      # 源 5
+      # =========================================================
+      SOURCE_5_ENABLED: "off"
+      SOURCE_5_URL: ""
+
+      # =========================================================
+      # 源 6
+      # =========================================================
+      SOURCE_6_ENABLED: "off"
+      SOURCE_6_URL: ""
+
+      # =========================================================
+      # 源 7
+      # =========================================================
+      SOURCE_7_ENABLED: "off"
+      SOURCE_7_URL: ""
+
+      # =========================================================
+      # 源 8
+      # =========================================================
+      SOURCE_8_ENABLED: "off"
+      SOURCE_8_URL: ""
+
+      # =========================================================
+      # 统一分组
+      #
+      # on  -> 按程序处理（去重、CCTV 标准化、统一分组）
+      # off -> 完全原样输出源文件，什么都不修改
+      # =========================================================
+      UNIFIED_GROUP_ENABLED: "off"
+      UNIFIED_GROUP_TITLE: "央视直播"
+
+      # =========================================================
+      # CCTV 名称标准化
+      # =========================================================
+      CCTV_NAME_STANDARDIZE_ENABLED: "on"
+
+      # =========================================================
+      # 企业微信
+      # =========================================================
+      WECHAT_ENABLED: "on"
+      WECHAT_KEY: "b581707c-2415-4b9e-958e-9d0f8fdba1cb"
+
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v5
 
-      - name: 下载源文件
+      # =========================================================
+      # 1. Checkout 仓库
+      # =========================================================
+      - name: Checkout 仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # =========================================================
+      # 2. 下载直播源
+      # =========================================================
+      - name: 下载直播源
         shell: bash
         run: |
-          set -e
-          curl -fL --retry 3 --connect-timeout 20 -o jinjiang.m3u "$JINJIANG_URL"
-          curl -fL --retry 3 --connect-timeout 20 -o main.m3u "$MAIN_URL"
-          curl -fL --retry 3 --connect-timeout 20 -o cctv.m3u "$CCTV_URL"
-          test -s jinjiang.m3u
-          test -s main.m3u
-          test -s cctv.m3u
+          set -euo pipefail
 
-      - name: 合并生成播放列表
-        id: build
-        shell: bash
-        run: |
-          set -e
-          rm -f new-iptv.m3u
-          echo "#EXTM3U" > new-iptv.m3u
-          append_source() {
-            FILE="$1"
-            if head -n1 "$FILE" | grep -q "^#EXTM3U"; then
-              tail -n +2 "$FILE"
-            else
-              cat "$FILE"
+          download_source() {
+            local enabled="$1"
+            local url="$2"
+            local file="$3"
+
+            if [ "$enabled" != "on" ]; then
+              echo "跳过：$file"
+              return 0
             fi
-          }
-          append_source jinjiang.m3u | sed -E 's/[[:space:]]*group-title="[^"]*"//g; s/(#EXTINF.*,)/\1 group-title="央视直播",/' >> new-iptv.m3u
-          append_source main.m3u | sed -E 's/[[:space:]]*group-title="[^"]*"//g; s/(#EXTINF.*,)/\1 group-title="央视直播",/' >> new-iptv.m3u
-          append_source cctv.m3u | sed -E 's/[[:space:]]*group-title="[^"]*"//g; s/(#EXTINF.*,)/\1 group-title="央视直播",/' >> new-iptv.m3u
-          CHANNEL_COUNT=$(grep -c "^#EXTINF" new-iptv.m3u || true)
-          NEW_HASH=$(sha256sum new-iptv.m3u | awk '{print $1}')
-          echo "hash=$NEW_HASH" >> "$GITHUB_OUTPUT"
-          echo "count=$CHANNEL_COUNT" >> "$GITHUB_OUTPUT"
 
-      - name: 对比文件变化
+            if [ -z "$url" ]; then
+              echo "错误：$file 已开启，但是 URL 为空"
+              return 1
+            fi
+
+            echo
+            echo "========================================"
+            echo "下载：$file"
+            echo "========================================"
+            echo "URL：$url"
+
+            curl -fL \
+              --retry 3 \
+              --retry-delay 2 \
+              --connect-timeout 20 \
+              --max-time 180 \
+              -A "Mozilla/5.0 IPTV-Sync/1.0" \
+              "$url" \
+              -o "$file"
+
+            if [ ! -s "$file" ]; then
+              echo "错误：$file 下载后为空"
+              return 1
+            fi
+
+            echo "下载成功：$file"
+            echo "文件大小：$(wc -c < "$file") bytes"
+          }
+
+          download_source \
+            "$SOURCE_1_ENABLED" \
+            "$SOURCE_1_URL" \
+            "source1.m3u"
+
+          download_source \
+            "$SOURCE_2_ENABLED" \
+            "$SOURCE_2_URL" \
+            "source2.m3u"
+
+          download_source \
+            "$SOURCE_3_ENABLED" \
+            "$SOURCE_3_URL" \
+            "source3.m3u"
+
+          download_source \
+            "$SOURCE_4_ENABLED" \
+            "$SOURCE_4_URL" \
+            "source4.m3u"
+
+          download_source \
+            "$SOURCE_5_ENABLED" \
+            "$SOURCE_5_URL" \
+            "source5.m3u"
+
+          download_source \
+            "$SOURCE_6_ENABLED" \
+            "$SOURCE_6_URL" \
+            "source6.m3u"
+
+          download_source \
+            "$SOURCE_7_ENABLED" \
+            "$SOURCE_7_URL" \
+            "source7.m3u"
+
+          download_source \
+            "$SOURCE_8_ENABLED" \
+            "$SOURCE_8_URL" \
+            "source8.m3u"
+
+      # =========================================================
+      # 3. 整理并合并直播源
+      # =========================================================
+      - name: 整理并合并直播源
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          WORK_FILE="new-index.php"
+
+          rm -f "$WORK_FILE"
+          : > "$WORK_FILE"
+
+          printf '%s\n' '#EXTM3U' >> "$WORK_FILE"
+
+          # =====================================================
+          # 去除首尾空格
+          # =====================================================
+          trim() {
+            local s="$1"
+
+            s="${s#"${s%%[![:space:]]*}"}"
+            s="${s%"${s##*[![:space:]]}"}"
+
+            printf '%s' "$s"
+          }
+
+          # =====================================================
+          # HTML 实体简单还原
+          # =====================================================
+          html_decode_basic() {
+            printf '%s' "$1" |
+              sed \
+                -e 's/&amp;/\&/g' \
+                -e 's/&quot;/"/g' \
+                -e "s/&#39;/'/g" \
+                -e 's/&lt;/</g' \
+                -e 's/&gt;/>/g'
+          }
+
+          # =====================================================
+          # 提取 EXTINF 属性
+          # =====================================================
+          extract_attr() {
+            local line="$1"
+            local attr="$2"
+
+            printf '%s\n' "$line" |
+              sed -nE "s/.*[[:space:]]${attr}=\"([^\"]*)\".*/\1/p"
+          }
+
+          # =====================================================
+          # 提取真正频道名称
+          # =====================================================
+          extract_display_name() {
+            local line="$1"
+            local result
+
+            case "$line" in
+              *,*)
+                result="${line#*,}"
+                ;;
+              *)
+                printf ''
+                return 0
+                ;;
+            esac
+
+            result=$(printf '%s' "$result" |
+              sed -E 's/[[:space:]]*group-title="[^"]*"//g')
+
+            case "$result" in
+              *,*)
+                result="${result##*,}"
+                ;;
+            esac
+
+            result=$(printf '%s' "$result" |
+              sed -E 's/[[:space:]]*group-title="[^"]*"//g')
+
+            result=$(trim "$result")
+            result=$(html_decode_basic "$result")
+
+            printf '%s' "$result"
+          }
+
+          # =====================================================
+          # CCTV 判断
+          # =====================================================
+          cctv_key() {
+            local raw="$1"
+            local name
+
+            name=$(html_decode_basic "$raw")
+
+            name=$(printf '%s' "$name" |
+              sed -E 's/[[:space:]_—–-]+//g')
+
+            case "$name" in
+
+              CCTV4K*|*CCTV4K*)
+                printf 'CCTV4K'
+                ;;
+
+              CCTV8K*|*CCTV8K*)
+                printf 'CCTV8K'
+                ;;
+
+              CCTV5+*|*CCTV5+*|CCTV5P*|*CCTV5P*)
+                printf 'CCTV5+'
+                ;;
+
+              CCTV4中文国际*|*CCTV4中文国际*)
+                printf 'CCTV4中文国际'
+                ;;
+
+              CCTV4国际*|*CCTV4国际*)
+                printf 'CCTV4中文国际'
+                ;;
+
+              CCTV4中文*|*CCTV4中文*)
+                printf 'CCTV4中文国际'
+                ;;
+
+              CCTV4欧洲*|*CCTV4欧洲*)
+                printf 'CCTV4欧洲'
+                ;;
+
+              CCTV4美洲*|*CCTV4美洲*)
+                printf 'CCTV4美洲'
+                ;;
+
+              CCTV17*|*CCTV17*)
+                printf 'CCTV17'
+                ;;
+
+              CCTV16*|*CCTV16*)
+                printf 'CCTV16'
+                ;;
+
+              CCTV15*|*CCTV15*)
+                printf 'CCTV15'
+                ;;
+
+              CCTV14*|*CCTV14*)
+                printf 'CCTV14'
+                ;;
+
+              CCTV13*|*CCTV13*)
+                printf 'CCTV13'
+                ;;
+
+              CCTV12*|*CCTV12*)
+                printf 'CCTV12'
+                ;;
+
+              CCTV11*|*CCTV11*)
+                printf 'CCTV11'
+                ;;
+
+              CCTV10*|*CCTV10*)
+                printf 'CCTV10'
+                ;;
+
+              CCTV9*|*CCTV9*)
+                printf 'CCTV9'
+                ;;
+
+              CCTV8*|*CCTV8*)
+                printf 'CCTV8'
+                ;;
+
+              CCTV7*|*CCTV7*)
+                printf 'CCTV7'
+                ;;
+
+              CCTV6*|*CCTV6*)
+                printf 'CCTV6'
+                ;;
+
+              CCTV5*|*CCTV5*)
+                printf 'CCTV5'
+                ;;
+
+              CCTV4*|*CCTV4*)
+                printf 'CCTV4'
+                ;;
+
+              CCTV3*|*CCTV3*)
+                printf 'CCTV3'
+                ;;
+
+              CCTV2*|*CCTV2*)
+                printf 'CCTV2'
+                ;;
+
+              CCTV1*|*CCTV1*)
+                printf 'CCTV1'
+                ;;
+
+              *)
+                printf ''
+                ;;
+
+            esac
+          }
+
+          # =====================================================
+          # CCTV 标准名称
+          # =====================================================
+          canonical_cctv_name() {
+            local key="$1"
+
+            case "$key" in
+
+              CCTV1)
+                printf 'CCTV1综合'
+                ;;
+
+              CCTV2)
+                printf 'CCTV2财经'
+                ;;
+
+              CCTV3)
+                printf 'CCTV3综艺'
+                ;;
+
+              CCTV4中文国际)
+                printf 'CCTV4中文国际'
+                ;;
+
+              CCTV4欧洲)
+                printf 'CCTV4欧洲'
+                ;;
+
+              CCTV4美洲)
+                printf 'CCTV4美洲'
+                ;;
+
+              CCTV4)
+                printf 'CCTV4中文国际'
+                ;;
+
+              CCTV5)
+                printf 'CCTV5体育'
+                ;;
+
+              CCTV5+)
+                printf 'CCTV5+体育赛事'
+                ;;
+
+              CCTV6)
+                printf 'CCTV6电影'
+                ;;
+
+              CCTV7)
+                printf 'CCTV7国防军事'
+                ;;
+
+              CCTV8)
+                printf 'CCTV8电视剧'
+                ;;
+
+              CCTV9)
+                printf 'CCTV9纪录'
+                ;;
+
+              CCTV10)
+                printf 'CCTV10科教'
+                ;;
+
+              CCTV11)
+                printf 'CCTV11戏曲'
+                ;;
+
+              CCTV12)
+                printf 'CCTV12社会与法'
+                ;;
+
+              CCTV13)
+                printf 'CCTV13新闻'
+                ;;
+
+              CCTV14)
+                printf 'CCTV14少儿'
+                ;;
+
+              CCTV15)
+                printf 'CCTV15音乐'
+                ;;
+
+              CCTV16)
+                printf 'CCTV16奥林匹克'
+                ;;
+
+              CCTV17)
+                printf 'CCTV17农业农村'
+                ;;
+
+              CCTV4K)
+                printf 'CCTV4K'
+                ;;
+
+              CCTV8K)
+                printf 'CCTV8K'
+                ;;
+
+              *)
+                printf ''
+                ;;
+
+            esac
+          }
+
+          # =====================================================
+          # 主源 CCTV 名称映射
+          # =====================================================
+          declare -A MAIN_CCTV_NAME=()
+
+          build_main_cctv_map() {
+
+            local file="source1.m3u"
+
+            if [ "$SOURCE_1_ENABLED" != "on" ]; then
+              return 0
+            fi
+
+            if [ ! -s "$file" ]; then
+              return 0
+            fi
+
+            local line
+            local display
+            local tvg_name
+            local tvg_id
+            local key
+            local canonical
+
+            while IFS= read -r line || [ -n "$line" ]; do
+
+              case "$line" in
+
+                \#EXTINF:*)
+
+                  display=$(extract_display_name "$line")
+
+                  tvg_name=$(extract_attr \
+                    "$line" \
+                    "tvg-name")
+
+                  tvg_id=$(extract_attr \
+                    "$line" \
+                    "tvg-id")
+
+                  display=$(trim "$display")
+                  tvg_name=$(trim "$tvg_name")
+                  tvg_id=$(trim "$tvg_id")
+
+                  display=$(html_decode_basic "$display")
+                  tvg_name=$(html_decode_basic "$tvg_name")
+                  tvg_id=$(html_decode_basic "$tvg_id")
+
+                  if [ -z "$display" ]; then
+                    display="$tvg_name"
+                  fi
+
+                  if [ -z "$display" ]; then
+                    display="$tvg_id"
+                  fi
+
+                  key=$(cctv_key "$display")
+
+                  if [ -z "$key" ] && [ -n "$tvg_name" ]; then
+                    key=$(cctv_key "$tvg_name")
+                  fi
+
+                  if [ -z "$key" ] && [ -n "$tvg_id" ]; then
+                    key=$(cctv_key "$tvg_id")
+                  fi
+
+                  if [ -n "$key" ]; then
+
+                    canonical=$(canonical_cctv_name "$key")
+
+                    if [ -n "$canonical" ]; then
+                      MAIN_CCTV_NAME["$key"]="$canonical"
+                    fi
+
+                  fi
+
+                  ;;
+
+              esac
+
+            done < "$file"
+
+            echo
+            echo "主源 CCTV 名称映射数量：${#MAIN_CCTV_NAME[@]}"
+
+            for key in \
+              CCTV1 \
+              CCTV2 \
+              CCTV3 \
+              CCTV4中文国际 \
+              CCTV4欧洲 \
+              CCTV4美洲 \
+              CCTV4K \
+              CCTV5 \
+              CCTV5+ \
+              CCTV6 \
+              CCTV7 \
+              CCTV8 \
+              CCTV9 \
+              CCTV10 \
+              CCTV11 \
+              CCTV12 \
+              CCTV13 \
+              CCTV14 \
+              CCTV15 \
+              CCTV16 \
+              CCTV17
+            do
+              if [ -n "${MAIN_CCTV_NAME[$key]-}" ]; then
+                echo "$key -> ${MAIN_CCTV_NAME[$key]}"
+              fi
+            done
+          }
+
+          # =====================================================
+          # 清除原来的 group-title
+          # =====================================================
+          clean_group_title() {
+            local line="$1"
+
+            printf '%s\n' "$line" |
+              sed -E 's/[[:space:]]+group-title="[^"]*"//g'
+          }
+
+          # =====================================================
+          # 处理一个源
+          # =====================================================
+          append_source() {
+
+            local file="$1"
+            local enabled="$2"
+
+            if [ "$enabled" != "on" ]; then
+              return 0
+            fi
+
+            if [ ! -s "$file" ]; then
+              echo "错误：源文件不存在或为空：$file"
+              return 1
+            fi
+
+            echo
+            echo "========================================"
+            echo "处理源：$file"
+            echo "========================================"
+
+            # =================================================
+            # 【核心】统一分组关闭时：
+            #   完全原样输出源文件内容，
+            #   仅去掉 #EXTM3U 头和空行，
+            #   其余一切（group-title、频道名、URL、tvg-*）
+            #   全部保持不变。
+            # =================================================
+            if [ "$UNIFIED_GROUP_ENABLED" != "on" ]; then
+
+              echo "统一分组已关闭，原样输出源文件内容（不做任何修改）"
+
+              local count=0
+
+              while IFS= read -r line || [ -n "$line" ]; do
+
+                case "$line" in
+                  \#EXTM3U*)
+                    continue
+                    ;;
+                esac
+
+                if [ -z "$(trim "$line")" ]; then
+                  continue
+                fi
+
+                printf '%s\n' "$line" >> "$WORK_FILE"
+
+                case "$line" in
+                  \#EXTINF:*)
+                    count=$((count + 1))
+                    ;;
+                esac
+
+              done < "$file"
+
+              echo "处理完成（原样）：$file"
+              echo "有效频道：$count"
+
+              return 0
+            fi
+
+            # =================================================
+            # 以下为统一分组开启时的处理逻辑
+            # =================================================
+
+            local line
+            local url
+
+            local original_prefix
+            local prefix
+
+            local display
+            local tvg_name
+            local tvg_id
+            local tvg_logo
+
+            local key
+            local canonical
+
+            local count=0
+            local skipped=0
+
+            while IFS= read -r line || [ -n "$line" ]; do
+
+              case "$line" in
+
+                \#EXTINF:*)
+
+                  original_prefix="$line"
+
+                  if ! IFS= read -r url; then
+                    echo "错误：$file 最后一条频道缺少 URL"
+                    return 1
+                  fi
+
+                  tvg_name=$(extract_attr \
+                    "$original_prefix" \
+                    "tvg-name")
+
+                  tvg_id=$(extract_attr \
+                    "$original_prefix" \
+                    "tvg-id")
+
+                  tvg_logo=$(extract_attr \
+                    "$original_prefix" \
+                    "tvg-logo")
+
+                  tvg_name=$(trim "$tvg_name")
+                  tvg_id=$(trim "$tvg_id")
+                  tvg_logo=$(trim "$tvg_logo")
+
+                  tvg_name=$(html_decode_basic "$tvg_name")
+                  tvg_id=$(html_decode_basic "$tvg_id")
+
+                  display=$(extract_display_name "$original_prefix")
+
+                  if [ -z "$display" ]; then
+                    display="$tvg_name"
+                  fi
+
+                  if [ -z "$display" ]; then
+                    display="$tvg_id"
+                  fi
+
+                  display=$(trim "$display")
+
+                  if [ -z "$display" ]; then
+                    skipped=$((skipped + 1))
+                    continue
+                  fi
+
+                  key=""
+
+                  if [ "$CCTV_NAME_STANDARDIZE_ENABLED" = "on" ]; then
+
+                    key=$(cctv_key "$display")
+
+                    if [ -z "$key" ] && [ -n "$tvg_name" ]; then
+                      key=$(cctv_key "$tvg_name")
+                    fi
+
+                    if [ -z "$key" ] && [ -n "$tvg_id" ]; then
+                      key=$(cctv_key "$tvg_id")
+                    fi
+
+                    if [ -n "$key" ]; then
+
+                      canonical="${MAIN_CCTV_NAME[$key]-}"
+
+                      if [ -z "$canonical" ]; then
+                        canonical=$(canonical_cctv_name "$key")
+                      fi
+
+                      if [ -n "$canonical" ]; then
+
+                        display="$canonical"
+                        tvg_name="$canonical"
+                        tvg_id="$canonical"
+
+                      fi
+
+                    fi
+
+                  fi
+
+                  case "$original_prefix" in
+                    *,*)
+                      prefix="${original_prefix%%,*}"
+                      ;;
+                    *)
+                      prefix="$original_prefix"
+                      ;;
+                  esac
+
+                  prefix=$(clean_group_title "$prefix")
+
+                  prefix=$(trim "$prefix")
+
+                  prefix="${prefix%,}"
+
+                  prefix="$prefix group-title=\"$UNIFIED_GROUP_TITLE\""
+
+                  printf '%s,%s\n' \
+                    "$prefix" \
+                    "$display" \
+                    >> "$WORK_FILE"
+
+                  printf '%s\n' "$url" >> "$WORK_FILE"
+
+                  count=$((count + 1))
+
+                  ;;
+
+              esac
+
+            done < "$file"
+
+            echo "处理完成：$file"
+            echo "有效频道：$count"
+            echo "跳过空名称：$skipped"
+          }
+
+          # =====================================================
+          # 建立主源 CCTV 名称
+          # =====================================================
+          build_main_cctv_map
+
+          # =====================================================
+          # 固定源顺序
+          # =====================================================
+
+          append_source \
+            "source3.m3u" \
+            "$SOURCE_3_ENABLED"
+
+          append_source \
+            "source1.m3u" \
+            "$SOURCE_1_ENABLED"
+
+          append_source \
+            "source2.m3u" \
+            "$SOURCE_2_ENABLED"
+
+          append_source \
+            "source4.m3u" \
+            "$SOURCE_4_ENABLED"
+
+          append_source \
+            "source5.m3u" \
+            "$SOURCE_5_ENABLED"
+
+          append_source \
+            "source6.m3u" \
+            "$SOURCE_6_ENABLED"
+
+          append_source \
+            "source7.m3u" \
+            "$SOURCE_7_ENABLED"
+
+          append_source \
+            "source8.m3u" \
+            "$SOURCE_8_ENABLED"
+
+          # =====================================================
+          # 最终统计
+          # =====================================================
+
+          CHANNEL_COUNT=$(
+            grep -c '^#EXTINF:' "$WORK_FILE" || true
+          )
+
+          URL_COUNT=$(
+            grep -E '^(https?|rtmp|rtsp|udp|rtp)://' "$WORK_FILE" |
+            wc -l
+          )
+
+          EMPTY_NAME_COUNT=$(
+            grep -c '^#EXTINF:[^,]*,$' "$WORK_FILE" || true
+          )
+
+          echo
+          echo "========================================"
+          echo "最终频道数：$CHANNEL_COUNT"
+          echo "最终 URL 数：$URL_COUNT"
+          echo "空名称频道：$EMPTY_NAME_COUNT"
+          echo "========================================"
+
+          if [ "$CHANNEL_COUNT" -eq 0 ]; then
+            echo "错误：最终没有频道"
+            exit 1
+          fi
+
+          # =====================================================
+          # 统一分组关闭时：跳过严格校验（原样透传）
+          # =====================================================
+          if [ "$UNIFIED_GROUP_ENABLED" != "on" ]; then
+
+            echo
+            echo "========================================"
+            echo "统一分组已关闭，跳过严格校验"
+            echo "（原样透传源文件内容）"
+            echo "========================================"
+
+            echo
+            echo "前 10 个频道："
+
+            grep -m 10 '^#EXTINF:' "$WORK_FILE" || true
+
+            mv "$WORK_FILE" "$OUTPUT_FILE"
+
+            echo
+            echo "直播源整理完成：$OUTPUT_FILE"
+
+            exit 0
+          fi
+
+          # =====================================================
+          # 以下为统一分组开启时的严格校验
+          # =====================================================
+
+          if [ "$CHANNEL_COUNT" -ne "$URL_COUNT" ]; then
+            echo "错误：频道数量与 URL 数量不一致"
+            echo "频道：$CHANNEL_COUNT"
+            echo "URL：$URL_COUNT"
+            exit 1
+          fi
+
+          if [ "$EMPTY_NAME_COUNT" -ne 0 ]; then
+            echo "错误：发现空频道名称"
+            exit 1
+          fi
+
+          if ! grep -F \
+            'group-title="'"$UNIFIED_GROUP_TITLE"'"' \
+            "$WORK_FILE" \
+            >/dev/null
+          then
+            echo "错误：统一 group-title 没有正确生成"
+            exit 1
+          fi
+
+          if grep -E \
+            'group-title="[^"]*"[^,]*,.*group-title="' \
+            "$WORK_FILE" \
+            >/dev/null
+          then
+            echo "错误：发现重复 group-title"
+            exit 1
+          fi
+
+          echo
+          echo "========================================"
+          echo "CCTV 标准化检查"
+          echo "========================================"
+
+          for cctv_name in \
+            CCTV1综合 \
+            CCTV2财经 \
+            CCTV3综艺 \
+            CCTV4中文国际 \
+            CCTV4欧洲 \
+            CCTV4美洲 \
+            CCTV4K \
+            CCTV5体育 \
+            'CCTV5+体育赛事' \
+            CCTV6电影 \
+            CCTV7国防军事 \
+            CCTV8电视剧 \
+            CCTV9纪录 \
+            CCTV10科教 \
+            CCTV11戏曲 \
+            CCTV12社会与法 \
+            CCTV13新闻 \
+            CCTV14少儿 \
+            CCTV15音乐 \
+            CCTV16奥林匹克 \
+            CCTV17农业农村
+          do
+
+            if grep -F \
+              ",$cctv_name" \
+              "$WORK_FILE" \
+              >/dev/null
+            then
+              echo "存在：$cctv_name"
+            fi
+
+          done
+
+          echo
+          echo "前 10 个频道："
+
+          grep -m 10 '^#EXTINF:' "$WORK_FILE" || true
+
+          mv "$WORK_FILE" "$OUTPUT_FILE"
+
+          echo
+          echo "直播源整理完成：$OUTPUT_FILE"
+
+      # =========================================================
+      # 4. 最终文件校验
+      # =========================================================
+      - name: 校验最终文件
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "开始校验：$OUTPUT_FILE"
+
+          if [ ! -s "$OUTPUT_FILE" ]; then
+            echo "错误：$OUTPUT_FILE 不存在或为空"
+            exit 1
+          fi
+
+          if ! grep -q '^#EXTM3U' "$OUTPUT_FILE"; then
+            echo "错误：缺少 #EXTM3U"
+            exit 1
+          fi
+
+          CHANNEL_COUNT=$(
+            grep -c '^#EXTINF:' "$OUTPUT_FILE" || true
+          )
+
+          URL_COUNT=$(
+            grep -E '^(https?|rtmp|rtsp|udp|rtp)://' "$OUTPUT_FILE" |
+            wc -l
+          )
+
+          echo "频道数量：$CHANNEL_COUNT"
+          echo "URL 数量：$URL_COUNT"
+
+          if [ "$CHANNEL_COUNT" -le 0 ]; then
+            echo "错误：没有任何频道"
+            exit 1
+          fi
+
+          # =====================================================
+          # 统一分组关闭时：跳过所有严格校验
+          # =====================================================
+          if [ "$UNIFIED_GROUP_ENABLED" != "on" ]; then
+
+            echo
+            echo "========================================"
+            echo "统一分组已关闭，跳过严格校验"
+            echo "========================================"
+
+            if [ "$CHANNEL_COUNT" -ne "$URL_COUNT" ]; then
+              echo "提示：频道数($CHANNEL_COUNT) 与 URL 数($URL_COUNT) 不一致（原样透传，不阻塞）"
+            fi
+
+            echo
+            echo "========================================"
+            echo "最终文件校验通过（宽松模式）"
+            echo "频道：$CHANNEL_COUNT"
+            echo "URL：$URL_COUNT"
+            echo "========================================"
+
+            exit 0
+          fi
+
+          # =====================================================
+          # 以下为统一分组开启时的严格校验
+          # =====================================================
+
+          if [ "$CHANNEL_COUNT" -ne "$URL_COUNT" ]; then
+            echo "错误：频道与 URL 数量不一致"
+            exit 1
+          fi
+
+          if grep -q '^#EXTINF:[^,]*,$' "$OUTPUT_FILE"; then
+            echo "错误：发现空频道名称"
+            exit 1
+          fi
+
+          if grep -q '^#EXTINF:[^,]*,[[:space:]]*$' "$OUTPUT_FILE"; then
+            echo "错误：发现空白频道名称"
+            exit 1
+          fi
+
+          if grep -E \
+            'group-title="[^"]*"[^,]*,.*group-title="' \
+            "$OUTPUT_FILE" \
+            >/dev/null
+          then
+            echo "错误：发现重复 group-title"
+            exit 1
+          fi
+
+          if grep -E \
+            ',CCTV1综合.*CCTV10|,CCTV1综合.*CCTV11|,CCTV1综合.*CCTV12|,CCTV1综合.*CCTV13|,CCTV1综合.*CCTV14|,CCTV1综合.*CCTV15|,CCTV1综合.*CCTV16|,CCTV1综合.*CCTV17' \
+            "$OUTPUT_FILE" \
+            >/dev/null
+          then
+            echo "错误：发现 CCTV1 与 CCTV10～17 异常合并"
+            exit 1
+          fi
+
+          echo
+          echo "========================================"
+          echo "最终文件校验通过"
+          echo "频道：$CHANNEL_COUNT"
+          echo "URL：$URL_COUNT"
+          echo "========================================"
+
+      # =========================================================
+      # 5. 比较并推送
+      # =========================================================
+      - name: 比较并推送
         id: compare
         shell: bash
         run: |
-          if [ -f "$OUTPUT_FILE" ]; then
-            OLD_HASH=$(sha256sum "$OUTPUT_FILE" | awk '{print $1}')
-          else
-            OLD_HASH="none"
+          set -euo pipefail
+
+          echo "检查 Git 仓库..."
+
+          if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+            echo "错误：当前目录不是 Git 仓库"
+            exit 1
           fi
-          echo "old=$OLD_HASH" >> "$GITHUB_OUTPUT"
-          echo "new=${{ steps.build.outputs.hash }}" >> "$GITHUB_OUTPUT"
-          if [ "$OLD_HASH" = "${{ steps.build.outputs.hash }}" ]; then
+
+          echo "Git 仓库正常"
+
+          OLD_SHA=""
+          NEW_SHA=""
+
+          if git show "HEAD:$OUTPUT_FILE" > /tmp/old-index.php 2>/dev/null; then
+
+            OLD_SHA=$(
+              sha256sum /tmp/old-index.php |
+              cut -d' ' -f1
+            )
+
+          else
+
+            echo "仓库中还不存在 $OUTPUT_FILE"
+            OLD_SHA=""
+
+          fi
+
+          if [ ! -s "$OUTPUT_FILE" ]; then
+            echo "错误：新 $OUTPUT_FILE 不存在"
+            exit 1
+          fi
+
+          NEW_SHA=$(
+            sha256sum "$OUTPUT_FILE" |
+            cut -d' ' -f1
+          )
+
+          echo "旧 SHA256：${OLD_SHA:-不存在}"
+          echo "新 SHA256：$NEW_SHA"
+
+          if [ -n "$OLD_SHA" ] && [ "$OLD_SHA" = "$NEW_SHA" ]; then
+
+            echo "index.php 没有变化"
+
             echo "changed=false" >> "$GITHUB_OUTPUT"
+
           else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+
+            echo "index.php 发生变化"
+
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            git add "$OUTPUT_FILE"
+
+            if git diff --cached --quiet; then
+
+              echo "没有需要提交的变化"
+
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+
+            else
+
+              git commit \
+                -m "自动同步 IPTV 直播源"
+
+              git push
+
+              echo "index.php 推送成功"
+
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+
+            fi
+
           fi
 
-      - name: 更新并推送文件
-        if: ${{ steps.compare.outputs.changed == 'true' }}
+      # =========================================================
+      # 6. 写入心跳
+      # =========================================================
+      - name: 写入心跳时间戳
         shell: bash
         run: |
-          set -e
-          mv new-iptv.m3u "$OUTPUT_FILE"
-          git config user.name "IPTV Sync Bot"
-          git config user.email "actions@github.com"
-          git add "$OUTPUT_FILE"
-          git commit -m "自动更新 IPTV 播放列表"
-          git push origin HEAD:main --force-with-lease
+          date '+%Y-%m-%d %H:%M:%S' > heartbeat.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add heartbeat.txt
+          git commit -m "心跳保活 $(date '+%Y-%m-%d %H:%M:%S')" || echo "心跳无变化跳过"
+          git push || true
 
+      # =========================================================
+      # 7. 企业微信通知
+      # =========================================================
       - name: 企业微信通知
-        if: ${{ always() && env.WECHAT_WEBHOOK != '' }}
+        if: always()
         shell: bash
         run: |
-          STATUS="${{ job.status }}"
-          CHANGED="${{ steps.compare.outputs.changed }}"
-          COUNT="${{ steps.build.outputs.count }}"
-          TIME=$(date '+%Y-%m-%d %H:%M:%S')
-          if [ "$STATUS" = "success" ]; then
-            STATUS_TEXT="✅运行成功"
-          else
-            STATUS_TEXT="❌运行失败"
+          if [ "$WECHAT_ENABLED" != "on" ]; then
+            echo "企业微信通知已关闭"
+            exit 0
           fi
-          if [ "$CHANGED" = "true" ]; then
-            RESULT_TEXT="检测更新，已推送新文件"
-          else
-            RESULT_TEXT="源内容无变动，未推送"
+
+          if [ -z "$WECHAT_KEY" ]; then
+            echo "未配置 WECHAT_KEY 密钥"
+            exit 0
           fi
-          MESSAGE="IPTV自动同步 状态：${STATUS_TEXT} 执行时间：${TIME} 频道数量：${COUNT} 结果：${RESULT_TEXT} 播放列表直链：https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/iptv-fe.m3u"
-          PAYLOAD=$(jq -n --arg msg "$MESSAGE" '{msgtype:"text", text:{content:$msg}}')
-          curl -s -X POST "$WECHAT_WEBHOOK" -H "Content-Type:application/json" -d "$PAYLOAD"
+
+          WECHAT_WEBHOOK="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${WECHAT_KEY}"
+          JOB_STATUS="${{ job.status }}"
+          CHANGE_STATUS="${{ steps.compare.outputs.changed }}"
+
+          if [ -f "$OUTPUT_FILE" ];then
+            CHANNEL_COUNT=$(grep -c '^#EXTINF:' "$OUTPUT_FILE" || true)
+          else
+            CHANNEL_COUNT="获取失败"
+          fi
+
+          if [[ "$JOB_STATUS" == "success" ]];then
+            STATUS_TEXT="✅ 同步任务执行成功"
+          else
+            STATUS_TEXT="❌ 同步任务执行失败！下载/解析/推送出错"
+          fi
+
+          MESSAGE=$(printf '%s\n' \
+            "📺 IPTV 直播源同步通知" \
+            "${STATUS_TEXT}" \
+            "" \
+            "仓库：${{ github.repository }}" \
+            "输出文件：index.php" \
+            "频道数量：${CHANNEL_COUNT}" \
+            "文件变更状态：${CHANGE_STATUS}" \
+            "源地址：https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/main/index.php")
+
+          JSON=$(jq -n \
+            --arg content "$MESSAGE" \
+            '{
+              msgtype: "text",
+              text: {
+                content: $content
+              }
+            }')
+
+          curl -fL \
+            -H "Content-Type: application/json" \
+            -d "$JSON" \
+            "$WECHAT_WEBHOOK"
+
+          echo "企业微信通知发送完成了"
