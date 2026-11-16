@@ -17,18 +17,18 @@ jobs:
       # 源 1：咪咕主源
       # =========================================================
       SOURCE_1_ENABLED: "on"
-      SOURCE_1_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/migu.m3u"
+      SOURCE_1_URL: "http://103.236.71.92:1905/l8326955/interface.m3u"
 
       # =========================================================
       # 源 2：咪咕 CCTV 源
       # =========================================================
-      SOURCE_2_ENABLED: "on"
-      SOURCE_2_URL: "https://raw.githubusercontent.com/ioptu/migu_video/main/cctv.migu.m3u"
+      SOURCE_2_ENABLED: "off"
+      SOURCE_2_URL: ""
 
       # =========================================================
       # 源 3：锦江酒店自有视频源
       # =========================================================
-      SOURCE_3_ENABLED: "off"
+      SOURCE_3_ENABLED: "on"
       SOURCE_3_URL: "https://raw.githubusercontent.com/2383534802/ds/refs/heads/main/jinjiang"
 
       # =========================================================
@@ -67,7 +67,7 @@ jobs:
       # on  -> 按程序处理（去重、CCTV 标准化、统一分组）
       # off -> 完全原样输出源文件，什么都不修改
       # =========================================================
-      UNIFIED_GROUP_ENABLED: "off"
+      UNIFIED_GROUP_ENABLED: "on"
       UNIFIED_GROUP_TITLE: "央视直播"
 
       # =========================================================
