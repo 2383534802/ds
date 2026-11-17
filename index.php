@@ -273,8 +273,6 @@ http://103.236.71.92:1905/l8326955/961930263
 http://103.236.71.92:1905/l8326955/proxy/jstv-665.m3u8
 #EXTINF:-1 tvg-id="安徽综艺体育" tvg-name="安徽综艺体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ca26ab53a4d70b7b7aa1.png?v=1794299821250&from=source" catchup="none" group-title="央视直播",安徽综艺体育
 http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
-#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
-http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a68968a4a253f818c44b.png?v=1794299821250&from=source" group-title="央视直播",广东体育
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
 #EXTINF:-1 tvg-id="福建文旅体育" tvg-name="福建文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/335059e07f510b82b075.png?v=1794299821250&from=source" group-title="央视直播",福建文旅体育
@@ -981,18 +979,16 @@ http://103.236.71.92:1905/l8326955/relay/sichuan-cities-dytv1.m3u8
 http://103.236.71.92:1905/l8326955/relay/sichuan-cities-pzhtv1.m3u8
 #EXTINF:-1 tvg-id="南充综合" tvg-name="南充综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8241d3181194a42f263c.jpg?v=1794299821250&from=source" catchup="none" group-title="央视直播",南充综合
 http://103.236.71.92:1905/l8326955/relay/sichuan-cities-nctv1.m3u8
-#EXTINF:-1 tvg-id="大连新闻综合" tvg-name="大连新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/7eca6aba50c4f171dddc.jpg?v=1794299821250&from=source" group-title="央视直播",大连新闻综合
-http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
-#EXTINF:-1 tvg-id="大连生活" tvg-name="大连生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e9895de636e332f0b04c.jpg?v=1794299821250&from=source" group-title="央视直播",大连生活
-http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1794327001304&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
 #EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
 http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
-#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
-http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
+#EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁生活
+http://103.236.71.92:1905/l8326955/proxy/liaoning-078ce87dcf5384d51e4655cb962fda18.m3u8
+#EXTINF:-1 tvg-id="辽宁北方" tvg-name="辽宁北方" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a1954f56cf92a5c31f98.jpg?v=1794399843186&from=source" group-title="央视直播",辽宁北方
+http://103.236.71.92:1905/l8326955/proxy/liaoning-8e95535378bd3e5f7494bc23ab1cb117.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794299821250&from=source" group-title="央视直播",家庭理财
 http://103.236.71.92:1905/l8326955/proxy/liaoning-7e29bde4f41ca08642b7fc3ce4eb1ae4.m3u8
 #EXTINF:-1 tvg-id="沈阳新闻综合" tvg-name="沈阳新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e205e09309242aa99dd1.jpg?v=1794299821250&from=source" group-title="央视直播",沈阳新闻综合
@@ -1124,21 +1120,21 @@ http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-id="福州少儿" tvg-name="福州少儿" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b0a740ca9074581f516e.jpg?v=1794299821250&from=source" group-title="央视直播",福州少儿
 http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
 #EXTINF:-1 tvg-id="漳州新闻综合" tvg-name="漳州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/c5f7042f9511c48bf09c.jpg?v=1794299821250&from=source" group-title="央视直播",漳州新闻综合
-https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=a576f83f1794899755
+https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=68af0ffc1794921655
 #EXTINF:-1 tvg-id="三明综合" tvg-name="三明综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f2cbaf10f364852c4fbc.jpg?v=1794299821250&from=source" group-title="央视直播",三明综合
-https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=ad074ba01794899755
+https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=ade2e95e1794921655
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/5d28759b9d15461e5330.jpg?v=1794299821250&from=source" group-title="央视直播",泉州新闻综合
-https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=350aa06f1794899755
+https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=4d9201ef1794921655
 #EXTINF:-1 tvg-id="南平综合" tvg-name="南平综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/963a3a386481159c03d9.png?v=1794299821250&from=source" group-title="央视直播",南平综合
-https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=7f98431d1794899755
+https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=992331b91794921655
 #EXTINF:-1 tvg-id="龙岩综合" tvg-name="龙岩综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e6ce208cbee0695d8ce8.jpg?v=1794299821250&from=source" group-title="央视直播",龙岩综合
-https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=823e7ce41794899755
+https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=7b2ff5d61794921655
 #EXTINF:-1 tvg-id="莆田新闻综合" tvg-name="莆田新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/14367d692af06b1d9e12.jpg?v=1794299821250&from=source" group-title="央视直播",莆田新闻综合
-https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=1650824f1794899755
+https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=e48574761794921655
 #EXTINF:-1 tvg-id="平潭综合" tvg-name="平潭综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/11c2f38ecec0146bed38.jpg?v=1794299821250&from=source" group-title="央视直播",平潭综合
-https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=3722926f1794899755
+https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=c823dfdb1794921655
 #EXTINF:-1 tvg-id="宁德新闻综合" tvg-name="宁德新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/72ea501ea3fa7786cf79.jpg?v=1794299821250&from=source" group-title="央视直播",宁德新闻综合
-https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=b479ee1d1794899755
+https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=9aa82d3c1794921655
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/33f3595e54bb29198114.jpg?v=1794299821250&from=source" catchup="none" group-title="央视直播",泉州新闻综合
 http://103.236.71.92:1905/l8326955/proxy/quanzhou-news-tv.m3u8
 #EXTINF:-1 tvg-id="泉州闽南语" tvg-name="泉州闽南语" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/9f643d30362fbf92ae55.jpg?v=1794299821250&from=source" catchup="none" group-title="央视直播",泉州闽南语
@@ -1409,10 +1405,10 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-22e49b8a07.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-b194bc6da9.m3u8
 #EXTINF:-1 tvg-id="吉林市·松花江江湾" tvg-name="吉林市·松花江江湾" tvg-logo="" catchup="none" group-title="央视直播",吉林市·松花江江湾
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-fd8537d494.m3u8
+#EXTINF:-1 tvg-id="长春市·生态广场立交桥" tvg-name="长春市·生态广场立交桥" tvg-logo="" catchup="none" group-title="央视直播",长春市·生态广场立交桥
+http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-7baa8c144f.m3u8
 #EXTINF:-1 tvg-id="通化市·浑江" tvg-name="通化市·浑江" tvg-logo="" catchup="none" group-title="央视直播",通化市·浑江
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-hunjiang.m3u8
-#EXTINF:-1 tvg-id="临江市·江心岛" tvg-name="临江市·江心岛" tvg-logo="" catchup="none" group-title="央视直播",临江市·江心岛
-http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangxin-island.m3u8
 #EXTINF:-1 tvg-id="敦化市·中成朝鲜生态村" tvg-name="敦化市·中成朝鲜生态村" tvg-logo="" catchup="none" group-title="央视直播",敦化市·中成朝鲜生态村
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-d055b56914.m3u8
 #EXTINF:-1 tvg-id="敦化市·六鼎山文化旅游区" tvg-name="敦化市·六鼎山文化旅游区" tvg-logo="" catchup="none" group-title="央视直播",敦化市·六鼎山文化旅游区
@@ -1441,16 +1437,16 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
 #EXTINF:-1 tvg-id="《养生堂——揪出隐匿的肺癌》" tvg-name="《养生堂——揪出隐匿的肺癌》" tvg-logo="" catchup="none" group-title="央视直播",《养生堂——揪出隐匿的肺癌》
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50anql3uv6o9de9a9aof68dio6e.m3u8
-#EXTINF:-1 tvg-id="识破身边骗局 守护家人安心" tvg-name="识破身边骗局 守护家人安心" tvg-logo="" catchup="none" group-title="央视直播",识破身边骗局 守护家人安心
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53skudolste89pa2s0ob6b4tbom.m3u8
-#EXTINF:-1 tvg-id="市场焦灼 怎样规划年末配置" tvg-name="市场焦灼 怎样规划年末配置" tvg-logo="" catchup="none" group-title="央视直播",市场焦灼 怎样规划年末配置
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57a7tkf3bjd8r1bi3aom78t2o7d.m3u8
+#EXTINF:-1 tvg-id="高考升学途径解析 第一场" tvg-name="高考升学途径解析 第一场" tvg-logo="" catchup="none" group-title="央视直播",高考升学途径解析 第一场
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-54v2c0picc39bq94h8jma8nd7ua.m3u8
 #EXTINF:-1 tvg-id="慢直播｜北京延庆玉渡晴雪" tvg-name="慢直播｜北京延庆玉渡晴雪" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜北京延庆玉渡晴雪
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5294hjquk348rab4rjalk8898n5.m3u8
-#EXTINF:-1 tvg-id="那一刻远亲不如近邻具象化了……" tvg-name="那一刻远亲不如近邻具象化了……" tvg-logo="" catchup="none" group-title="央视直播",那一刻远亲不如近邻具象化了……
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-578u5mu4q4k9fga6lqc0vsfeknc.m3u8
+#EXTINF:-1 tvg-id="电视剧《谷雨》精彩现场" tvg-name="电视剧《谷雨》精彩现场" tvg-logo="" catchup="none" group-title="央视直播",电视剧《谷雨》精彩现场
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5616h41eait9q0bq6p65janp8l7.m3u8
 #EXTINF:-1 tvg-id="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-name="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻100小时全媒体大直播
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5148heha4r58ooqievvm46j9ahn.m3u8
+#EXTINF:-1 tvg-id="财思敏学（2026年11月17日）" tvg-name="财思敏学（2026年11月17日）" tvg-logo="" catchup="none" group-title="央视直播",财思敏学（2026年11月17日）
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-55r7r4ld3jd9f9r9uktdcvedk87.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5712q83nqup8q98ju0tn9gq4jvu.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1794299821250&from=source" catchup="none" group-title="央视直播",山西卫视
