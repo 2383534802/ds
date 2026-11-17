@@ -1585,8 +1585,6 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-7baa8c144f.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-hunjiang.m3u8
 #EXTINF:-1 tvg-id="敦化市·中成朝鲜生态村" tvg-name="敦化市·中成朝鲜生态村" tvg-logo="" catchup="none" group-title="央视直播",敦化市·中成朝鲜生态村
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-d055b56914.m3u8
-#EXTINF:-1 tvg-id="敦化市·六鼎山文化旅游区" tvg-name="敦化市·六鼎山文化旅游区" tvg-logo="" catchup="none" group-title="央视直播",敦化市·六鼎山文化旅游区
-http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-169ac91ccc.m3u8
 #EXTINF:-1 tvg-id="敦化市·渤海湖公园" tvg-name="敦化市·渤海湖公园" tvg-logo="" catchup="none" group-title="央视直播",敦化市·渤海湖公园
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-ae0f56b481.m3u8
 #EXTINF:-1 tvg-id="敦化市·敖东大桥" tvg-name="敦化市·敖东大桥" tvg-logo="" catchup="none" group-title="央视直播",敦化市·敖东大桥
