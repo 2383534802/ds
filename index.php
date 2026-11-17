@@ -985,6 +985,8 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1794327001304&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
+http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794299821250&from=source" group-title="央视直播",家庭理财
@@ -1435,18 +1437,18 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
 #EXTINF:-1 tvg-id="慢直播｜北京延庆玉渡晴雪" tvg-name="慢直播｜北京延庆玉渡晴雪" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜北京延庆玉渡晴雪
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5294hjquk348rab4rjalk8898n5.m3u8
+#EXTINF:-1 tvg-id="【20261117】决战2:30——秦鹏" tvg-name="【20261117】决战2:30——秦鹏" tvg-logo="" catchup="none" group-title="央视直播",【20261117】决战2:30——秦鹏
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50donlh9hnu837q5osepc6qalgt.m3u8
 #EXTINF:-1 tvg-id="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-name="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻100小时全媒体大直播
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5148heha4r58ooqievvm46j9ahn.m3u8
+#EXTINF:-1 tvg-id="国家卫生健康委召开新闻发布会" tvg-name="国家卫生健康委召开新闻发布会" tvg-logo="" catchup="none" group-title="央视直播",国家卫生健康委召开新闻发布会
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53krlpn4s4e82tp1rmid5sj46ra.m3u8
+#EXTINF:-1 tvg-id="【读书俱乐部】战地记者唐师曾遗作《我在茧房吐老丝》品读" tvg-name="【读书俱乐部】战地记者唐师曾遗作《我在茧房吐老丝》品读" tvg-logo="" catchup="none" group-title="央视直播",【读书俱乐部】战地记者唐师曾遗作《我在茧房吐老丝》品读
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51kct914va5884ae3ji6v5ev4hs.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5712q83nqup8q98ju0tn9gq4jvu.m3u8
 #EXTINF:-1 tvg-id="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-name="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜秦皇岛阿那亚 静听潮起潮落
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5694f7ph2ln9kqoj78fqqaj5ane.m3u8
-#EXTINF:-1 tvg-id="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-name="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5230otgl50t8bjqelcpa98ds5il.m3u8
-#EXTINF:-1 tvg-id="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-name="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-540f7f37shs8v2q72p84t1k4rjh.m3u8
-#EXTINF:-1 tvg-id="慢直播｜我把故宫带回家2026" tvg-name="慢直播｜我把故宫带回家2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜我把故宫带回家2026
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51q01s662r59n6pvg6ld676i80e.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1794299821250&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1794299821250&from=source" catchup="none" group-title="央视直播",黄河电视台
