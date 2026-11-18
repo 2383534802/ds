@@ -273,8 +273,6 @@ http://103.236.71.92:1905/l8326955/961930263
 http://103.236.71.92:1905/l8326955/proxy/jstv-665.m3u8
 #EXTINF:-1 tvg-id="安徽综艺体育" tvg-name="安徽综艺体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ca26ab53a4d70b7b7aa1.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",安徽综艺体育
 http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
-#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
-http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a68968a4a253f818c44b.png?v=1794918243937&from=source" group-title="央视直播",广东体育
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
 #EXTINF:-1 tvg-id="福建文旅体育" tvg-name="福建文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/335059e07f510b82b075.png?v=1794918243937&from=source" group-title="央视直播",福建文旅体育
@@ -349,9 +347,11 @@ http://103.236.71.92:1905/l8326955/969489430
 http://103.236.71.92:1905/l8326955/969491824
 #EXTINF:-1 tvg-id="《球你别说了》官媒暗讽？杨瀚森处境堪忧？" tvg-name="NBA 《球你别说了》官媒暗讽？杨瀚森处境堪忧？ 完整回放 11:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 《球你别说了》官媒暗讽？杨瀚森处境堪忧？ 完整回放 11:30
 http://103.236.71.92:1905/l8326955/969489698
+#EXTINF:-1 tvg-id="精彩回顾：朱琳 vs 帕克斯" tvg-name="中国网球公开赛 精彩回顾：朱琳 vs 帕克斯 【回放】帕克斯0-2朱琳 12:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：朱琳 vs 帕克斯 【回放】帕克斯0-2朱琳 12:00
+http://103.236.71.92:1905/l8326955/968078970
 #EXTINF:-1 tvg-id="中国篮球放映室：浙江vs青岛" tvg-name="CBA经典赛事 中国篮球放映室：浙江vs青岛 全场回放（季孟年） 14:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/c8067363-371e-49f9-8bdb-3e1a18ac0f7d.png" group-title="央视直播",CBA经典赛事 中国篮球放映室：浙江vs青岛 全场回放（季孟年） 14:00
 http://103.236.71.92:1905/l8326955/968670472
-#EXTINF:-1 tvg-id="精彩回顾：高馨妤 vs 乌德瓦尔迪" tvg-name="中国网球公开赛 精彩回顾：高馨妤 vs 乌德瓦尔迪 2026中国网球公开赛女单第1轮回放：高馨妤2-0乌德瓦尔迪（刘钟鸣） 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：高馨妤 vs 乌德瓦尔迪 2026中国网球公开赛女单第1轮回放：高馨妤2-0乌德瓦尔迪（刘钟鸣） 15:00
+#EXTINF:-1 tvg-id="精彩回顾：高馨妤 vs 乌德瓦尔迪" tvg-name="中国网球公开赛 精彩回顾：高馨妤 vs 乌德瓦尔迪 【回放】高馨妤2-0乌德瓦尔迪（刘钟鸣） 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：高馨妤 vs 乌德瓦尔迪 【回放】高馨妤2-0乌德瓦尔迪（刘钟鸣） 15:00
 http://103.236.71.92:1905/l8326955/968081800
 #EXTINF:-1 tvg-id="袁励岑3-1逆转 陈俊菘单双打皆胜" tvg-name="WTT 袁励岑3-1逆转 陈俊菘单双打皆胜 全场回放（王睿涓） 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 袁励岑3-1逆转 陈俊菘单双打皆胜 全场回放（王睿涓） 15:00
 http://103.236.71.92:1905/l8326955/969501852
@@ -407,29 +407,37 @@ http://103.236.71.92:1905/l8326955/969509007
 http://103.236.71.92:1905/l8326955/969508808
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】许医尘2-5罗泽涛（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】许医尘2-5罗泽涛（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969505057
-#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】斯蒂芬·霍尔沃斯5-3吴安仪（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】斯蒂芬·霍尔沃斯5-3吴安仪（赛场原声） 22:30
-http://103.236.71.92:1905/l8326955/969504995
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】本·沃拉斯顿4-5张家玮（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】本·沃拉斯顿4-5张家玮（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969510518
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】罗斯·缪尔4-5邓壕辉（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】罗斯·缪尔4-5邓壕辉（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969508208
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】江俊5-0约书亚·托蒙德（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】江俊5-0约书亚·托蒙德（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969508773
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】傅家俊5-2奥利弗·莱恩斯（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】傅家俊5-2奥利弗·莱恩斯（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969506740
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】贺国强3-5辛格·查达（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】贺国强3-5辛格·查达（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969509583
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】卢卡·布雷切尔5-2姚朋成（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】卢卡·布雷切尔5-2姚朋成（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969509452
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】利亚姆·普伦5-0白雨露（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】利亚姆·普伦5-0白雨露（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969502787
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】斯蒂芬·霍尔沃斯5-3吴安仪（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】斯蒂芬·霍尔沃斯5-3吴安仪（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969504995
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】斯坦·穆迪5-0肖恩·奥沙利文（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】斯坦·穆迪5-0肖恩·奥沙利文（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969508591
-#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】塔纳瓦特·提拉朋派班5-2康诺·本齐（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】塔纳瓦特·提拉朋派班5-2康诺·本齐（赛场原声） 22:30
-http://103.236.71.92:1905/l8326955/969504197
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】杰克逊·佩奇5-2阿什利·休吉尔（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】杰克逊·佩奇5-2阿什利·休吉尔（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969510566
 #EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】利亚姆·格雷姆0-5朱利安·勒克莱（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】利亚姆·格雷姆0-5朱利安·勒克莱（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969503031
-#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第2轮回放：瑞恩·戴4-5大卫·格雷斯（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第2轮回放：瑞恩·戴4-5大卫·格雷斯（赛场原声） 22:30
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】瑞恩·戴4-5大卫·格雷斯（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】瑞恩·戴4-5大卫·格雷斯（赛场原声） 22:30
 http://103.236.71.92:1905/l8326955/969509573
-#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第2轮回放：贺国强3-5辛格·查达（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第2轮回放：贺国强3-5辛格·查达（赛场原声） 22:30
-http://103.236.71.92:1905/l8326955/969509583
-#EXTINF:-1 tvg-id="精彩回顾：郑钦文 vs 卡林斯卡娅" tvg-name="中国网球公开赛 精彩回顾：郑钦文 vs 卡林斯卡娅 【女单第2轮】郑钦文1-1卡林斯卡娅（退赛）（郭丰庆、张文悦、詹俊、郑洁） 19:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：郑钦文 vs 卡林斯卡娅 【女单第2轮】郑钦文1-1卡林斯卡娅（退赛）（郭丰庆、张文悦、詹俊、郑洁） 19:00
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】塔纳瓦特·提拉朋派班5-2康诺·本齐（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 【回放】塔纳瓦特·提拉朋派班5-2康诺·本齐（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969504197
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第1轮回放：乔丹·布朗3-5萨希尔·纳亚尔（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第1轮回放：乔丹·布朗3-5萨希尔·纳亚尔（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969511884
+#EXTINF:-1 tvg-id="江俊5-0速胜 张家玮5-4沃拉斯顿" tvg-name="斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第2轮回放：斯科特·唐纳森4-5克雷格·斯泰德曼（赛场原声） 22:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 江俊5-0速胜 张家玮5-4沃拉斯顿 26/27赛季斯诺克德国大师赛资格赛第2轮回放：斯科特·唐纳森4-5克雷格·斯泰德曼（赛场原声） 22:30
+http://103.236.71.92:1905/l8326955/969512605
+#EXTINF:-1 tvg-id="精彩回顾：郑钦文 vs 卡林斯卡娅" tvg-name="中国网球公开赛 精彩回顾：郑钦文 vs 卡林斯卡娅 【回放】郑钦文1-1卡林斯卡娅（退赛）（郭丰庆、张文悦、詹俊、郑洁） 19:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：郑钦文 vs 卡林斯卡娅 【回放】郑钦文1-1卡林斯卡娅（退赛）（郭丰庆、张文悦、詹俊、郑洁） 19:00
 http://103.236.71.92:1905/l8326955/968109618
 #EXTINF:-1 tvg-id="中国篮球放映室：宁波vs辽宁" tvg-name="CBA经典赛事 中国篮球放映室：宁波vs辽宁 全场回放（孙博、丁彦雨航、闫宇峰） 19:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/c8067363-371e-49f9-8bdb-3e1a18ac0f7d.png" group-title="央视直播",CBA经典赛事 中国篮球放映室：宁波vs辽宁 全场回放（孙博、丁彦雨航、闫宇峰） 19:30
 http://103.236.71.92:1905/l8326955/968928165
@@ -469,48 +477,42 @@ http://103.236.71.92:1905/l8326955/969507695
 http://103.236.71.92:1905/l8326955/969507030
 #EXTINF:-1 tvg-id="袁励岑、孙杨晋级正赛 陈俊菘止步" tvg-name="WTT 袁励岑、孙杨晋级正赛 陈俊菘止步 全场回放（四号桌） 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 袁励岑、孙杨晋级正赛 陈俊菘止步 全场回放（四号桌） 21:00
 http://103.236.71.92:1905/l8326955/969506176
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404201" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 朱峰立 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 朱峰立 03:00
-http://103.236.71.92:1905/l8326955/969404201
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404169" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 AI智慧观赛 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 AI智慧观赛 03:00
-http://103.236.71.92:1905/l8326955/969404169
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969403951" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 2号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 2号桌 03:00
-http://103.236.71.92:1905/l8326955/969403951
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969403986" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 3号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 3号桌 03:00
-http://103.236.71.92:1905/l8326955/969403986
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404021" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 4号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 4号桌 03:00
-http://103.236.71.92:1905/l8326955/969404021
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404045" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 5号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 5号桌 03:00
-http://103.236.71.92:1905/l8326955/969404045
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404078" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 6号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 6号桌 03:00
-http://103.236.71.92:1905/l8326955/969404078
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404109" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 7号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 7号桌 03:00
-http://103.236.71.92:1905/l8326955/969404109
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404142" tvg-id="龙泽煌VS高阳 刘文炜、吕昊天出战" tvg-name="斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 8号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌VS高阳 刘文炜、吕昊天出战 8号桌 03:00
-http://103.236.71.92:1905/l8326955/969404142
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969497991" tvg-id="国际自盟场地自行车世锦赛-3" tvg-name="国际自盟场地自行车世锦赛 国际自盟场地自行车世锦赛-3 解说 07:22" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/29/10000000157210695b94.png" group-title="央视直播",国际自盟场地自行车世锦赛 国际自盟场地自行车世锦赛-3 解说 07:22
-http://103.236.71.92:1905/l8326955/969497991
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/968817902" tvg-id="undefined" tvg-name="咪咕体育日报 undefined 咪咕体育日报 第245期 08:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/10/7/100000001233106a7b6e.png" group-title="央视直播",咪咕体育日报 undefined 咪咕体育日报 第245期 08:00
-http://103.236.71.92:1905/l8326955/968817902
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442123" tvg-id="猛龙VS尼克斯" tvg-name="NBA 猛龙VS尼克斯 盛哲 08:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 猛龙VS尼克斯 盛哲 08:25
-http://103.236.71.92:1905/l8326955/969442123
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442163" tvg-id="猛龙VS尼克斯" tvg-name="NBA 猛龙VS尼克斯 英文原声 08:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 猛龙VS尼克斯 英文原声 08:25
-http://103.236.71.92:1905/l8326955/969442163
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442352" tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 杨健 丁彦雨航 佳依 08:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 杨健 丁彦雨航 佳依 08:30
-http://103.236.71.92:1905/l8326955/969442352
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442365" tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 王晓晨 08:55" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 王晓晨 08:55
-http://103.236.71.92:1905/l8326955/969442365
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442374" tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 英文原声 08:55" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 英文原声 08:55
-http://103.236.71.92:1905/l8326955/969442374
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969462268" tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 智能字幕 08:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 智能字幕 08:30
-http://103.236.71.92:1905/l8326955/969462268
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442240" tvg-id="森林狼VS开拓者" tvg-name="NBA 森林狼VS开拓者 姜帆 闫宇峰 拜月宁 08:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 森林狼VS开拓者 姜帆 闫宇峰 拜月宁 08:30
-http://103.236.71.92:1905/l8326955/969442240
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442263" tvg-id="森林狼VS开拓者" tvg-name="NBA 森林狼VS开拓者 邢晨 08:55" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 森林狼VS开拓者 邢晨 08:55
-http://103.236.71.92:1905/l8326955/969442263
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442280" tvg-id="森林狼VS开拓者" tvg-name="NBA 森林狼VS开拓者 英文原声 08:55" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 森林狼VS开拓者 英文原声 08:55
-http://103.236.71.92:1905/l8326955/969442280
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969462271" tvg-id="森林狼VS开拓者" tvg-name="NBA 森林狼VS开拓者 智能字幕 08:55" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 森林狼VS开拓者 智能字幕 08:55
-http://103.236.71.92:1905/l8326955/969462271
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】迈克尔·霍尔特1-5吕昊天（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】迈克尔·霍尔特1-5吕昊天（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969510536
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】汤姆·福德5-1刘文炜（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】汤姆·福德5-1刘文炜（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969510774
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】罗比·威廉姆斯5-0瑞安·埃文斯（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】罗比·威廉姆斯5-0瑞安·埃文斯（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969510576
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】扎克·舒尔第5-1迈克尔·拉科夫（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】扎克·舒尔第5-1迈克尔·拉科夫（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969510507
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】龙泽煌5-4高阳（朱峰立） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】龙泽煌5-4高阳（朱峰立） 03:00
+http://103.236.71.92:1905/l8326955/969511013
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】本·默滕斯3-5恰查蓬·纳萨（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】本·默滕斯3-5恰查蓬·纳萨（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969511177
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】大卫·吉尔伯特5-4阿尔特米·齐津斯（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】大卫·吉尔伯特5-4阿尔特米·齐津斯（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969511425
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】大卫·吉尔伯特5-4阿尔特米·齐津斯（AI观赛） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 【回放】大卫·吉尔伯特5-4阿尔特米·齐津斯（AI观赛） 03:00
+http://103.236.71.92:1905/l8326955/969511675
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 26/27赛季斯诺克德国大师赛资格赛第2轮回放：龙泽煌5-4高阳（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 26/27赛季斯诺克德国大师赛资格赛第2轮回放：龙泽煌5-4高阳（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969512085
+#EXTINF:-1 tvg-id="龙泽煌5-4高阳 吕昊天5-1霍尔特" tvg-name="斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 26/27赛季斯诺克德国大师赛资格赛第2轮回放：奥利弗·莱恩斯4-5杰米·克拉克（赛场原声） 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 龙泽煌5-4高阳 吕昊天5-1霍尔特 26/27赛季斯诺克德国大师赛资格赛第2轮回放：奥利弗·莱恩斯4-5杰米·克拉克（赛场原声） 03:00
+http://103.236.71.92:1905/l8326955/969512081
+#EXTINF:-1 tvg-id="猛龙VS尼克斯" tvg-name="NBA 猛龙VS尼克斯 全场回放（盛哲） 08:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 猛龙VS尼克斯 全场回放（盛哲） 08:25
+http://103.236.71.92:1905/l8326955/969514982
+#EXTINF:-1 tvg-id="猛龙VS尼克斯" tvg-name="NBA 猛龙VS尼克斯 全场回放（英文原声） 08:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 猛龙VS尼克斯 全场回放（英文原声） 08:25
+http://103.236.71.92:1905/l8326955/969516162
+#EXTINF:-1 tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 全场回放（杨健、丁彦雨航、佳依） 08:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 全场回放（杨健、丁彦雨航、佳依） 08:30
+http://103.236.71.92:1905/l8326955/969516216
+#EXTINF:-1 tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 全场回放（王晓晨） 08:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 全场回放（王晓晨） 08:30
+http://103.236.71.92:1905/l8326955/969516075
+#EXTINF:-1 tvg-id="马刺VS活塞" tvg-name="NBA 马刺VS活塞 全场回放（AI字幕） 08:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 马刺VS活塞 全场回放（AI字幕） 08:30
+http://103.236.71.92:1905/l8326955/969516118
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969505837" tvg-id="王祉怡、陈雨菲领衔 凤凰组合回归" tvg-name="BWF 王祉怡、陈雨菲领衔 凤凰组合回归 王祉怡VS白驭珀 11:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 王祉怡、陈雨菲领衔 凤凰组合回归 王祉怡VS白驭珀 11:50
+http://103.236.71.92:1905/l8326955/969505837
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969506824" tvg-id="王祉怡、陈雨菲领衔 凤凰组合回归" tvg-name="BWF 王祉怡、陈雨菲领衔 凤凰组合回归 朱轩辰VS苏力扬 11:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 王祉怡、陈雨菲领衔 凤凰组合回归 朱轩辰VS苏力扬 11:50
+http://103.236.71.92:1905/l8326955/969506824
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969506872" tvg-id="王祉怡、陈雨菲领衔 凤凰组合回归" tvg-name="BWF 王祉怡、陈雨菲领衔 凤凰组合回归 高家炫/吴梦莹VS杨博轩/胡绫芳 11:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 王祉怡、陈雨菲领衔 凤凰组合回归 高家炫/吴梦莹VS杨博轩/胡绫芳 11:50
+http://103.236.71.92:1905/l8326955/969506872
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463884" tvg-id="王祉怡、陈雨菲领衔 凤凰组合回归" tvg-name="BWF 王祉怡、陈雨菲领衔 凤凰组合回归 1号场地 09:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 王祉怡、陈雨菲领衔 凤凰组合回归 1号场地 09:00
 http://103.236.71.92:1905/l8326955/969463884
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463904" tvg-id="王祉怡、陈雨菲领衔 凤凰组合回归" tvg-name="BWF 王祉怡、陈雨菲领衔 凤凰组合回归 2号场地 09:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 王祉怡、陈雨菲领衔 凤凰组合回归 2号场地 09:00
@@ -519,7 +521,7 @@ http://103.236.71.92:1905/l8326955/969463904
 http://103.236.71.92:1905/l8326955/969463938
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463986" tvg-id="王祉怡、陈雨菲领衔 凤凰组合回归" tvg-name="BWF 王祉怡、陈雨菲领衔 凤凰组合回归 4号场地 09:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 王祉怡、陈雨菲领衔 凤凰组合回归 4号场地 09:00
 http://103.236.71.92:1905/l8326955/969463986
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442460" tvg-id="快船VS爵士" tvg-name="NBA 快船VS爵士 王琰博 11:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 快船VS爵士 王琰博 11:25
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442460" tvg-id="湖人VS黄蜂" tvg-name="NBA 湖人VS黄蜂 同看爵士vs快船 11:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 湖人VS黄蜂 同看爵士vs快船 11:25
 http://103.236.71.92:1905/l8326955/969442460
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969442486" tvg-id="快船VS爵士" tvg-name="NBA 快船VS爵士 英文原声 11:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 快船VS爵士 英文原声 11:25
 http://103.236.71.92:1905/l8326955/969442486
@@ -545,6 +547,10 @@ http://103.236.71.92:1905/l8326955/969463141
 http://103.236.71.92:1905/l8326955/969463271
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463384" tvg-id="陈垣宇/黄友政冲8强 袁励岑争正赛首胜" tvg-name="WTT 陈垣宇/黄友政冲8强 袁励岑争正赛首胜 4号桌 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 陈垣宇/黄友政冲8强 袁励岑争正赛首胜 4号桌 15:00
 http://103.236.71.92:1905/l8326955/969463384
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969512880" tvg-id="陈垣宇/黄友政冲8强 袁励岑争正赛首胜" tvg-name="WTT 陈垣宇/黄友政冲8强 袁励岑争正赛首胜 英文解说 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 陈垣宇/黄友政冲8强 袁励岑争正赛首胜 英文解说 15:00
+http://103.236.71.92:1905/l8326955/969512880
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969514149" tvg-id="陈垣宇/黄友政冲8强 袁励岑争正赛首胜" tvg-name="WTT 陈垣宇/黄友政冲8强 袁励岑争正赛首胜 智能字幕 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 陈垣宇/黄友政冲8强 袁励岑争正赛首胜 智能字幕 15:00
+http://103.236.71.92:1905/l8326955/969514149
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493046" tvg-id="新疆广汇能源VS合肥狂风" tvg-name="CBA俱乐部杯 新疆广汇能源VS合肥狂风 孙博 曾令旭 15:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 新疆广汇能源VS合肥狂风 孙博 曾令旭 15:15
 http://103.236.71.92:1905/l8326955/969493046
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492995" tvg-id="新疆广汇能源VS合肥狂风" tvg-name="CBA俱乐部杯 新疆广汇能源VS合肥狂风 新疆主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 新疆广汇能源VS合肥狂风 新疆主队 15:20
@@ -561,7 +567,7 @@ http://103.236.71.92:1905/l8326955/969492850
 http://103.236.71.92:1905/l8326955/969492834
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492821" tvg-id="北京控股VS江西大谦" tvg-name="CBA俱乐部杯 北京控股VS江西大谦 赛场原声 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 北京控股VS江西大谦 赛场原声 15:20
 http://103.236.71.92:1905/l8326955/969492821
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493073" tvg-id="广州智都集团VS长白山恩都里" tvg-name="CBA俱乐部杯 广州智都集团VS长白山恩都里 解说 15:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广州智都集团VS长白山恩都里 解说 15:15
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493073" tvg-id="广州智都集团VS长白山恩都里" tvg-name="CBA俱乐部杯 广州智都集团VS长白山恩都里 李天宇 于德豪 15:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广州智都集团VS长白山恩都里 李天宇 于德豪 15:15
 http://103.236.71.92:1905/l8326955/969493073
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493090" tvg-id="广州智都集团VS长白山恩都里" tvg-name="CBA俱乐部杯 广州智都集团VS长白山恩都里 广州主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广州智都集团VS长白山恩都里 广州主队 15:20
 http://103.236.71.92:1905/l8326955/969493090
@@ -569,13 +575,13 @@ http://103.236.71.92:1905/l8326955/969493090
 http://103.236.71.92:1905/l8326955/969493113
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493125" tvg-id="广州智都集团VS长白山恩都里" tvg-name="CBA俱乐部杯 广州智都集团VS长白山恩都里 赛场原声 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广州智都集团VS长白山恩都里 赛场原声 15:20
 http://103.236.71.92:1905/l8326955/969493125
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492705" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 邵化谦 季孟年 15:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 邵化谦 季孟年 15:15
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492705" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 邵化谦 季孟年 15:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 邵化谦 季孟年 15:45
 http://103.236.71.92:1905/l8326955/969492705
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492740" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 天津主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 天津主队 15:20
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492740" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 天津主队 15:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 天津主队 15:50
 http://103.236.71.92:1905/l8326955/969492740
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492752" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 玄鸟主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 玄鸟主队 15:20
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492752" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 玄鸟主队 15:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 玄鸟主队 15:50
 http://103.236.71.92:1905/l8326955/969492752
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492776" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 赛场原声 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 赛场原声 15:20
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492776" tvg-id="天津先行者VS上海玄鸟" tvg-name="CBA俱乐部杯 天津先行者VS上海玄鸟 赛场原声 15:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 天津先行者VS上海玄鸟 赛场原声 15:50
 http://103.236.71.92:1905/l8326955/969492776
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969488764" tvg-id="高阳索诺天枪VS乌兰巴托野马" tvg-name="东亚超级联赛 高阳索诺天枪VS乌兰巴托野马 王冠证 17:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/1/100000001347106fed66.png" group-title="央视直播",东亚超级联赛 高阳索诺天枪VS乌兰巴托野马 王冠证 17:50
 http://103.236.71.92:1905/l8326955/969488764
@@ -583,24 +589,26 @@ http://103.236.71.92:1905/l8326955/969488764
 http://103.236.71.92:1905/l8326955/968075216
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/968075237" tvg-id="高阳索诺天枪VS乌兰巴托野马" tvg-name="东亚超级联赛 高阳索诺天枪VS乌兰巴托野马 赛场原声 17:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/1/100000001347106fed66.png" group-title="央视直播",东亚超级联赛 高阳索诺天枪VS乌兰巴托野马 赛场原声 17:50
 http://103.236.71.92:1905/l8326955/968075237
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404567" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 陶哲铭 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 陶哲铭 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404567" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 陶哲铭 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 陶哲铭 18:00
 http://103.236.71.92:1905/l8326955/969404567
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404299" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 2号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 2号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404299" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 2号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 2号桌 18:00
 http://103.236.71.92:1905/l8326955/969404299
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404324" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 3号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 3号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404324" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 3号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 3号桌 18:00
 http://103.236.71.92:1905/l8326955/969404324
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404336" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 4号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 4号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404336" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 4号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 4号桌 18:00
 http://103.236.71.92:1905/l8326955/969404336
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404373" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 5号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 5号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404373" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 5号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 5号桌 18:00
 http://103.236.71.92:1905/l8326955/969404373
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404392" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 6号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 6号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404392" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 6号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 6号桌 18:00
 http://103.236.71.92:1905/l8326955/969404392
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404485" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 7号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 7号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404485" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 7号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 7号桌 18:00
 http://103.236.71.92:1905/l8326955/969404485
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404503" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 8号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 8号桌 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404503" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 8号桌 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 8号桌 18:00
 http://103.236.71.92:1905/l8326955/969404503
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404538" tvg-id="刘宏宇、徐思、范争一出战" tvg-name="斯诺克 刘宏宇、徐思、范争一出战 AI智慧观赛 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 刘宏宇、徐思、范争一出战 AI智慧观赛 18:00
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404538" tvg-id="吉米·怀特、刘宏宇出战" tvg-name="斯诺克 吉米·怀特、刘宏宇出战 AI智慧观赛 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 吉米·怀特、刘宏宇出战 AI智慧观赛 18:00
 http://103.236.71.92:1905/l8326955/969404538
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969421771" tvg-id="NBA精彩重播：活塞 vs 马刺" tvg-name="NBA经典赛事 NBA精彩重播：活塞 vs 马刺 杨健 丁彦雨航 佳依 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/985164a0-1f05-4397-bf24-481207678231.png" group-title="央视直播",NBA经典赛事 NBA精彩重播：活塞 vs 马刺 杨健 丁彦雨航 佳依 18:00
+http://103.236.71.92:1905/l8326955/969421771
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969405221" tvg-id="精彩回顾：郑钦文 vs 布兹科娃" tvg-name="中国网球公开赛 精彩回顾：郑钦文 vs 布兹科娃 詹俊、王蔷 19:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：郑钦文 vs 布兹科娃 詹俊、王蔷 19:00
 http://103.236.71.92:1905/l8326955/969405221
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969292024" tvg-id="辽宁vs安徽" tvg-name="中国篮球城市冠军联赛 辽宁vs安徽 清流播出 19:25" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/11/9/100000001583106a6a52.png" group-title="央视直播",中国篮球城市冠军联赛 辽宁vs安徽 清流播出 19:25
@@ -617,7 +625,7 @@ http://103.236.71.92:1905/l8326955/969324540
 http://103.236.71.92:1905/l8326955/969463567
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463571" tvg-id="湖州VS嘉兴" tvg-name="浙BA 湖州VS嘉兴 赛场原声 19:30" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/09/02/77N92ACGBBVQ.png" group-title="央视直播",浙BA 湖州VS嘉兴 赛场原声 19:30
 http://103.236.71.92:1905/l8326955/969463571
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493362" tvg-id="山东高速VS广东东阳光" tvg-name="CBA俱乐部杯 山东高速VS广东东阳光 解说 19:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 山东高速VS广东东阳光 解说 19:45
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493362" tvg-id="山东高速VS广东东阳光" tvg-name="CBA俱乐部杯 山东高速VS广东东阳光 李天宇 于德豪 19:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 山东高速VS广东东阳光 李天宇 于德豪 19:45
 http://103.236.71.92:1905/l8326955/969493362
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493399" tvg-id="山东高速VS广东东阳光" tvg-name="CBA俱乐部杯 山东高速VS广东东阳光 山东主队 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 山东高速VS广东东阳光 山东主队 19:50
 http://103.236.71.92:1905/l8326955/969493399
@@ -625,7 +633,7 @@ http://103.236.71.92:1905/l8326955/969493399
 http://103.236.71.92:1905/l8326955/969493413
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493435" tvg-id="山东高速VS广东东阳光" tvg-name="CBA俱乐部杯 山东高速VS广东东阳光 赛场原声 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 山东高速VS广东东阳光 赛场原声 19:50
 http://103.236.71.92:1905/l8326955/969493435
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493142" tvg-id="江苏肯帝亚VS北京首钢" tvg-name="CBA俱乐部杯 江苏肯帝亚VS北京首钢 邵化谦 季孟年 19:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 江苏肯帝亚VS北京首钢 邵化谦 季孟年 19:45
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493142" tvg-id="江苏肯帝亚VS北京首钢" tvg-name="CBA俱乐部杯 江苏肯帝亚VS北京首钢 邵化谦 李根 季孟年 19:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 江苏肯帝亚VS北京首钢 邵化谦 李根 季孟年 19:45
 http://103.236.71.92:1905/l8326955/969493142
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493163" tvg-id="江苏肯帝亚VS北京首钢" tvg-name="CBA俱乐部杯 江苏肯帝亚VS北京首钢 江苏主队 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 江苏肯帝亚VS北京首钢 江苏主队 19:50
 http://103.236.71.92:1905/l8326955/969493163
@@ -659,6 +667,10 @@ http://103.236.71.92:1905/l8326955/969462973
 http://103.236.71.92:1905/l8326955/969463011
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463031" tvg-id="黄友政冲32强 范姝涵迎国乒内战" tvg-name="WTT 黄友政冲32强 范姝涵迎国乒内战 4号桌 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 黄友政冲32强 范姝涵迎国乒内战 4号桌 21:00
 http://103.236.71.92:1905/l8326955/969463031
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969512860" tvg-id="黄友政冲32强 范姝涵迎国乒内战" tvg-name="WTT 黄友政冲32强 范姝涵迎国乒内战 英文解说 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 黄友政冲32强 范姝涵迎国乒内战 英文解说 21:00
+http://103.236.71.92:1905/l8326955/969512860
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969514137" tvg-id="黄友政冲32强 范姝涵迎国乒内战" tvg-name="WTT 黄友政冲32强 范姝涵迎国乒内战 智能字幕 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 黄友政冲32强 范姝涵迎国乒内战 智能字幕 21:00
+http://103.236.71.92:1905/l8326955/969514137
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969405033" tvg-id="丁俊晖、周跃龙、斯佳辉出战" tvg-name="斯诺克 丁俊晖、周跃龙、斯佳辉出战 朱峰立 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 丁俊晖、周跃龙、斯佳辉出战 朱峰立 03:00
 http://103.236.71.92:1905/l8326955/969405033
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969404997" tvg-id="丁俊晖、周跃龙、斯佳辉出战" tvg-name="斯诺克 丁俊晖、周跃龙、斯佳辉出战 卢正浩 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 丁俊晖、周跃龙、斯佳辉出战 卢正浩 03:00
@@ -771,6 +783,10 @@ http://103.236.71.92:1905/l8326955/969463248
 http://103.236.71.92:1905/l8326955/969463279
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463308" tvg-id="男女单打1/16决赛、男女双打1/4决赛" tvg-name="WTT 男女单打1/16决赛、男女双打1/4决赛 4号桌 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 男女单打1/16决赛、男女双打1/4决赛 4号桌 15:00
 http://103.236.71.92:1905/l8326955/969463308
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969512847" tvg-id="男女单打1/16决赛、男女双打1/4决赛" tvg-name="WTT 男女单打1/16决赛、男女双打1/4决赛 英文解说 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 男女单打1/16决赛、男女双打1/4决赛 英文解说 15:00
+http://103.236.71.92:1905/l8326955/969512847
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969514097" tvg-id="男女单打1/16决赛、男女双打1/4决赛" tvg-name="WTT 男女单打1/16决赛、男女双打1/4决赛 智能字幕 15:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 男女单打1/16决赛、男女双打1/4决赛 智能字幕 15:00
+http://103.236.71.92:1905/l8326955/969514097
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493609" tvg-id="南京同曦宙光VS新疆广汇能源" tvg-name="CBA俱乐部杯 南京同曦宙光VS新疆广汇能源 孙博 曾令旭 15:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 南京同曦宙光VS新疆广汇能源 孙博 曾令旭 15:15
 http://103.236.71.92:1905/l8326955/969493609
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493636" tvg-id="南京同曦宙光VS新疆广汇能源" tvg-name="CBA俱乐部杯 南京同曦宙光VS新疆广汇能源 南京主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 南京同曦宙光VS新疆广汇能源 南京主队 15:20
@@ -795,13 +811,13 @@ http://103.236.71.92:1905/l8326955/969493560
 http://103.236.71.92:1905/l8326955/969493569
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493596" tvg-id="福建晋江文旅VS北京控股" tvg-name="CBA俱乐部杯 福建晋江文旅VS北京控股 赛场原声 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 福建晋江文旅VS北京控股 赛场原声 15:20
 http://103.236.71.92:1905/l8326955/969493596
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493464" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 邵化谦 季孟年 15:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 邵化谦 季孟年 15:15
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493464" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 邵化谦 李根 季孟年 15:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 邵化谦 李根 季孟年 15:45
 http://103.236.71.92:1905/l8326955/969493464
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493487" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 深圳主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 深圳主队 15:20
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493487" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 深圳主队 15:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 深圳主队 15:50
 http://103.236.71.92:1905/l8326955/969493487
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493498" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 天津主队 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 天津主队 15:20
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493498" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 天津主队 15:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 天津主队 15:50
 http://103.236.71.92:1905/l8326955/969493498
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493525" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 赛场原声 15:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 赛场原声 15:20
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493525" tvg-id="深圳马可波罗VS天津先行者" tvg-name="CBA俱乐部杯 深圳马可波罗VS天津先行者 赛场原声 15:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 深圳马可波罗VS天津先行者 赛场原声 15:50
 http://103.236.71.92:1905/l8326955/969493525
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969405280" tvg-id="张安达、袁思俊、庞俊旭出战" tvg-name="斯诺克 张安达、袁思俊、庞俊旭出战 涂子轩 18:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 张安达、袁思俊、庞俊旭出战 涂子轩 18:00
 http://103.236.71.92:1905/l8326955/969405280
@@ -825,13 +841,13 @@ http://103.236.71.92:1905/l8326955/969405173
 http://103.236.71.92:1905/l8326955/969405202
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969405296" tvg-id="精彩回顾：郑钦文 vs 查拉耶娃" tvg-name="中国网球公开赛 精彩回顾：郑钦文 vs 查拉耶娃 詹俊、王蔷 19:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/9/25/10000000111010617861.jpg" group-title="央视直播",中国网球公开赛 精彩回顾：郑钦文 vs 查拉耶娃 詹俊、王蔷 19:00
 http://103.236.71.92:1905/l8326955/969405296
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492983" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 邵化谦 季孟年 19:45" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 邵化谦 季孟年 19:45
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969492983" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 邵化谦 李根 季孟年 19:15" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 邵化谦 李根 季孟年 19:15
 http://103.236.71.92:1905/l8326955/969492983
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493005" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 浙证主队 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 浙证主队 19:50
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493005" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 浙证主队 19:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 浙证主队 19:20
 http://103.236.71.92:1905/l8326955/969493005
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493042" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 江苏主队 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 江苏主队 19:50
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493042" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 江苏主队 19:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 江苏主队 19:20
 http://103.236.71.92:1905/l8326955/969493042
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493062" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 赛场原声 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 赛场原声 19:50
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493062" tvg-id="浙江浙商证券VS江苏肯帝亚" tvg-name="CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 赛场原声 19:20" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 浙江浙商证券VS江苏肯帝亚 赛场原声 19:20
 http://103.236.71.92:1905/l8326955/969493062
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969464051" tvg-id="义乌VS富阳" tvg-name="浙BA 义乌VS富阳 赛场原声 19:30" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/09/02/77N92ACGBBVQ.png" group-title="央视直播",浙BA 义乌VS富阳 赛场原声 19:30
 http://103.236.71.92:1905/l8326955/969464051
@@ -853,8 +869,8 @@ http://103.236.71.92:1905/l8326955/969493229
 http://103.236.71.92:1905/l8326955/969493249
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493284" tvg-id="山西汾酒VS宁波町渥" tvg-name="CBA俱乐部杯 山西汾酒VS宁波町渥 赛场原声 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 山西汾酒VS宁波町渥 赛场原声 19:50
 http://103.236.71.92:1905/l8326955/969493284
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493409" tvg-id="广东东阳光VS浙江稠州金租" tvg-name="CBA俱乐部杯 广东东阳光VS浙江稠州金租 解说 18:00" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广东东阳光VS浙江稠州金租 解说 18:00
-http://103.236.71.92:1905/l8326955/969493409
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969512633" tvg-id="广东东阳光VS浙江稠州金租" tvg-name="CBA俱乐部杯 广东东阳光VS浙江稠州金租 李天宇 于德豪 18:00" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广东东阳光VS浙江稠州金租 李天宇 于德豪 18:00
+http://103.236.71.92:1905/l8326955/969512633
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493472" tvg-id="广东东阳光VS浙江稠州金租" tvg-name="CBA俱乐部杯 广东东阳光VS浙江稠州金租 广东主队 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广东东阳光VS浙江稠州金租 广东主队 19:50
 http://103.236.71.92:1905/l8326955/969493472
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493490" tvg-id="广东东阳光VS浙江稠州金租" tvg-name="CBA俱乐部杯 广东东阳光VS浙江稠州金租 浙江主队 19:50" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTFHTMB7SI.png" group-title="央视直播",CBA俱乐部杯 广东东阳光VS浙江稠州金租 浙江主队 19:50
@@ -875,6 +891,10 @@ http://103.236.71.92:1905/l8326955/969463412
 http://103.236.71.92:1905/l8326955/969463439
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969463485" tvg-id="男女单打1/16决赛、男女双打半决赛" tvg-name="WTT 男女单打1/16决赛、男女双打半决赛 4号桌 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 男女单打1/16决赛、男女双打半决赛 4号桌 21:00
 http://103.236.71.92:1905/l8326955/969463485
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969512836" tvg-id="男女单打1/16决赛、男女双打半决赛" tvg-name="WTT 男女单打1/16决赛、男女双打半决赛 英文解说 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 男女单打1/16决赛、男女双打半决赛 英文解说 21:00
+http://103.236.71.92:1905/l8326955/969512836
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969514052" tvg-id="男女单打1/16决赛、男女双打半决赛" tvg-name="WTT 男女单打1/16决赛、男女双打半决赛 智能字幕 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/9/28/1000000004041064e35e.png" group-title="央视直播",WTT 男女单打1/16决赛、男女双打半决赛 智能字幕 21:00
+http://103.236.71.92:1905/l8326955/969514052
 #EXTINF:-1 tvg-id="建党105周年巡礼" tvg-name="建党105周年巡礼" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/27362f5403f1dc570251.webp?v=1794918243937&from=source" group-title="央视直播",建党105周年巡礼
 http://103.236.71.92:1905/l8326955/713600957
 #EXTINF:-1 tvg-id="经典香港电影" tvg-name="经典香港电影" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ea5a3301a515b1a19905.webp?v=1794918243937&from=source" group-title="央视直播",经典香港电影
@@ -1153,10 +1173,6 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
-#EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁生活
-http://103.236.71.92:1905/l8326955/proxy/liaoning-078ce87dcf5384d51e4655cb962fda18.m3u8
-#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
-http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794918243937&from=source" group-title="央视直播",家庭理财
 http://103.236.71.92:1905/l8326955/proxy/liaoning-7e29bde4f41ca08642b7fc3ce4eb1ae4.m3u8
 #EXTINF:-1 tvg-id="沈阳新闻综合" tvg-name="沈阳新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e205e09309242aa99dd1.jpg?v=1794918243937&from=source" group-title="央视直播",沈阳新闻综合
@@ -1288,21 +1304,21 @@ http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-id="福州少儿" tvg-name="福州少儿" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b0a740ca9074581f516e.jpg?v=1794918243937&from=source" group-title="央视直播",福州少儿
 http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
 #EXTINF:-1 tvg-id="漳州新闻综合" tvg-name="漳州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/c5f7042f9511c48bf09c.jpg?v=1794918243937&from=source" group-title="央视直播",漳州新闻综合
-https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=af2819151794965455
+https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=a7ff84791794987356
 #EXTINF:-1 tvg-id="三明综合" tvg-name="三明综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f2cbaf10f364852c4fbc.jpg?v=1794918243937&from=source" group-title="央视直播",三明综合
-https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=e00f0fb71794965455
+https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=7cd78ad01794987356
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/5d28759b9d15461e5330.jpg?v=1794918243937&from=source" group-title="央视直播",泉州新闻综合
-https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=10bdd1cc1794965455
+https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=69c020ca1794987356
 #EXTINF:-1 tvg-id="南平综合" tvg-name="南平综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/963a3a386481159c03d9.png?v=1794918243937&from=source" group-title="央视直播",南平综合
-https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=2994d69c1794965455
+https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=e15c7a2a1794987356
 #EXTINF:-1 tvg-id="龙岩综合" tvg-name="龙岩综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e6ce208cbee0695d8ce8.jpg?v=1794918243937&from=source" group-title="央视直播",龙岩综合
-https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=e057515c1794965455
+https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=78e272991794987356
 #EXTINF:-1 tvg-id="莆田新闻综合" tvg-name="莆田新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/14367d692af06b1d9e12.jpg?v=1794918243937&from=source" group-title="央视直播",莆田新闻综合
-https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=2e975f571794965455
+https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=3f0fde941794987356
 #EXTINF:-1 tvg-id="平潭综合" tvg-name="平潭综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/11c2f38ecec0146bed38.jpg?v=1794918243937&from=source" group-title="央视直播",平潭综合
-https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=afbeeb721794965455
+https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=c0bf97591794987356
 #EXTINF:-1 tvg-id="宁德新闻综合" tvg-name="宁德新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/72ea501ea3fa7786cf79.jpg?v=1794918243937&from=source" group-title="央视直播",宁德新闻综合
-https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=67d183f51794965455
+https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=1c2d0b211794987356
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/33f3595e54bb29198114.jpg?v=1794918243937&from=source" catchup="none" group-title="央视直播",泉州新闻综合
 http://103.236.71.92:1905/l8326955/proxy/quanzhou-news-tv.m3u8
 #EXTINF:-1 tvg-id="泉州闽南语" tvg-name="泉州闽南语" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/9f643d30362fbf92ae55.jpg?v=1794918243937&from=source" catchup="none" group-title="央视直播",泉州闽南语
@@ -1603,10 +1619,6 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="冬季取暖神器怎么用才安全 消防实验现场示范" tvg-name="冬季取暖神器怎么用才安全 消防实验现场示范" tvg-logo="" catchup="none" group-title="央视直播",冬季取暖神器怎么用才安全 消防实验现场示范
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-561iq0lbtki8cbpdq54bbqjp8jp.m3u8
-#EXTINF:-1 tvg-id="【20261118】黄金11点——陆巍：又是高开低走 市场近期会不会再创新低？" tvg-name="【20261118】黄金11点——陆巍：又是高开低走 市场近期会不会再创新低？" tvg-logo="" catchup="none" group-title="央视直播",【20261118】黄金11点——陆巍：又是高开低走 市场近期会不会再创新低？
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-540fs3tk1ie85krr9d8cola88qv.m3u8
 #EXTINF:-1 tvg-id="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-name="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻100小时全媒体大直播
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5148heha4r58ooqievvm46j9ahn.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
@@ -1615,6 +1627,10 @@ http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5712q83nqup8q98ju0tn9gq4
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5694f7ph2ln9kqoj78fqqaj5ane.m3u8
 #EXTINF:-1 tvg-id="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-name="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5230otgl50t8bjqelcpa98ds5il.m3u8
+#EXTINF:-1 tvg-id="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-name="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-540f7f37shs8v2q72p84t1k4rjh.m3u8
+#EXTINF:-1 tvg-id="慢直播｜我把故宫带回家2026" tvg-name="慢直播｜我把故宫带回家2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜我把故宫带回家2026
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51q01s662r59n6pvg6ld676i80e.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",黄河电视台
