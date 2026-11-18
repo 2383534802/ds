@@ -1153,6 +1153,8 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
+#EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁生活
+http://103.236.71.92:1905/l8326955/proxy/liaoning-078ce87dcf5384d51e4655cb962fda18.m3u8
 #EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
 http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794918243937&from=source" group-title="央视直播",家庭理财
@@ -1569,14 +1571,16 @@ http://103.236.71.92:1905/l8326955/proxy/nmtv-alxa.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-22e49b8a07.m3u8
 #EXTINF:-1 tvg-id="长春市·文化广场" tvg-name="长春市·文化广场" tvg-logo="" catchup="none" group-title="央视直播",长春市·文化广场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-b194bc6da9.m3u8
-#EXTINF:-1 tvg-id="吉林市·松花江江湾" tvg-name="吉林市·松花江江湾" tvg-logo="" catchup="none" group-title="央视直播",吉林市·松花江江湾
-http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-fd8537d494.m3u8
-#EXTINF:-1 tvg-id="长春市·生态广场立交桥" tvg-name="长春市·生态广场立交桥" tvg-logo="" catchup="none" group-title="央视直播",长春市·生态广场立交桥
-http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-7baa8c144f.m3u8
+#EXTINF:-1 tvg-id="吉林市·松花湖" tvg-name="吉林市·松花湖" tvg-logo="" catchup="none" group-title="央视直播",吉林市·松花湖
+http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-0f1934aa8a.m3u8
+#EXTINF:-1 tvg-id="吉林市·临江门大桥" tvg-name="吉林市·临江门大桥" tvg-logo="" catchup="none" group-title="央视直播",吉林市·临江门大桥
+http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-ed867e7d61.m3u8
 #EXTINF:-1 tvg-id="通化市·浑江" tvg-name="通化市·浑江" tvg-logo="" catchup="none" group-title="央视直播",通化市·浑江
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-hunjiang.m3u8
 #EXTINF:-1 tvg-id="敦化市·中成朝鲜生态村" tvg-name="敦化市·中成朝鲜生态村" tvg-logo="" catchup="none" group-title="央视直播",敦化市·中成朝鲜生态村
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-d055b56914.m3u8
+#EXTINF:-1 tvg-id="敦化市·六鼎山文化旅游区" tvg-name="敦化市·六鼎山文化旅游区" tvg-logo="" catchup="none" group-title="央视直播",敦化市·六鼎山文化旅游区
+http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-169ac91ccc.m3u8
 #EXTINF:-1 tvg-id="敦化市·渤海湖公园" tvg-name="敦化市·渤海湖公园" tvg-logo="" catchup="none" group-title="央视直播",敦化市·渤海湖公园
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-ae0f56b481.m3u8
 #EXTINF:-1 tvg-id="敦化市·敖东大桥" tvg-name="敦化市·敖东大桥" tvg-logo="" catchup="none" group-title="央视直播",敦化市·敖东大桥
@@ -1599,10 +1603,10 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="【京城帮帮团】如何让看似“凑合”的婚姻，重新焕发生机？" tvg-name="【京城帮帮团】如何让看似“凑合”的婚姻，重新焕发生机？" tvg-logo="" catchup="none" group-title="央视直播",【京城帮帮团】如何让看似“凑合”的婚姻，重新焕发生机？
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57s8cfpe7cf8578areeu9equ01s.m3u8
-#EXTINF:-1 tvg-id="2026丰台区养老资源发布会" tvg-name="2026丰台区养老资源发布会" tvg-logo="" catchup="none" group-title="央视直播",2026丰台区养老资源发布会
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53onju5mm0p8ata2l683nqfqct6.m3u8
+#EXTINF:-1 tvg-id="冬季取暖神器怎么用才安全 消防实验现场示范" tvg-name="冬季取暖神器怎么用才安全 消防实验现场示范" tvg-logo="" catchup="none" group-title="央视直播",冬季取暖神器怎么用才安全 消防实验现场示范
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-561iq0lbtki8cbpdq54bbqjp8jp.m3u8
+#EXTINF:-1 tvg-id="【20261118】黄金11点——陆巍：又是高开低走 市场近期会不会再创新低？" tvg-name="【20261118】黄金11点——陆巍：又是高开低走 市场近期会不会再创新低？" tvg-logo="" catchup="none" group-title="央视直播",【20261118】黄金11点——陆巍：又是高开低走 市场近期会不会再创新低？
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-540fs3tk1ie85krr9d8cola88qv.m3u8
 #EXTINF:-1 tvg-id="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-name="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻100小时全媒体大直播
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5148heha4r58ooqievvm46j9ahn.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
