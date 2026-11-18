@@ -1171,6 +1171,8 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1794947043291&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
+http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794918243937&from=source" group-title="央视直播",家庭理财
@@ -1619,18 +1621,18 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-name="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻100小时全媒体大直播
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5148heha4r58ooqievvm46j9ahn.m3u8
-#EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5712q83nqup8q98ju0tn9gq4jvu.m3u8
-#EXTINF:-1 tvg-id="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-name="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜秦皇岛阿那亚 静听潮起潮落
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5694f7ph2ln9kqoj78fqqaj5ane.m3u8
-#EXTINF:-1 tvg-id="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-name="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5230otgl50t8bjqelcpa98ds5il.m3u8
-#EXTINF:-1 tvg-id="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-name="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-540f7f37shs8v2q72p84t1k4rjh.m3u8
-#EXTINF:-1 tvg-id="慢直播｜我把故宫带回家2026" tvg-name="慢直播｜我把故宫带回家2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜我把故宫带回家2026
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51q01s662r59n6pvg6ld676i80e.m3u8
+#EXTINF:-1 tvg-id="读懂心脏的&quot;求救&quot;信号！" tvg-name="读懂心脏的&quot;求救&quot;信号！" tvg-logo="" catchup="none" group-title="央视直播",读懂心脏的"求救"信号！
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56kfqcidghl98jokt7vss0b84e8.m3u8
+#EXTINF:-1 tvg-id="【20261118】决战2:30——秦鹏：调整最后一公里VS还会创新低，如何应对?" tvg-name="【20261118】决战2:30——秦鹏：调整最后一公里VS还会创新低，如何应对?" tvg-logo="" catchup="none" group-title="央视直播",【20261118】决战2:30——秦鹏：调整最后一公里VS还会创新低，如何应对?
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57j4lhqfmtj9s3qb19jomfdj84o.m3u8
+#EXTINF:-1 tvg-id="2026“博物馆之城”——走进中国华侨历史博物馆，回望赤子侨心" tvg-name="2026“博物馆之城”——走进中国华侨历史博物馆，回望赤子侨心" tvg-logo="" catchup="none" group-title="央视直播",2026“博物馆之城”——走进中国华侨历史博物馆，回望赤子侨心
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-537pis82rja9sba5bqjtpgvkpot.m3u8
+#EXTINF:-1 tvg-id="冠军伴我行 | 跑赢人生 科学跑步大师课" tvg-name="冠军伴我行 | 跑赢人生 科学跑步大师课" tvg-logo="" catchup="none" group-title="央视直播",冠军伴我行 | 跑赢人生 科学跑步大师课
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56o40p2n6248iib4js8s0d82vhi.m3u8
+#EXTINF:-1 tvg-id="护航成长：生命安全必修课" tvg-name="护航成长：生命安全必修课" tvg-logo="" catchup="none" group-title="央视直播",护航成长：生命安全必修课
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50ectt4nn899eh9ge01dnviq0a3.m3u8
+#EXTINF:-1 tvg-id="APEC“中国年”深圳时刻" tvg-name="APEC“中国年”深圳时刻" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56tvkquo6788jpq55rac6gq04ag.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",黄河电视台
