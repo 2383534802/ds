@@ -1183,6 +1183,8 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1794947043291&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
+http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794918243937&from=source" group-title="央视直播",家庭理财
@@ -1633,18 +1635,18 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
 #EXTINF:-1 tvg-id="3岁唇腭裂男孩今天手术，邀您一起为小多吉云守护！" tvg-name="3岁唇腭裂男孩今天手术，邀您一起为小多吉云守护！" tvg-logo="" catchup="none" group-title="央视直播",3岁唇腭裂男孩今天手术，邀您一起为小多吉云守护！
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50v1in2rrjp9kb8hlabsip5u1is.m3u8
-#EXTINF:-1 tvg-id="别让关节提前 “罢工”！" tvg-name="别让关节提前 “罢工”！" tvg-logo="" catchup="none" group-title="央视直播",别让关节提前 “罢工”！
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-55n2f2ni39p8318p5te4f6og3vn.m3u8
-#EXTINF:-1 tvg-id="香港佳士得 珍罕名酿：三大瞩目窖藏" tvg-name="香港佳士得 珍罕名酿：三大瞩目窖藏" tvg-logo="" catchup="none" group-title="央视直播",香港佳士得 珍罕名酿：三大瞩目窖藏
+#EXTINF:-1 tvg-id="北京外办领保大讲堂第八讲" tvg-name="北京外办领保大讲堂第八讲" tvg-logo="" catchup="none" group-title="央视直播",北京外办领保大讲堂第八讲
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-55f40liri8h8is9lk9h2nhu0h34.m3u8
+#EXTINF:-1 tvg-id="变“便”为宝，肠道微生态你了解吗？" tvg-name="变“便”为宝，肠道微生态你了解吗？" tvg-logo="" catchup="none" group-title="央视直播",变“便”为宝，肠道微生态你了解吗？
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-55ou6q2c7ng9sip0f8bmo529arn.m3u8
+#EXTINF:-1 tvg-id="“智越虚实 万物共生”——新浪新闻·2026探索大会" tvg-name="“智越虚实 万物共生”——新浪新闻·2026探索大会" tvg-logo="" catchup="none" group-title="央视直播",“智越虚实 万物共生”——新浪新闻·2026探索大会
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-52t3igl5mlc803b0mnn3qjgh3kk.m3u8
+#EXTINF:-1 tvg-id="佳士得香港 珍罕名酿：三大瞩目窖藏" tvg-name="佳士得香港 珍罕名酿：三大瞩目窖藏" tvg-logo="" catchup="none" group-title="央视直播",佳士得香港 珍罕名酿：三大瞩目窖藏
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-54olkt0iqlp8je9rof18igmcveb.m3u8
-#EXTINF:-1 tvg-id="【20261119】布局60分——王文轩：指数再次探底后小幅回升，是筑底信号吗？" tvg-name="【20261119】布局60分——王文轩：指数再次探底后小幅回升，是筑底信号吗？" tvg-logo="" catchup="none" group-title="央视直播",【20261119】布局60分——王文轩：指数再次探底后小幅回升，是筑底信号吗？
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51ueobq9o7n81rqop5f2ho4cf9r.m3u8
-#EXTINF:-1 tvg-id="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-name="APEC“中国年”深圳时刻100小时全媒体大直播" tvg-logo="" catchup="none" group-title="央视直播",APEC“中国年”深圳时刻100小时全媒体大直播
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5148heha4r58ooqievvm46j9ahn.m3u8
-#EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5712q83nqup8q98ju0tn9gq4jvu.m3u8
-#EXTINF:-1 tvg-id="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-name="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜秦皇岛阿那亚 静听潮起潮落
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5694f7ph2ln9kqoj78fqqaj5ane.m3u8
+#EXTINF:-1 tvg-id="2026“阅读北京”年度盛典" tvg-name="2026“阅读北京”年度盛典" tvg-logo="" catchup="none" group-title="央视直播",2026“阅读北京”年度盛典
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57b17qcuq5t8ijpb9oaaka9e57e.m3u8
+#EXTINF:-1 tvg-id="【20261119】决战2:30——秦鹏：指数新低反复，市场能否物极必反？" tvg-name="【20261119】决战2:30——秦鹏：指数新低反复，市场能否物极必反？" tvg-logo="" catchup="none" group-title="央视直播",【20261119】决战2:30——秦鹏：指数新低反复，市场能否物极必反？
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57uvjtrjvor8l6r2k3n62a03866.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",黄河电视台
