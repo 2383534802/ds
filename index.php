@@ -273,10 +273,6 @@ http://103.236.71.92:1905/l8326955/proxy/jstv-665.m3u8
 http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a68968a4a253f818c44b.png?v=1794918243937&from=source" group-title="央视直播",广东体育
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
-#EXTINF:-1 tvg-id="广东体育 · “汕头贴身服饰交易市场杯”汕头市潮阳区第二届男子篮球联赛" tvg-name="广东体育 · “汕头贴身服饰交易市场杯”汕头市潮阳区第二届男子篮球联赛" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · “汕头贴身服饰交易市场杯”汕头市潮阳区第二届男子篮球联赛
-http://103.236.71.92:1905/l8326955/relay/gdsport-event-120717.m3u8
-#EXTINF:-1 tvg-id="广东体育 · 2026新昌“斯菱智驱”林丹杯羽毛球公开赛" tvg-name="广东体育 · 2026新昌“斯菱智驱”林丹杯羽毛球公开赛" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 2026新昌“斯菱智驱”林丹杯羽毛球公开赛
-http://103.236.71.92:1905/l8326955/relay/gdsport-event-120749.m3u8
 #EXTINF:-1 tvg-id="福建文旅体育" tvg-name="福建文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/335059e07f510b82b075.png?v=1794918243937&from=source" group-title="央视直播",福建文旅体育
 http://103.236.71.92:1905/l8326955/relay/fjtv-province-665248752898248704.m3u8
 #EXTINF:-1 tvg-id="河北文旅体育" tvg-name="河北文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b8066eb66aa36e27b84a.png?v=1794918243937&from=source" group-title="央视直播",河北文旅体育
@@ -1293,8 +1289,6 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1794947043291&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/71642ce229b22ecf589b.jpg?v=1795062246472&from=source" group-title="央视直播",辽宁卫视
-http://103.236.71.92:1905/l8326955/proxy/liaoning-c077b260424404846285cba1e1759280.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁生活
@@ -1353,10 +1347,6 @@ http://103.236.71.92:1905/l8326955/relay/gdtv-94.m3u8
 http://103.236.71.92:1905/l8326955/relay/gdtv-99.m3u8
 #EXTINF:-1 tvg-id="GRTN生活" tvg-name="GRTN生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f86f4f256d872f9ac63c.png?v=1794918243937&from=source" group-title="央视直播",GRTN生活
 http://103.236.71.92:1905/l8326955/relay/gdtv-102.m3u8
-#EXTINF:-1 tvg-id="广东体育 · “汕头贴身服饰交易市场杯”汕头市潮阳区第二届男子篮球联赛" tvg-name="广东体育 · “汕头贴身服饰交易市场杯”汕头市潮阳区第二届男子篮球联赛" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · “汕头贴身服饰交易市场杯”汕头市潮阳区第二届男子篮球联赛
-http://103.236.71.92:1905/l8326955/relay/gdsport-event-120717.m3u8
-#EXTINF:-1 tvg-id="广东体育 · 2026新昌“斯菱智驱”林丹杯羽毛球公开赛" tvg-name="广东体育 · 2026新昌“斯菱智驱”林丹杯羽毛球公开赛" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 2026新昌“斯菱智驱”林丹杯羽毛球公开赛
-http://103.236.71.92:1905/l8326955/relay/gdsport-event-120749.m3u8
 #EXTINF:-1 tvg-id="广州综合" tvg-name="广州综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ef7e8b64838397475411.jpg?v=1794918243937&from=source" group-title="央视直播",广州综合
 http://103.236.71.92:1905/l8326955/gztv-3001
 #EXTINF:-1 tvg-id="广州新闻" tvg-name="广州新闻" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f10617a14c013d815e05.jpg?v=1794918243937&from=source" group-title="央视直播",广州新闻
@@ -1749,10 +1739,6 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="香港佳士得 至尊窖藏：勃艮第传奇佳酿及全球珍罕名酒" tvg-name="香港佳士得 至尊窖藏：勃艮第传奇佳酿及全球珍罕名酒" tvg-logo="" catchup="none" group-title="央视直播",香港佳士得 至尊窖藏：勃艮第传奇佳酿及全球珍罕名酒
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56r5srve5ql9ku8gfrpg3av2mei.m3u8
-#EXTINF:-1 tvg-id="11月20日 放量下跌，恐慌出尽了吗？" tvg-name="11月20日 放量下跌，恐慌出尽了吗？" tvg-logo="" catchup="none" group-title="央视直播",11月20日 放量下跌，恐慌出尽了吗？
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-501gtb5pj9p97ar6hg6titu91df.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5712q83nqup8q98ju0tn9gq4jvu.m3u8
 #EXTINF:-1 tvg-id="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-name="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜秦皇岛阿那亚 静听潮起潮落
@@ -1763,6 +1749,8 @@ http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5230otgl50t8bjqelcpa98ds
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-540f7f37shs8v2q72p84t1k4rjh.m3u8
 #EXTINF:-1 tvg-id="慢直播｜我把故宫带回家2026" tvg-name="慢直播｜我把故宫带回家2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜我把故宫带回家2026
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51q01s662r59n6pvg6ld676i80e.m3u8
+#EXTINF:-1 tvg-id="慢直播丨百米高空看北京：朝看国贸川流不息 夜赏京城璀璨华灯2026" tvg-name="慢直播丨百米高空看北京：朝看国贸川流不息 夜赏京城璀璨华灯2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播丨百米高空看北京：朝看国贸川流不息 夜赏京城璀璨华灯2026
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50gm82ad5mt95baljblf48k4kj4.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1794918243937&from=source" catchup="none" group-title="央视直播",黄河电视台
