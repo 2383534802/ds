@@ -1309,8 +1309,8 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1794947043291&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/71642ce229b22ecf589b.jpg?v=1795062246472&from=source" group-title="央视直播",辽宁卫视
-http://103.236.71.92:1905/l8326955/proxy/liaoning-c077b260424404846285cba1e1759280.m3u8
+#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
+http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1794918243937&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1794918243937&from=source" group-title="央视直播",家庭理财
@@ -1431,12 +1431,6 @@ http://103.236.71.92:1905/l8326955/relay/fjtv-province-665248752898248704.m3u8
 http://103.236.71.92:1905/l8326955/relay/fjtv-province-665248553475870720.m3u8
 #EXTINF:-1 tvg-id="海峡卫视" tvg-name="海峡卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd3c419e7ca8d1d8b576.jpg?v=1794918243937&from=source" group-title="央视直播",海峡卫视
 http://103.236.71.92:1905/l8326955/relay/fjtv-province-665248523855695872.m3u8
-#EXTINF:-1 tvg-id="厦视一套" tvg-name="厦视一套" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/6e9a555580fb5322291e.png?v=1794918243937&from=source" group-title="央视直播",厦视一套
-http://103.236.71.92:1905/l8326955/proxy/fjtv-xiamen-16.m3u8
-#EXTINF:-1 tvg-id="厦视二套" tvg-name="厦视二套" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/508b1974b5afe2743180.png?v=1794918243937&from=source" group-title="央视直播",厦视二套
-http://103.236.71.92:1905/l8326955/proxy/fjtv-xiamen-17.m3u8
-#EXTINF:-1 tvg-id="厦视三套" tvg-name="厦视三套" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/c0c82a68f2ff8da2df94.png?v=1794918243937&from=source" group-title="央视直播",厦视三套
-http://103.236.71.92:1905/l8326955/proxy/fjtv-xiamen-18.m3u8
 #EXTINF:-1 tvg-id="福州综合" tvg-name="福州综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f8334b029e52cb829e67.jpg?v=1794918243937&from=source" group-title="央视直播",福州综合
 http://live.zohi.tv/video/s10001-fztv-1/index.m3u8
 #EXTINF:-1 tvg-id="福州生活" tvg-name="福州生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/2e7decb97543c5cd9ea5.jpg?v=1794918243937&from=source" group-title="央视直播",福州生活
@@ -1444,21 +1438,21 @@ http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-id="福州少儿" tvg-name="福州少儿" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b0a740ca9074581f516e.jpg?v=1794918243937&from=source" group-title="央视直播",福州少儿
 http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
 #EXTINF:-1 tvg-id="漳州新闻综合" tvg-name="漳州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/c5f7042f9511c48bf09c.jpg?v=1794918243937&from=source" group-title="央视直播",漳州新闻综合
-https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=7fd62fda1795118758
+https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=405b22ec1795140657
 #EXTINF:-1 tvg-id="三明综合" tvg-name="三明综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f2cbaf10f364852c4fbc.jpg?v=1794918243937&from=source" group-title="央视直播",三明综合
-https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=8c1247a71795118758
+https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=8be7174e1795140657
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/5d28759b9d15461e5330.jpg?v=1794918243937&from=source" group-title="央视直播",泉州新闻综合
-https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=a68dca931795118758
+https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=c2ee76391795140657
 #EXTINF:-1 tvg-id="南平综合" tvg-name="南平综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/963a3a386481159c03d9.png?v=1794918243937&from=source" group-title="央视直播",南平综合
-https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=bb702cf71795118758
+https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=6c9e9e631795140657
 #EXTINF:-1 tvg-id="龙岩综合" tvg-name="龙岩综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e6ce208cbee0695d8ce8.jpg?v=1794918243937&from=source" group-title="央视直播",龙岩综合
-https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=4f4e0d9b1795118758
+https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=248e5ffe1795140657
 #EXTINF:-1 tvg-id="莆田新闻综合" tvg-name="莆田新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/14367d692af06b1d9e12.jpg?v=1794918243937&from=source" group-title="央视直播",莆田新闻综合
-https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=c79d11941795118758
+https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=1857f0601795140657
 #EXTINF:-1 tvg-id="平潭综合" tvg-name="平潭综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/11c2f38ecec0146bed38.jpg?v=1794918243937&from=source" group-title="央视直播",平潭综合
-https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=0ea5ba881795118758
+https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=57740fe61795140657
 #EXTINF:-1 tvg-id="宁德新闻综合" tvg-name="宁德新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/72ea501ea3fa7786cf79.jpg?v=1794918243937&from=source" group-title="央视直播",宁德新闻综合
-https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=2f73d4801795118758
+https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=8ef439be1795140657
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/33f3595e54bb29198114.jpg?v=1794918243937&from=source" catchup="none" group-title="央视直播",泉州新闻综合
 http://103.236.71.92:1905/l8326955/proxy/quanzhou-news-tv.m3u8
 #EXTINF:-1 tvg-id="泉州闽南语" tvg-name="泉州闽南语" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/9f643d30362fbf92ae55.jpg?v=1794918243937&from=source" catchup="none" group-title="央视直播",泉州闽南语
