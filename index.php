@@ -351,6 +351,14 @@ http://103.236.71.92:1905/l8326955/969764769
 http://103.236.71.92:1905/l8326955/969766479
 #EXTINF:-1 tvg-id="李梓嘉横扫晋级 郑加恒逆转" tvg-name="BWF 李梓嘉横扫晋级 郑加恒逆转 【全场回放】四号场地（赛场原声）（一） 18:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 李梓嘉横扫晋级 郑加恒逆转 【全场回放】四号场地（赛场原声）（一） 18:50
 http://103.236.71.92:1905/l8326955/969766766
+#EXTINF:-1 tvg-id="李梓嘉横扫晋级 郑加恒逆转" tvg-name="BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日二号场地全场回放（赛场原声）（二） 18:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日二号场地全场回放（赛场原声）（二） 18:50
+http://103.236.71.92:1905/l8326955/969771542
+#EXTINF:-1 tvg-id="李梓嘉横扫晋级 郑加恒逆转" tvg-name="BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日四号场地全场回放（赛场原声）（二） 18:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日四号场地全场回放（赛场原声）（二） 18:50
+http://103.236.71.92:1905/l8326955/969773156
+#EXTINF:-1 tvg-id="李梓嘉横扫晋级 郑加恒逆转" tvg-name="BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日三号场地全场回放（赛场原声）（二） 18:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日三号场地全场回放（赛场原声）（二） 18:50
+http://103.236.71.92:1905/l8326955/969773212
+#EXTINF:-1 tvg-id="李梓嘉横扫晋级 郑加恒逆转" tvg-name="BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日一号场地全场回放（赛场原声）（二） 18:50" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2023/5/25/100000001055106085dd.png" group-title="央视直播",BWF 李梓嘉横扫晋级 郑加恒逆转 2026BWF赛德莫迪羽毛球国际赛第二日一号场地全场回放（赛场原声）（二） 18:50
+http://103.236.71.92:1905/l8326955/969773262
 #EXTINF:-1 tvg-id="精彩回顾：科斯秋克 vs 诺斯科娃" tvg-name="WTA 精彩回顾：科斯秋克 vs 诺斯科娃 【回放】科斯秋克0-2诺斯科娃（鸿昆） 12:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2025/3/7/1000000012341069e1a8.jpg" group-title="央视直播",WTA 精彩回顾：科斯秋克 vs 诺斯科娃 【回放】科斯秋克0-2诺斯科娃（鸿昆） 12:00
 http://103.236.71.92:1905/l8326955/969284651
 #EXTINF:-1 tvg-id="中国篮球放映室：山东vs北控" tvg-name="CBA经典赛事 中国篮球放映室：山东vs北控 全场回放（孙博、李根） 14:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/8/c8067363-371e-49f9-8bdb-3e1a18ac0f7d.png" group-title="央视直播",CBA经典赛事 中国篮球放映室：山东vs北控 全场回放（孙博、李根） 14:00
@@ -377,42 +385,28 @@ http://103.236.71.92:1905/l8326955/969768888
 http://103.236.71.92:1905/l8326955/969769529
 #EXTINF:-1 tvg-id="万隆VS首尔" tvg-name="亚冠二级 万隆VS首尔 全场回放（刘洋） 20:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 万隆VS首尔 全场回放（刘洋） 20:00
 http://103.236.71.92:1905/l8326955/969768633
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969752522" tvg-id="晋级轮：斯佳辉VS霍尔特 龙泽煌出战" tvg-name="斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 柏林 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 柏林 21:00
-http://103.236.71.92:1905/l8326955/969752522
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493808" tvg-id="晋级轮：斯佳辉VS霍尔特 龙泽煌出战" tvg-name="斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 2号桌 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 2号桌 21:00
-http://103.236.71.92:1905/l8326955/969493808
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493967" tvg-id="晋级轮：斯佳辉VS霍尔特 龙泽煌出战" tvg-name="斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 AI智慧观赛 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 AI智慧观赛 21:00
-http://103.236.71.92:1905/l8326955/969493967
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493714" tvg-id="晋级轮：斯佳辉VS霍尔特 龙泽煌出战" tvg-name="斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 1号桌 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 1号桌 21:00
-http://103.236.71.92:1905/l8326955/969493714
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969493875" tvg-id="晋级轮：斯佳辉VS霍尔特 龙泽煌出战" tvg-name="斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 3号桌 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 3号桌 21:00
-http://103.236.71.92:1905/l8326955/969493875
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969494007" tvg-id="晋级轮：斯佳辉VS霍尔特 龙泽煌出战" tvg-name="斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 4号桌 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：斯佳辉VS霍尔特 龙泽煌出战 4号桌 21:00
-http://103.236.71.92:1905/l8326955/969494007
+#EXTINF:-1 tvg-id="斯佳辉3-6霍尔特 龙泽煌无缘正赛" tvg-name="斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：迈克尔·霍尔特6-3斯佳辉（赛场原声） 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：迈克尔·霍尔特6-3斯佳辉（赛场原声） 21:00
+http://103.236.71.92:1905/l8326955/969772473
+#EXTINF:-1 tvg-id="斯佳辉3-6霍尔特 龙泽煌无缘正赛" tvg-name="斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：迈克尔·霍尔特6-3斯佳辉（赛场原声） 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：迈克尔·霍尔特6-3斯佳辉（赛场原声） 21:00
+http://103.236.71.92:1905/l8326955/969773278
+#EXTINF:-1 tvg-id="斯佳辉3-6霍尔特 龙泽煌无缘正赛" tvg-name="斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：乔·奥康纳6-4杰米·琼斯（赛场原声） 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：乔·奥康纳6-4杰米·琼斯（赛场原声） 21:00
+http://103.236.71.92:1905/l8326955/969773505
+#EXTINF:-1 tvg-id="斯佳辉3-6霍尔特 龙泽煌无缘正赛" tvg-name="斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：杰克·琼斯3-6马修·塞尔特（赛场原声） 21:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 斯佳辉3-6霍尔特 龙泽煌无缘正赛 26/27赛季斯诺克英锦赛资格赛第4轮回放：杰克·琼斯3-6马修·塞尔特（赛场原声） 21:00
+http://103.236.71.92:1905/l8326955/969773628
+#EXTINF:-1 tvg-id="纳萨夫VS永恒体育" tvg-name="亚冠二级 纳萨夫VS永恒体育 全场回放（乔迁） 21:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 纳萨夫VS永恒体育 全场回放（乔迁） 21:30
+http://103.236.71.92:1905/l8326955/969773029
 #EXTINF:-1 tvg-id="《球你别说了》男篮客战沙特，胜算几何？" tvg-name="CBA 《球你别说了》男篮客战沙特，胜算几何？ 全场回放 22:00" tvg-logo="https://img.cmvideo.cn/publish/noms_wc/nomsworldcup/2026/10/30/77QTDOK0QB8R.png" group-title="央视直播",CBA 《球你别说了》男篮客战沙特，胜算几何？ 全场回放 22:00
 http://103.236.71.92:1905/l8326955/969769717
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526064" tvg-id="科威特竞技VS阿布扎比统一" tvg-name="亚冠二级 科威特竞技VS阿布扎比统一 鹿中原 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 科威特竞技VS阿布扎比统一 鹿中原 23:45
-http://103.236.71.92:1905/l8326955/969526064
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526051" tvg-id="科威特竞技VS阿布扎比统一" tvg-name="亚冠二级 科威特竞技VS阿布扎比统一 赛场原声 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 科威特竞技VS阿布扎比统一 赛场原声 23:45
-http://103.236.71.92:1905/l8326955/969526051
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526235" tvg-id="费萨里体育VS赖扬" tvg-name="亚冠二级 费萨里体育VS赖扬 刘一臻 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 费萨里体育VS赖扬 刘一臻 23:45
-http://103.236.71.92:1905/l8326955/969526235
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526225" tvg-id="费萨里体育VS赖扬" tvg-name="亚冠二级 费萨里体育VS赖扬 赛场原声 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 费萨里体育VS赖扬 赛场原声 23:45
-http://103.236.71.92:1905/l8326955/969526225
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526127" tvg-id="穆哈拉格VS阿尔卡达格" tvg-name="亚冠二级 穆哈拉格VS阿尔卡达格 张天翼 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 穆哈拉格VS阿尔卡达格 张天翼 23:45
-http://103.236.71.92:1905/l8326955/969526127
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526114" tvg-id="穆哈拉格VS阿尔卡达格" tvg-name="亚冠二级 穆哈拉格VS阿尔卡达格 赛场原声 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 穆哈拉格VS阿尔卡达格 赛场原声 23:45
-http://103.236.71.92:1905/l8326955/969526114
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526200" tvg-id="阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹" tvg-name="亚冠二级 阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹 洪宇青 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹 洪宇青 23:45
-http://103.236.71.92:1905/l8326955/969526200
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526175" tvg-id="阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹" tvg-name="亚冠二级 阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹 赛场原声 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹 赛场原声 23:45
-http://103.236.71.92:1905/l8326955/969526175
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969761827" tvg-id="国际自盟场地自行车世锦赛-3" tvg-name="国际自盟场地自行车世锦赛 国际自盟场地自行车世锦赛-3 解说 00:08" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2026/10/29/10000000157210695b94.png" group-title="央视直播",国际自盟场地自行车世锦赛 国际自盟场地自行车世锦赛-3 解说 00:08
-http://103.236.71.92:1905/l8326955/969761827
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526300" tvg-id="布赖代合作VS阿尔纳达" tvg-name="亚冠二级 布赖代合作VS阿尔纳达 吴子越 02:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 布赖代合作VS阿尔纳达 吴子越 02:00
-http://103.236.71.92:1905/l8326955/969526300
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969526287" tvg-id="布赖代合作VS阿尔纳达" tvg-name="亚冠二级 布赖代合作VS阿尔纳达 赛场原声 02:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 布赖代合作VS阿尔纳达 赛场原声 02:00
-http://103.236.71.92:1905/l8326955/969526287
+#EXTINF:-1 tvg-id="科威特竞技VS阿布扎比统一" tvg-name="亚冠二级 科威特竞技VS阿布扎比统一 全场回放（鹿中原） 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 科威特竞技VS阿布扎比统一 全场回放（鹿中原） 23:45
+http://103.236.71.92:1905/l8326955/969773304
+#EXTINF:-1 tvg-id="费萨里体育VS赖扬" tvg-name="亚冠二级 费萨里体育VS赖扬 全场回放（刘一臻） 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 费萨里体育VS赖扬 全场回放（刘一臻） 23:45
+http://103.236.71.92:1905/l8326955/969773287
+#EXTINF:-1 tvg-id="穆哈拉格VS阿尔卡达格" tvg-name="亚冠二级 穆哈拉格VS阿尔卡达格 全场回放（张天翼） 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 穆哈拉格VS阿尔卡达格 全场回放（张天翼） 23:45
+http://103.236.71.92:1905/l8326955/969773294
+#EXTINF:-1 tvg-id="阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹" tvg-name="亚冠二级 阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹 全场回放（洪宇青） 23:45" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/9/11/100000001227106e764f.png" group-title="央视直播",亚冠二级 阿布扎比半岛足球俱乐部VS戈尔戈哈尔锡尔詹 全场回放（洪宇青） 23:45
+http://103.236.71.92:1905/l8326955/969773339
+#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969752484" tvg-id="晋级轮：张安达PK穆迪 范争一vs宾汉姆" tvg-name="斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 卢正浩 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 卢正浩 03:00
+http://103.236.71.92:1905/l8326955/969752484
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969494222" tvg-id="晋级轮：张安达PK穆迪 范争一vs宾汉姆" tvg-name="斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 1号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 1号桌 03:00
 http://103.236.71.92:1905/l8326955/969494222
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969494340" tvg-id="晋级轮：张安达PK穆迪 范争一vs宾汉姆" tvg-name="斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 AI智慧观赛 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 AI智慧观赛 03:00
@@ -423,8 +417,6 @@ http://103.236.71.92:1905/l8326955/969495880
 http://103.236.71.92:1905/l8326955/969495979
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969496076" tvg-id="晋级轮：张安达PK穆迪 范争一vs宾汉姆" tvg-name="斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 4号桌 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 4号桌 03:00
 http://103.236.71.92:1905/l8326955/969496076
-#EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969752484" tvg-id="晋级轮：张安达PK穆迪 范争一vs宾汉姆" tvg-name="斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 卢正浩 03:00" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2024/1/16/100000001001106678f6.jpg" group-title="央视直播",斯诺克 晋级轮：张安达PK穆迪 范争一vs宾汉姆 卢正浩 03:00
-http://103.236.71.92:1905/l8326955/969752484
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969582230" tvg-id="76人VS热火" tvg-name="NBA 76人VS热火 孙博 丁彦雨航 霍楠 05:30" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 76人VS热火 孙博 丁彦雨航 霍楠 05:30
 http://103.236.71.92:1905/l8326955/969582230
 #EXTINF:-1 danmaku-url="http://103.236.71.92:1905/l8326955/danmaku/migu/969582182" tvg-id="76人VS热火" tvg-name="NBA 76人VS热火 莫俊祺 05:55" tvg-logo="https://img.cmvideo.cn/sports/uploadImages/2020/1/10/7f7fd4d8-7213-412b-8a19-02521a6ef852.png" group-title="央视直播",NBA 76人VS热火 莫俊祺 05:55
@@ -961,6 +953,8 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1795551844152&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/71642ce229b22ecf589b.jpg?v=1795062246472&from=source" group-title="央视直播",辽宁卫视
+http://103.236.71.92:1905/l8326955/proxy/liaoning-c077b260424404846285cba1e1759280.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1795523046076&from=source" group-title="央视直播",家庭理财
