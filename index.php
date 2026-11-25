@@ -271,6 +271,8 @@ http://103.236.71.92:1905/l8326955/961930263
 http://103.236.71.92:1905/l8326955/proxy/jstv-665.m3u8
 #EXTINF:-1 tvg-id="安徽综艺体育" tvg-name="安徽综艺体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ca26ab53a4d70b7b7aa1.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",安徽综艺体育
 http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
+#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
+http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a68968a4a253f818c44b.png?v=1795523046076&from=source" group-title="央视直播",广东体育
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
 #EXTINF:-1 tvg-id="福建文旅体育" tvg-name="福建文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/335059e07f510b82b075.png?v=1795523046076&from=source" group-title="央视直播",福建文旅体育
@@ -1039,8 +1041,12 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1795551844152&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
+http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
+#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
+http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1795523046076&from=source" group-title="央视直播",家庭理财
 http://103.236.71.92:1905/l8326955/proxy/liaoning-7e29bde4f41ca08642b7fc3ce4eb1ae4.m3u8
 #EXTINF:-1 tvg-id="沈阳新闻综合" tvg-name="沈阳新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e205e09309242aa99dd1.jpg?v=1795523046076&from=source" group-title="央视直播",沈阳新闻综合
@@ -1481,16 +1487,14 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="【读书俱乐部】读懂冰，看见藏在寒冷里的文明" tvg-name="【读书俱乐部】读懂冰，看见藏在寒冷里的文明" tvg-logo="" catchup="none" group-title="央视直播",【读书俱乐部】读懂冰，看见藏在寒冷里的文明
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-55je37akjk69drocu8d7otg30hm.m3u8
-#EXTINF:-1 tvg-id="职场中的边界与温度！" tvg-name="职场中的边界与温度！" tvg-logo="" catchup="none" group-title="央视直播",职场中的边界与温度！
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-54t7upj7mmc9a98jm3mlml0v5hb.m3u8
+#EXTINF:-1 tvg-id="市场反复 年末如何破局" tvg-name="市场反复 年末如何破局" tvg-logo="" catchup="none" group-title="央视直播",市场反复 年末如何破局
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-52ep40i6d8e9i4richhjpvi10m2.m3u8
+#EXTINF:-1 tvg-id="解码“人工智能+终身学习”的首都方案" tvg-name="解码“人工智能+终身学习”的首都方案" tvg-logo="" catchup="none" group-title="央视直播",解码“人工智能+终身学习”的首都方案
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-515ve4bv46n8h3ppuadpd9m59c0.m3u8
+#EXTINF:-1 tvg-id="如果要搬家，你最舍不得你们小区的什么？" tvg-name="如果要搬家，你最舍不得你们小区的什么？" tvg-logo="" catchup="none" group-title="央视直播",如果要搬家，你最舍不得你们小区的什么？
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-578aivie80q97ea0gk7f5lqq7mp.m3u8
 #EXTINF:-1 tvg-id="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-name="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜跟着课本去旅行《迷人的张家界》
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53brd67p39p85fp3marineh4ugr.m3u8
-#EXTINF:-1 tvg-id="商圈海选｜建外SOHO赛区11月25日下午B区02桌" tvg-name="商圈海选｜建外SOHO赛区11月25日下午B区02桌" tvg-logo="" catchup="none" group-title="央视直播",商圈海选｜建外SOHO赛区11月25日下午B区02桌
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-556gos72ik68s2bgtl16lo80g3a.m3u8
-#EXTINF:-1 tvg-id="别以为只是胖了点，脂肪肝暗藏肝癌风险" tvg-name="别以为只是胖了点，脂肪肝暗藏肝癌风险" tvg-logo="" catchup="none" group-title="央视直播",别以为只是胖了点，脂肪肝暗藏肝癌风险
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-54i4nr2kq3r8rm8ntpp7r621qtm.m3u8
 #EXTINF:-1 tvg-id="《耳里“心跳”，脑里“警报”》" tvg-name="《耳里“心跳”，脑里“警报”》" tvg-logo="" catchup="none" group-title="央视直播",《耳里“心跳”，脑里“警报”》
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-514p29cahlp9r4ru9f737bu8ja9.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
