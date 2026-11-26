@@ -1214,21 +1214,21 @@ http://live.zohi.tv/video/s10001-fztv-3/index.m3u8
 #EXTINF:-1 tvg-id="福州少儿" tvg-name="福州少儿" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b0a740ca9074581f516e.jpg?v=1795523046076&from=source" group-title="央视直播",福州少儿
 http://live.zohi.tv/video/s10001-fztv-4/index.m3u8
 #EXTINF:-1 tvg-id="漳州新闻综合" tvg-name="漳州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/c5f7042f9511c48bf09c.jpg?v=1795523046076&from=source" group-title="央视直播",漳州新闻综合
-https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=58a07ba81795709303
+https://live4-fuyun.fjtv.net/hb_zztv/sd/live.m3u8?_upt=09db8c1c1795731203
 #EXTINF:-1 tvg-id="三明综合" tvg-name="三明综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f2cbaf10f364852c4fbc.jpg?v=1795523046076&from=source" group-title="央视直播",三明综合
-https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=55b29b6a1795709303
+https://live4-fuyun.fjtv.net/hb_smtv/sd/live.m3u8?_upt=e788a9ea1795731203
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/5d28759b9d15461e5330.jpg?v=1795523046076&from=source" group-title="央视直播",泉州新闻综合
-https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=f054bbce1795709303
+https://live4-fuyun.fjtv.net/hb_qztv/sd/live.m3u8?_upt=7f5660f41795731203
 #EXTINF:-1 tvg-id="南平综合" tvg-name="南平综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/963a3a386481159c03d9.png?v=1795523046076&from=source" group-title="央视直播",南平综合
-https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=304e2d891795709303
+https://live4-fuyun.fjtv.net/hb_nptv/sd/live.m3u8?_upt=ed5918151795731203
 #EXTINF:-1 tvg-id="龙岩综合" tvg-name="龙岩综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e6ce208cbee0695d8ce8.jpg?v=1795523046076&from=source" group-title="央视直播",龙岩综合
-https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=6e3747771795709303
+https://live4-fuyun.fjtv.net/hb_lytv/sd/live.m3u8?_upt=a04d86731795731203
 #EXTINF:-1 tvg-id="莆田新闻综合" tvg-name="莆田新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/14367d692af06b1d9e12.jpg?v=1795523046076&from=source" group-title="央视直播",莆田新闻综合
-https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=ca1095ce1795709303
+https://live4-fuyun.fjtv.net/hb_puttv/sd/live.m3u8?_upt=84d7ecb21795731203
 #EXTINF:-1 tvg-id="平潭综合" tvg-name="平潭综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/11c2f38ecec0146bed38.jpg?v=1795523046076&from=source" group-title="央视直播",平潭综合
-https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=eb39007d1795709303
+https://live4-fuyun.fjtv.net/hb_pttv/sd/live.m3u8?_upt=c1e7c1841795731203
 #EXTINF:-1 tvg-id="宁德新闻综合" tvg-name="宁德新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/72ea501ea3fa7786cf79.jpg?v=1795523046076&from=source" group-title="央视直播",宁德新闻综合
-https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=836cf1a01795709303
+https://live4-fuyun.fjtv.net/hb_ndtv/sd/live.m3u8?_upt=f72fee4f1795731203
 #EXTINF:-1 tvg-id="泉州新闻综合" tvg-name="泉州新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/33f3595e54bb29198114.jpg?v=1795523046076&from=source" catchup="none" group-title="央视直播",泉州新闻综合
 http://103.236.71.92:1905/l8326955/proxy/quanzhou-news-tv.m3u8
 #EXTINF:-1 tvg-id="泉州闽南语" tvg-name="泉州闽南语" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/9f643d30362fbf92ae55.jpg?v=1795523046076&from=source" catchup="none" group-title="央视直播",泉州闽南语
