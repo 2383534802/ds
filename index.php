@@ -271,6 +271,8 @@ http://103.236.71.92:1905/l8326955/961930263
 http://103.236.71.92:1905/l8326955/proxy/jstv-665.m3u8
 #EXTINF:-1 tvg-id="安徽综艺体育" tvg-name="安徽综艺体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ca26ab53a4d70b7b7aa1.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",安徽综艺体育
 http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
+#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
+http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a68968a4a253f818c44b.png?v=1795523046076&from=source" group-title="央视直播",广东体育
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
 #EXTINF:-1 tvg-id="福建文旅体育" tvg-name="福建文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/335059e07f510b82b075.png?v=1795523046076&from=source" group-title="央视直播",福建文旅体育
@@ -949,8 +951,12 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1795551844152&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
+http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
+#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
+http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1795523046076&from=source" group-title="央视直播",家庭理财
 http://103.236.71.92:1905/l8326955/proxy/liaoning-7e29bde4f41ca08642b7fc3ce4eb1ae4.m3u8
 #EXTINF:-1 tvg-id="沈阳新闻综合" tvg-name="沈阳新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e205e09309242aa99dd1.jpg?v=1795523046076&from=source" group-title="央视直播",沈阳新闻综合
@@ -1391,18 +1397,18 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="【20261126】决战2:30——秦鹏：缩量新低后，见底条件还有哪些待确认？" tvg-name="【20261126】决战2:30——秦鹏：缩量新低后，见底条件还有哪些待确认？" tvg-logo="" catchup="none" group-title="央视直播",【20261126】决战2:30——秦鹏：缩量新低后，见底条件还有哪些待确认？
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56pmaogn5208ooqq8vi9sur09ni.m3u8
-#EXTINF:-1 tvg-id="【读书俱乐部】商务印书馆26年11月双十佳图书" tvg-name="【读书俱乐部】商务印书馆26年11月双十佳图书" tvg-logo="" catchup="none" group-title="央视直播",【读书俱乐部】商务印书馆26年11月双十佳图书
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57p8m3p8qie9j989jr0tqqno4gf.m3u8
-#EXTINF:-1 tvg-id="走，跟王振龙逛京韵市集去！「北京范儿」好物专场" tvg-name="走，跟王振龙逛京韵市集去！「北京范儿」好物专场" tvg-logo="" catchup="none" group-title="央视直播",走，跟王振龙逛京韵市集去！「北京范儿」好物专场
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-562pdjvotjs86r8q2b2jmrb2vqk.m3u8
-#EXTINF:-1 tvg-id="《探秘周口店·寻根北京人》——穿越70万年一场直播看懂人类进化史" tvg-name="《探秘周口店·寻根北京人》——穿越70万年一场直播看懂人类进化史" tvg-logo="" catchup="none" group-title="央视直播",《探秘周口店·寻根北京人》——穿越70万年一场直播看懂人类进化史
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-54clkf1d8bl9enbimak4tsmphmh.m3u8
+#EXTINF:-1 tvg-id="市场磨底期 选时还是选股" tvg-name="市场磨底期 选时还是选股" tvg-logo="" catchup="none" group-title="央视直播",市场磨底期 选时还是选股
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53p0r4ec6ss9eaamurcmh0c5jsg.m3u8
+#EXTINF:-1 tvg-id="有没有哪种暖，短暂但是后劲很足？" tvg-name="有没有哪种暖，短暂但是后劲很足？" tvg-logo="" catchup="none" group-title="央视直播",有没有哪种暖，短暂但是后劲很足？
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5078uhg20dg8rtoee6h4nun238i.m3u8
+#EXTINF:-1 tvg-id="【2027北京高招时间】特殊类型招生多一条赛道还是多一道门槛？" tvg-name="【2027北京高招时间】特殊类型招生多一条赛道还是多一道门槛？" tvg-logo="" catchup="none" group-title="央视直播",【2027北京高招时间】特殊类型招生多一条赛道还是多一道门槛？
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5611qkd3uj38caqogpssgov979c.m3u8
 #EXTINF:-1 tvg-id="WISE2026 商业之王" tvg-name="WISE2026 商业之王" tvg-logo="" catchup="none" group-title="央视直播",WISE2026 商业之王
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56h38hcu2t68nib9re2vrbstp3a.m3u8
-#EXTINF:-1 tvg-id="就等你来：丰台区云岗街道就业服务站招聘会" tvg-name="就等你来：丰台区云岗街道就业服务站招聘会" tvg-logo="" catchup="none" group-title="央视直播",就等你来：丰台区云岗街道就业服务站招聘会
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-52j2sln36sd9us8cuh9aukmgrr0.m3u8
+#EXTINF:-1 tvg-id="《冬天补肾，别丢了骨头和肌肉！》" tvg-name="《冬天补肾，别丢了骨头和肌肉！》" tvg-logo="" catchup="none" group-title="央视直播",《冬天补肾，别丢了骨头和肌肉！》
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50s0bs3i5ak8rbo5o0pijiikkfq.m3u8
+#EXTINF:-1 tvg-id="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-name="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜跟着课本去旅行《迷人的张家界》
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53brd67p39p85fp3marineh4ugr.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",黄河电视台
