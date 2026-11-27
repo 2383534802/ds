@@ -271,8 +271,6 @@ http://103.236.71.92:1905/l8326955/961930263
 http://103.236.71.92:1905/l8326955/proxy/jstv-665.m3u8
 #EXTINF:-1 tvg-id="安徽综艺体育" tvg-name="安徽综艺体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ca26ab53a4d70b7b7aa1.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",安徽综艺体育
 http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
-#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
-http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a68968a4a253f818c44b.png?v=1795523046076&from=source" group-title="央视直播",广东体育
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
 #EXTINF:-1 tvg-id="广东体育 · 世界棒球12强资格赛（中山赛区）" tvg-name="广东体育 · 世界棒球12强资格赛（中山赛区）" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 世界棒球12强资格赛（中山赛区）
@@ -1115,8 +1113,10 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
 http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
-#EXTINF:-1 tvg-id="辽宁体育休闲" tvg-name="辽宁体育休闲" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b379b41021985f1c6605.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁体育休闲
-http://103.236.71.92:1905/l8326955/proxy/liaoning-e0bb9a7fd9afa954658bc50d0681cd49.m3u8
+#EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁生活
+http://103.236.71.92:1905/l8326955/proxy/liaoning-078ce87dcf5384d51e4655cb962fda18.m3u8
+#EXTINF:-1 tvg-id="辽宁北方" tvg-name="辽宁北方" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a1954f56cf92a5c31f98.jpg?v=1795609443377&from=source" group-title="央视直播",辽宁北方
+http://103.236.71.92:1905/l8326955/proxy/liaoning-8e95535378bd3e5f7494bc23ab1cb117.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1795523046076&from=source" group-title="央视直播",家庭理财
 http://103.236.71.92:1905/l8326955/proxy/liaoning-7e29bde4f41ca08642b7fc3ce4eb1ae4.m3u8
 #EXTINF:-1 tvg-id="沈阳新闻综合" tvg-name="沈阳新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e205e09309242aa99dd1.jpg?v=1795523046076&from=source" group-title="央视直播",沈阳新闻综合
@@ -1559,20 +1559,20 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-china-memory.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 #EXTINF:-1 tvg-id="长白山·万达滑雪场" tvg-name="长白山·万达滑雪场" tvg-logo="" catchup="none" group-title="央视直播",长白山·万达滑雪场
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
-#EXTINF:-1 tvg-id="市场强势反攻 年末行情开启？" tvg-name="市场强势反攻 年末行情开启？" tvg-logo="" catchup="none" group-title="央视直播",市场强势反攻 年末行情开启？
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57caqr04ccr95pqm3o020j1mg9g.m3u8
+#EXTINF:-1 tvg-id="8年三孩非亲生 欺诈性抚养的伦理边界" tvg-name="8年三孩非亲生 欺诈性抚养的伦理边界" tvg-logo="" catchup="none" group-title="央视直播",8年三孩非亲生 欺诈性抚养的伦理边界
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-523kk05bqpt8o0obvp2j7rn2pog.m3u8
 #EXTINF:-1 tvg-id="让爱，被听见——一场关于理解、陪伴与歌声的公益演唱会" tvg-name="让爱，被听见——一场关于理解、陪伴与歌声的公益演唱会" tvg-logo="" catchup="none" group-title="央视直播",让爱，被听见——一场关于理解、陪伴与歌声的公益演唱会
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-56imt7tf28482193hkp0t0ao257.m3u8
-#EXTINF:-1 tvg-id="“全国首例职场性侵工伤认定案”劳动争议一审宣判 记者深度对话当事人崔丽丽" tvg-name="“全国首例职场性侵工伤认定案”劳动争议一审宣判 记者深度对话当事人崔丽丽" tvg-logo="" catchup="none" group-title="央视直播",“全国首例职场性侵工伤认定案”劳动争议一审宣判 记者深度对话当事人崔丽丽
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-55d2vbv75d28r1r44fmfosbg26h.m3u8
-#EXTINF:-1 tvg-id="下了班，你最想去学点什么?" tvg-name="下了班，你最想去学点什么?" tvg-logo="" catchup="none" group-title="央视直播",下了班，你最想去学点什么?
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51g303ke8rb8lt9d8puu0dovulk.m3u8
-#EXTINF:-1 tvg-id="《退役第一课》第二季重磅开播！" tvg-name="《退役第一课》第二季重磅开播！" tvg-logo="" catchup="none" group-title="央视直播",《退役第一课》第二季重磅开播！
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50f37r60q9k8tsp94mbe3s33b7p.m3u8
+#EXTINF:-1 tvg-id="第十八届北京快板邀请赛暨2026京津冀快板邀请赛——山东快书专场展演" tvg-name="第十八届北京快板邀请赛暨2026京津冀快板邀请赛——山东快书专场展演" tvg-logo="" catchup="none" group-title="央视直播",第十八届北京快板邀请赛暨2026京津冀快板邀请赛——山东快书专场展演
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-5782dqb0o5b8keb8n3vp40a63du.m3u8
 #EXTINF:-1 tvg-id="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-name="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜跟着课本去旅行《迷人的张家界》
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53brd67p39p85fp3marineh4ugr.m3u8
-#EXTINF:-1 tvg-id="我爱问医生：您的健康需要管理师" tvg-name="我爱问医生：您的健康需要管理师" tvg-logo="" catchup="none" group-title="央视直播",我爱问医生：您的健康需要管理师
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-546h9v92ijg91vadp0dtbm37ujq.m3u8
+#EXTINF:-1 tvg-id="2026年“一书一梦一世界”少年儿童情景剧活动二" tvg-name="2026年“一书一梦一世界”少年儿童情景剧活动二" tvg-logo="" catchup="none" group-title="央视直播",2026年“一书一梦一世界”少年儿童情景剧活动二
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51e1fftfsj58adrbaqc0mqaa8r6.m3u8
+#EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51a8p7upak1919927c44fltorat.m3u8
+#EXTINF:-1 tvg-id="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-name="慢直播｜秦皇岛阿那亚 静听潮起潮落" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜秦皇岛阿那亚 静听潮起潮落
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51heig05je3997ou5c5t84gf3up.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",黄河电视台
