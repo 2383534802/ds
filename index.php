@@ -1133,10 +1133,6 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1795551844152&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/71642ce229b22ecf589b.jpg?v=1795753443378&from=source" group-title="央视直播",辽宁卫视
-http://103.236.71.92:1905/l8326955/proxy/liaoning-c077b260424404846285cba1e1759280.m3u8
-#EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1794299821250&from=source" group-title="央视直播",辽宁都市
-http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁生活
@@ -1593,8 +1589,6 @@ http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-57tnd6pcnic90dqsn6fqtvuh
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51o4vpkfkfe85spikubo4n17urh.m3u8
 #EXTINF:-1 tvg-id="慢直播｜我把故宫带回家2026" tvg-name="慢直播｜我把故宫带回家2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜我把故宫带回家2026
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51pg76qskbn866q2sm6a37fua42.m3u8
-#EXTINF:-1 tvg-id="红绿灯20261127" tvg-name="红绿灯20261127" tvg-logo="" catchup="none" group-title="央视直播",红绿灯20261127
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-579pu721bcb815ponrl506olevd.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",黄河电视台
