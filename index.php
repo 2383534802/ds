@@ -275,8 +275,6 @@ http://103.236.71.92:1905/l8326955/proxy/anhui-zytytv.m3u8
 http://103.236.71.92:1905/l8326955/relay/gdtv-47.m3u8
 #EXTINF:-1 tvg-id="广东体育 · 2026广东省城市足球超级联赛决赛" tvg-name="广东体育 · 2026广东省城市足球超级联赛决赛" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 2026广东省城市足球超级联赛决赛
 http://103.236.71.92:1905/l8326955/relay/gdsport-event-120091.m3u8
-#EXTINF:-1 tvg-id="广东体育 · 世界棒球12强资格赛（中山赛区）" tvg-name="广东体育 · 世界棒球12强资格赛（中山赛区）" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 世界棒球12强资格赛（中山赛区）
-http://103.236.71.92:1905/l8326955/relay/gdsport-event-120894.m3u8
 #EXTINF:-1 tvg-id="福建文旅体育" tvg-name="福建文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/335059e07f510b82b075.png?v=1795523046076&from=source" group-title="央视直播",福建文旅体育
 http://103.236.71.92:1905/l8326955/relay/fjtv-province-665248752898248704.m3u8
 #EXTINF:-1 tvg-id="河北文旅体育" tvg-name="河北文旅体育" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/b8066eb66aa36e27b84a.png?v=1795523046076&from=source" group-title="央视直播",河北文旅体育
@@ -1255,14 +1253,14 @@ http://103.236.71.92:1905/l8326955/proxy/dalian-7.m3u8
 http://103.236.71.92:1905/l8326955/proxy/dalian-8.m3u8
 #EXTINF:-1 tvg-id="大连文体" tvg-name="大连文体" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/cd8f3b2927a73b809b8d.jpg?v=1795551844152&from=source" group-title="央视直播",大连文体
 http://103.236.71.92:1905/l8326955/proxy/dalian-9.m3u8
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/71642ce229b22ecf589b.jpg?v=1795753443378&from=source" group-title="央视直播",辽宁卫视
+http://103.236.71.92:1905/l8326955/proxy/liaoning-c077b260424404846285cba1e1759280.m3u8
 #EXTINF:-1 tvg-id="辽宁都市" tvg-name="辽宁都市" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/3e9f8210a1ab404b8e28.jpg?v=1795855071920&from=source" group-title="央视直播",辽宁都市
 http://103.236.71.92:1905/l8326955/proxy/liaoning-10d3de0d03c62e85a1a281bbde8b6952.m3u8
 #EXTINF:-1 tvg-id="辽宁影视剧" tvg-name="辽宁影视剧" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a0e4c07403eccc043c01.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁影视剧
 http://103.236.71.92:1905/l8326955/proxy/liaoning-918510749a0f319ec12ff695b1c95230.m3u8
 #EXTINF:-1 tvg-id="辽宁生活" tvg-name="辽宁生活" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/8dfb80be107a5474ea6d.jpg?v=1795523046076&from=source" group-title="央视直播",辽宁生活
 http://103.236.71.92:1905/l8326955/proxy/liaoning-078ce87dcf5384d51e4655cb962fda18.m3u8
-#EXTINF:-1 tvg-id="辽宁北方" tvg-name="辽宁北方" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a1954f56cf92a5c31f98.jpg?v=1795609443377&from=source" group-title="央视直播",辽宁北方
-http://103.236.71.92:1905/l8326955/proxy/liaoning-8e95535378bd3e5f7494bc23ab1cb117.m3u8
 #EXTINF:-1 tvg-id="家庭理财" tvg-name="家庭理财" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d20982fa32498971bf7f.jpg?v=1795523046076&from=source" group-title="央视直播",家庭理财
 http://103.236.71.92:1905/l8326955/proxy/liaoning-7e29bde4f41ca08642b7fc3ce4eb1ae4.m3u8
 #EXTINF:-1 tvg-id="沈阳新闻综合" tvg-name="沈阳新闻综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/e205e09309242aa99dd1.jpg?v=1795523046076&from=source" group-title="央视直播",沈阳新闻综合
@@ -1319,8 +1317,6 @@ http://103.236.71.92:1905/l8326955/relay/gdtv-99.m3u8
 http://103.236.71.92:1905/l8326955/relay/gdtv-102.m3u8
 #EXTINF:-1 tvg-id="广东体育 · 2026广东省城市足球超级联赛决赛" tvg-name="广东体育 · 2026广东省城市足球超级联赛决赛" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 2026广东省城市足球超级联赛决赛
 http://103.236.71.92:1905/l8326955/relay/gdsport-event-120091.m3u8
-#EXTINF:-1 tvg-id="广东体育 · 世界棒球12强资格赛（中山赛区）" tvg-name="广东体育 · 世界棒球12强资格赛（中山赛区）" tvg-logo="" catchup="none" group-title="央视直播",广东体育 · 世界棒球12强资格赛（中山赛区）
-http://103.236.71.92:1905/l8326955/relay/gdsport-event-120894.m3u8
 #EXTINF:-1 tvg-id="广州综合" tvg-name="广州综合" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/ef7e8b64838397475411.jpg?v=1795523046076&from=source" group-title="央视直播",广州综合
 http://103.236.71.92:1905/l8326955/gztv-3001
 #EXTINF:-1 tvg-id="广州新闻" tvg-name="广州新闻" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/f10617a14c013d815e05.jpg?v=1795523046076&from=source" group-title="央视直播",广州新闻
@@ -1705,10 +1701,8 @@ http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-jiangjunding.m3u8
 http://103.236.71.92:1905/l8326955/proxy/jlntv-slow-wanda-ski.m3u8
 #EXTINF:-1 tvg-id="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-name="慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜副中心五河交汇——北京邮储大厦（副中心）2026
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-510gplgemiq9rhpsa1g2p2foeu4.m3u8
-#EXTINF:-1 tvg-id="万人齐跳贵州“村舞”" tvg-name="万人齐跳贵州“村舞”" tvg-logo="" catchup="none" group-title="央视直播",万人齐跳贵州“村舞”
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-521qltlepnm8esaal13t3po1kjt.m3u8
-#EXTINF:-1 tvg-id="第十八届北京快板邀请赛暨2026京津冀快板邀请赛少儿组决赛（第三场）" tvg-name="第十八届北京快板邀请赛暨2026京津冀快板邀请赛少儿组决赛（第三场）" tvg-logo="" catchup="none" group-title="央视直播",第十八届北京快板邀请赛暨2026京津冀快板邀请赛少儿组决赛（第三场）
-http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-50nee3s3l9s8g9bno6c7drioqfr.m3u8
+#EXTINF:-1 tvg-id="马琳·艾尔索普、张昊辰与费城交响乐团音乐会" tvg-name="马琳·艾尔索普、张昊辰与费城交响乐团音乐会" tvg-logo="" catchup="none" group-title="央视直播",马琳·艾尔索普、张昊辰与费城交响乐团音乐会
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-52mmslq0fb58up80op8jda77k66.m3u8
 #EXTINF:-1 tvg-id="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-name="慢直播｜跟着课本去旅行《迷人的张家界》" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜跟着课本去旅行《迷人的张家界》
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-53brd67p39p85fp3marineh4ugr.m3u8
 #EXTINF:-1 tvg-id="慢直播｜云赏石家庄正定古城" tvg-name="慢直播｜云赏石家庄正定古城" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜云赏石家庄正定古城
@@ -1717,6 +1711,8 @@ http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51a8p7upak1919927c44flto
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51heig05je3997ou5c5t84gf3up.m3u8
 #EXTINF:-1 tvg-id="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-name="慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜最美中轴线钟鼓楼慢直播/我在最美中轴线祈愿2026
 http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51o4vpkfkfe85spikubo4n17urh.m3u8
+#EXTINF:-1 tvg-id="慢直播｜我把故宫带回家2026" tvg-name="慢直播｜我把故宫带回家2026" tvg-logo="" catchup="none" group-title="央视直播",慢直播｜我把故宫带回家2026
+http://103.236.71.92:1905/l8326955/proxy/beijing-live-6-51pg76qskbn866q2sm6a37fua42.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/a76b48f163eb53e93e39.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",山西卫视
 http://103.236.71.92:1905/l8326955/relay/shanxi-satellite.m3u8
 #EXTINF:-1 tvg-id="黄河电视台" tvg-name="黄河电视台" tvg-logo="http://103.236.71.92:1905/l8326955/logo-cache/d5c18260d83d3c165e73.png?v=1795523046076&from=source" catchup="none" group-title="央视直播",黄河电视台
